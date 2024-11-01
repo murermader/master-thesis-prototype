@@ -1,0 +1,28 @@
+.full-height {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+header {
+  display: flex;
+  width: 100%;
+  background: white;
+  border-bottom: 1px solid lightgray;
+}
+
+header > h1 {
+  padding: 0 1rem;
+}
+
+main {
+  background: #fbfbfb;
+  flex: 1;
+  padding: 5rem;
+}
+
+main > div {
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  height: 100%;
+}
