@@ -14,3 +14,8 @@ body {
 *, *::before, *::after {
   box-sizing: border-box;
 }
+
+.leaflet-control-zoom, .leaflet-bottom {
+  /*Annoying: Gets sometimes selecting when zooming / panning the map.*/
+  user-select: none;
+}
