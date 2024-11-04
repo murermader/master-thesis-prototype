@@ -15,7 +15,7 @@ export class LayersComponent {
     'https://{s}.tile.openstreetmap.fr/hot/{z}/{x}/{y}.png', // OSM Hot
 
     // TODO: Jawg oder so hieß die andere coole map.
-    'https://{s}.tile.openstreetmap.fr/hot/{z}/{x}/{y}.png', // OSM Hot
+    // 'https://{s}.tile.openstreetmap.fr/hot/{z}/{x}/{y}.png', // OSM Hot
   ];
 
   constructor(protected layerSettings: LayerSettingsService) {}

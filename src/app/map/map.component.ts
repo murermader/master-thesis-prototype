@@ -22,7 +22,7 @@ export class MapComponent implements OnInit, AfterViewInit {
   constructor(private layerSettings: LayerSettingsService) {}
 
   ngOnInit() {
-    this.layerSettings.selectedLayer$.subscribe((item) => {
+    this.layerSettings.selectedBaseLayer$.subscribe((item) => {
       if (!item) {
         // Do not overwrite Layer with null. For some reason this runs with item = null,
         // although no one called it.

@@ -2,7 +2,7 @@
 
   <div class="base-layers">
     @for ( baseLayerUrl of baseLayerUrls; track baseLayerUrl ){
-      <div (click)="layerSettings.setLayer(baseLayerUrl)" >
+      <div (click)="layerSettings.setBaseLayer(baseLayerUrl)" >
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
           <!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
           <path
@@ -10,6 +10,13 @@
         </svg>
       </div>
     }
+  </div>
+
+  <div>
+    <div class="mb-3">
+      <label cLabel for="formFile">Default file input example</label>
+      <input cFormControl id="formFile" type="file" />
+    </div>
   </div>
 
 </div>
