@@ -1,3 +1,3 @@
 export interface Visualization {
-  apply(): void;
+    apply(): void;
 }

@@ -1,41 +1,41 @@
 .layers-container {
-  border: 1px solid lightgray;
-  height: 100%;
-  background: white;
-  display: flex;
-  flex-direction: column-reverse;
-  padding: 1rem;
-  grid-gap: 1rem;
+    border: 1px solid lightgray;
+    height: 100%;
+    background: white;
+    display: flex;
+    flex-direction: column-reverse;
+    padding: 1rem;
+    grid-gap: 1rem;
 }
 
 .layers-container > div {
-  width: 100%;
-  height: fit-content;
-  background: #f8f8f8;
-  border-radius: 1rem;
+    width: 100%;
+    height: fit-content;
+    background: #f8f8f8;
+    border-radius: 1rem;
 }
 
 .base-layers {
-  display: flex;
-  justify-content: space-evenly;
-  padding: 0.5rem 0.25rem;
+    display: flex;
+    justify-content: space-evenly;
+    padding: 0.5rem 0.25rem;
 }
 
 .base-layers > div {
-  display: grid;
-  place-items: center;
-  height: 50px;
-  width: 50px;
-  border-radius: 0.2rem;
-  transition: all 100ms ease-in-out;
+    display: grid;
+    place-items: center;
+    height: 50px;
+    width: 50px;
+    border-radius: 0.2rem;
+    transition: all 100ms ease-in-out;
 }
 
-.base-layers > div:hover{
-  background: #f1f1f1;
-  cursor: pointer;
+.base-layers > div:hover {
+    background: #f1f1f1;
+    cursor: pointer;
 }
 
 .base-layers > div > svg {
-  width: 30px;
-  fill: #bfdab3;
+    width: 30px;
+    fill: #bfdab3;
 }

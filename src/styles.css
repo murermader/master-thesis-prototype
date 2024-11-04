@@ -1,21 +1,26 @@
 /* Define the "system" font family */
 @font-face {
-  font-family: system-ui-123;
-  font-style: normal;
-  font-weight: 300;
-  src: local(".SFNSText-Light"), local(".HelveticaNeueDeskInterface-Light"), local(".LucidaGrandeUI"), local("Ubuntu Light"), local("Segoe UI Light"), local("Roboto-Light"), local("DroidSans"), local("Tahoma");
+    font-family: system-ui-123;
+    font-style: normal;
+    font-weight: 300;
+    src: local(".SFNSText-Light"), local(".HelveticaNeueDeskInterface-Light"),
+        local(".LucidaGrandeUI"), local("Ubuntu Light"), local("Segoe UI Light"),
+        local("Roboto-Light"), local("DroidSans"), local("Tahoma");
 }
 
 /* Now, let's apply it on an element */
 body {
-  font-family: "system-ui-123", sans-serif;
+    font-family: "system-ui-123", sans-serif;
 }
 
-*, *::before, *::after {
-  box-sizing: border-box;
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
 }
 
-.leaflet-control-zoom, .leaflet-bottom {
-  /*Annoying: Gets sometimes selecting when zooming / panning the map.*/
-  user-select: none;
+.leaflet-control-zoom,
+.leaflet-bottom {
+    /*Annoying: Gets sometimes selecting when zooming / panning the map.*/
+    user-select: none;
 }
