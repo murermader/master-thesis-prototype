@@ -1,0 +1,1305 @@
+{
+    "type": "FeatureCollection",
+    "features": [
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    13.554898,
+                    52.333956
+                ]
+            },
+            "properties": {
+                "PLAC": "Kiekebusch,,Dahme-Spreewald,BRANDENBURG,DEUTSCHLAND,"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    13.983899,
+                    52.027206
+                ]
+            },
+            "properties": {
+                "PLAC": "Krugau,,Dahme-Spreewald,BRANDENBURG,DEUTSCHLAND,"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    13.958323,
+                    52.059514
+                ]
+            },
+            "properties": {
+                "PLAC": "Kuschkow,,Dahme-Spreewald,BRANDENBURG,DEUTSCHLAND,"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    16.246596,
+                    52.293444
+                ]
+            },
+            "properties": {
+                "PLAC": "Bukowiec,64-333,Powiat Nowotomyski,WOIWODSCHAFT GROßPOLEN,POLEN,"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    13.496318,
+                    52.415562
+                ]
+            },
+            "properties": {
+                "PLAC": "Rudow,,Berlin,BERLIN,DEUTSCHLAND,"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    13.765507,
+                    52.250446
+                ]
+            },
+            "properties": {
+                "PLAC": "Dolgenbrodt,,Dahme-Spreewald,BRANDENBURG,DEUTSCHLAND,"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    14.300451,
+                    51.985081
+                ]
+            },
+            "properties": {
+                "PLAC": "Lieberose,15868,Dahme-Spreewald,BRANDENBURG,DEUTSCHLAND,"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    13.822173,
+                    52.206633
+                ]
+            },
+            "properties": {
+                "PLAC": "Streganz,,Dahme-Spreewald,BRANDENBURG,DEUTSCHLAND,"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    13.600887,
+                    51.835373
+                ]
+            },
+            "properties": {
+                "PLAC": "Langengrassau,,Dahme-Spreewald,BRANDENBURG,DEUTSCHLAND,"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    13.438875,
+                    52.318635
+                ]
+            },
+            "properties": {
+                "PLAC": "Dahlewitz,,Teltow-Fläming,BRANDENBURG,DEUTSCHLAND,"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    20.755983,
+                    54.470935
+                ]
+            },
+            "properties": {
+                "PLAC": "Nowosjolki,,Багратионовский Городской Округ,OBLAST KALININGRAD,RUSSLAND,"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    13.42895,
+                    52.418662
+                ]
+            },
+            "properties": {
+                "PLAC": "Buckow,,,BERLIN,DEUTSCHLAND,"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    13.40204,
+                    52.393456
+                ]
+            },
+            "properties": {
+                "PLAC": "Lichtenrade,,,BERLIN,DEUTSCHLAND,"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    13.70682,
+                    53.02919
+                ]
+            },
+            "properties": {
+                "PLAC": "Friedrichswalde,12060068,,BRANDENBURG,DEUTSCHLAND,"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    13.477419,
+                    52.278706
+                ]
+            },
+            "properties": {
+                "PLAC": "Groß Machnow,,Teltow-Fläming,BRANDENBURG,DEUTSCHLAND,"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    14.046312,
+                    52.683462
+                ]
+            },
+            "properties": {
+                "PLAC": "Frankenfelde,,Märkisch-Oderland,BRANDENBURG,DEUTSCHLAND,"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    13.32564,
+                    52.63353
+                ]
+            },
+            "properties": {
+                "PLAC": "Glienicke,,,BRANDENBURG,DEUTSCHLAND,"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    13.596091,
+                    52.364316
+                ]
+            },
+            "properties": {
+                "PLAC": "Schulzendorf,,Dahme-Spreewald,BRANDENBURG,DEUTSCHLAND,"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    13.576413,
+                    52.45391
+                ]
+            },
+            "properties": {
+                "PLAC": "Köpenick,,,BERLIN,DEUTSCHLAND,"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    13.29243,
+                    52.189029
+                ]
+            },
+            "properties": {
+                "PLAC": "Lüdersdorf,,Teltow-Fläming,BRANDENBURG,DEUTSCHLAND,"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    13.477521,
+                    52.309722
+                ]
+            },
+            "properties": {
+                "PLAC": "Klein Kienitz,,Teltow-Fläming,BRANDENBURG,DEUTSCHLAND,"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    13.472378,
+                    52.380978
+                ]
+            },
+            "properties": {
+                "PLAC": "Waßmannsdorf,,Dahme-Spreewald,BRANDENBURG,DEUTSCHLAND,"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    13.495473,
+                    52.246881
+                ]
+            },
+            "properties": {
+                "PLAC": "Telz,,Dahme-Spreewald,BRANDENBURG,DEUTSCHLAND,"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    13.712732,
+                    52.393458
+                ]
+            },
+            "properties": {
+                "PLAC": "Gosen,,Oder-Spree,BRANDENBURG,DEUTSCHLAND,"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    13.802663,
+                    53.242451
+                ]
+            },
+            "properties": {
+                "PLAC": "Sternhagen,,Uckermark,BRANDENBURG,DEUTSCHLAND,"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    12.26667,
+                    53.65
+                ]
+            },
+            "properties": {
+                "PLAC": "Krakow am See,,,MECKLENBURG-VORPOMMERN,DEUTSCHLAND,"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    13.36008,
+                    52.346346
+                ]
+            },
+            "properties": {
+                "PLAC": "Diedersdorf,,Teltow-Fläming,BRANDENBURG,DEUTSCHLAND,"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    13.585737,
+                    52.295029
+                ]
+            },
+            "properties": {
+                "PLAC": "Deutsch Wusterhausen,15711,Dahme-Spreewald,BRANDENBURG,DEUTSCHLAND,"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    15.916454,
+                    52.793849
+                ]
+            },
+            "properties": {
+                "PLAC": "Karwin - Hammer,66-530,Powiat Strzelecko-Drezdenecki,WOIWODSCHAFT LEBUS,POLEN,"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    13.51667,
+                    52.38333
+                ]
+            },
+            "properties": {
+                "PLAC": "Schönefeld,12061433,,BRANDENBURG,DEUTSCHLAND,"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    13.347123,
+                    52.3827
+                ]
+            },
+            "properties": {
+                "PLAC": "Friederikenhof,14979,Teltow-Fläming,BRANDENBURG,DEUTSCHLAND,"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    13.81119,
+                    52.88726
+                ]
+            },
+            "properties": {
+                "PLAC": "Britz,,,,,"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    13.633,
+                    52.30141
+                ]
+            },
+            "properties": {
+                "PLAC": "Königs Wusterhausen,,,BRANDENBURG,DEUTSCHLAND,"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    14.56667,
+                    51.03333
+                ]
+            },
+            "properties": {
+                "PLAC": "Friedersdorf,,,SACHSEN,DEUTSCHLAND,"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    13.45,
+                    52.21667
+                ]
+            },
+            "properties": {
+                "PLAC": "Zossen,,,BRANDENBURG,DEUTSCHLAND,"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    13.7,
+                    52.11667
+                ]
+            },
+            "properties": {
+                "PLAC": "Halbe,12061216,,BRANDENBURG,DEUTSCHLAND,"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    13.447672,
+                    52.392874
+                ]
+            },
+            "properties": {
+                "PLAC": "Großziethen,,Dahme-Spreewald,BRANDENBURG,DEUTSCHLAND,"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    13.34839,
+                    52.47457
+                ]
+            },
+            "properties": {
+                "PLAC": "Berlin Schöneberg,,,BERLIN,DEUTSCHLAND,"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    13.904807,
+                    51.604625
+                ]
+            },
+            "properties": {
+                "PLAC": "Wormlage,,Oberspreewald-Lausitz,BRANDENBURG,DEUTSCHLAND,"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    13.854723,
+                    52.252346
+                ]
+            },
+            "properties": {
+                "PLAC": "Klein Schauen,,Oder-Spree,BRANDENBURG,DEUTSCHLAND,"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    13.523585,
+                    52.48434
+                ]
+            },
+            "properties": {
+                "PLAC": "Karlshorst,10318,,BERLIN,DEUTSCHLAND,"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    11.379926,
+                    52.319202
+                ]
+            },
+            "properties": {
+                "PLAC": "Gut Detzel,39345,Börde,SACHSEN-ANHALT,DEUTSCHLAND,"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    13.66667,
+                    53.18333
+                ]
+            },
+            "properties": {
+                "PLAC": "Mittenwalde,12073404,,BRANDENBURG,DEUTSCHLAND,"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    17.46101,
+                    54.46571
+                ]
+            },
+            "properties": {
+                "PLAC": "Darżyno,76-230,Powiat Słupski,WOIWODSCHAFT POMMERN,POLEN,"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    22.702701,
+                    54.680118
+                ]
+            },
+            "properties": {
+                "PLAC": "Plimballen,238015,Нестеровский Городской Округ,OBLAST KALININGRAD,RUSSLAND,"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    13.290734,
+                    52.214693
+                ]
+            },
+            "properties": {
+                "PLAC": "Christinendorf,,Teltow-Fläming,BRANDENBURG,DEUTSCHLAND,"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    14.275416,
+                    52.104162
+                ]
+            },
+            "properties": {
+                "PLAC": "Friedland,,Oder-Spree,BRANDENBURG,DEUTSCHLAND,"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    13.435434,
+                    52.344997
+                ]
+            },
+            "properties": {
+                "PLAC": "Glasow,15827,Teltow-Fläming,BRANDENBURG,DEUTSCHLAND,"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    13.58228,
+                    52.44254
+                ]
+            },
+            "properties": {
+                "PLAC": "Berlin Köpenick,,,BERLIN,DEUTSCHLAND,"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    13.352133,
+                    52.27291
+                ]
+            },
+            "properties": {
+                "PLAC": "Groß Schulzendorf,,Teltow-Fläming,BRANDENBURG,DEUTSCHLAND,"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    13.658817,
+                    52.164662
+                ]
+            },
+            "properties": {
+                "PLAC": "Groß Köris,2017-12-31,Dahme-Spreewald,BRANDENBURG,DEUTSCHLAND,"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    15.702439,
+                    52.151545
+                ]
+            },
+            "properties": {
+                "PLAC": "Harthe,66-111,Powiat Zielonogórski,WOIWODSCHAFT LEBUS,POLEN,"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    12.87083,
+                    51.39888
+                ]
+            },
+            "properties": {
+                "PLAC": "Falkenhain,14729130,Direktionsbezirk Leipzig,SACHSEN,DEUTSCHLAND,"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    13.79242,
+                    52.298231
+                ]
+            },
+            "properties": {
+                "PLAC": "Friedersdorf,,Dahme-Spreewald,BRANDENBURG,DEUTSCHLAND,"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    16.81945,
+                    52.756
+                ]
+            },
+            "properties": {
+                "PLAC": "Ludomy - Ludom,64-603,Powiat Obornicki,WOIWODSCHAFT GROßPOLEN,POLEN,"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    13.548141,
+                    52.297815
+                ]
+            },
+            "properties": {
+                "PLAC": "Ragow,15749,Dahme-Spreewald,BRANDENBURG,DEUTSCHLAND,"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    13.757067,
+                    52.280748
+                ]
+            },
+            "properties": {
+                "PLAC": "Bindow,,Dahme-Spreewald,BRANDENBURG,DEUTSCHLAND,"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    13.614284,
+                    52.321485
+                ]
+            },
+            "properties": {
+                "PLAC": "Hoherlehme,15745,Dahme-Spreewald,BRANDENBURG,DEUTSCHLAND,"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    14.214722,
+                    50.78242
+                ]
+            },
+            "properties": {
+                "PLAC": "Tetschen,,Aussiger Region,NORDWESTEN,TSCHECHIEN,"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    16.112662,
+                    52.11725
+                ]
+            },
+            "properties": {
+                "PLAC": "Wollstein,,Powiat Wolsztyński,WOIWODSCHAFT GROßPOLEN,POLEN,"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    14.75927,
+                    53.8591
+                ]
+            },
+            "properties": {
+                "PLAC": "Döbberphul,72-511,Landkreis Cammin,WOIWODSCHAFT WESTPOMMERN,POLEN,"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    13.390028,
+                    52.44008
+                ]
+            },
+            "properties": {
+                "PLAC": "Mariendorf,,,BERLIN,DEUTSCHLAND,"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    13.733751,
+                    52.223987
+                ]
+            },
+            "properties": {
+                "PLAC": "Gräbendorf,,Dahme-Spreewald,BRANDENBURG,DEUTSCHLAND,"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    13.59317,
+                    52.210223
+                ]
+            },
+            "properties": {
+                "PLAC": "Motzen,,Dahme-Spreewald,BRANDENBURG,DEUTSCHLAND,"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    13.499061,
+                    52.333675
+                ]
+            },
+            "properties": {
+                "PLAC": "Tollkrug,12529,Dahme-Spreewald,BRANDENBURG,DEUTSCHLAND,"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    13.542097,
+                    52.337188
+                ]
+            },
+            "properties": {
+                "PLAC": "Karlshof,,Dahme-Spreewald,BRANDENBURG,DEUTSCHLAND,"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    13.468917,
+                    52.326092
+                ]
+            },
+            "properties": {
+                "PLAC": "Groß Kienitz,,Teltow-Fläming,BRANDENBURG,DEUTSCHLAND,"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    13.511416,
+                    52.306426
+                ]
+            },
+            "properties": {
+                "PLAC": "Brusendorf,,Dahme-Spreewald,BRANDENBURG,DEUTSCHLAND,"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    13.51081,
+                    52.341874
+                ]
+            },
+            "properties": {
+                "PLAC": "Rotberg - Rotzis,12529,Dahme-Spreewald,BRANDENBURG,DEUTSCHLAND,"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    11.6177,
+                    52.20193
+                ]
+            },
+            "properties": {
+                "PLAC": "Barleben,15083040,,SACHSEN-ANHALT,DEUTSCHLAND,"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    11.43265,
+                    51.94384
+                ]
+            },
+            "properties": {
+                "PLAC": "Egeln,15089075,,SACHSEN-ANHALT,DEUTSCHLAND,"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    12.25,
+                    51.88333
+                ]
+            },
+            "properties": {
+                "PLAC": "Roßlau,,,SACHSEN-ANHALT,DEUTSCHLAND,"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    10.25,
+                    51.23333
+                ]
+            },
+            "properties": {
+                "PLAC": "Effelder,16061027,,THÜRINGEN,DEUTSCHLAND,"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    11.3245,
+                    52.28759
+                ]
+            },
+            "properties": {
+                "PLAC": "Süplingen,15083495,,SACHSEN-ANHALT,DEUTSCHLAND,"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    12.00514,
+                    52.67565
+                ]
+            },
+            "properties": {
+                "PLAC": "Arneburg,,,SACHSEN-ANHALT,DEUTSCHLAND,"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    11.1,
+                    52.36667
+                ]
+            },
+            "properties": {
+                "PLAC": "Everingen,,,SACHSEN-ANHALT,DEUTSCHLAND,"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    8.34028,
+                    49.76806
+                ]
+            },
+            "properties": {
+                "PLAC": "Alsheim,07331002,,RHEINLAND-PFALZ,DEUTSCHLAND,"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    8.27111,
+                    50.0
+                ]
+            },
+            "properties": {
+                "PLAC": "Mainz,,,RHEINLAND-PFALZ,DEUTSCHLAND,"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    11.43333,
+                    52.11667
+                ]
+            },
+            "properties": {
+                "PLAC": "Klein Rodensleben,,,SACHSEN-ANHALT,DEUTSCHLAND,"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    10.6,
+                    50.65
+                ]
+            },
+            "properties": {
+                "PLAC": "Benshausen,16066006,,THÜRINGEN,DEUTSCHLAND,"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    11.530628,
+                    51.998297
+                ]
+            },
+            "properties": {
+                "PLAC": "Altenweddingen,,Börde,SACHSEN-ANHALT,DEUTSCHLAND,"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    14.421254,
+                    50.087465
+                ]
+            },
+            "properties": {
+                "PLAC": "Prag,,Hauptstadt Prag,PRAG,TSCHECHIEN,"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    11.08333,
+                    52.06667
+                ]
+            },
+            "properties": {
+                "PLAC": "Hamersleben,,,SACHSEN-ANHALT,DEUTSCHLAND,"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    11.49994,
+                    52.17898
+                ]
+            },
+            "properties": {
+                "PLAC": "Hohenwarsleben,,,SACHSEN-ANHALT,DEUTSCHLAND,"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    11.53736,
+                    52.19519
+                ]
+            },
+            "properties": {
+                "PLAC": "Dahlenwarsleben,,,SACHSEN-ANHALT,DEUTSCHLAND,"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    11.421318,
+                    52.20311
+                ]
+            },
+            "properties": {
+                "PLAC": "Klein Santersleben,,Börde,SACHSEN-ANHALT,DEUTSCHLAND,"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    11.33738,
+                    52.21076
+                ]
+            },
+            "properties": {
+                "PLAC": "Nordgermersleben,,,SACHSEN-ANHALT,DEUTSCHLAND,"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    11.40896,
+                    52.15782
+                ]
+            },
+            "properties": {
+                "PLAC": "Ochtmersleben,,,SACHSEN-ANHALT,DEUTSCHLAND,"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    11.498397,
+                    52.140458
+                ]
+            },
+            "properties": {
+                "PLAC": "Schnarsleben,39167,Börde,SACHSEN-ANHALT,DEUTSCHLAND,"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    11.57478,
+                    52.18551
+                ]
+            },
+            "properties": {
+                "PLAC": "Ebendorf,,,SACHSEN-ANHALT,DEUTSCHLAND,"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    11.95,
+                    52.05
+                ]
+            },
+            "properties": {
+                "PLAC": "Leitzkau,,,SACHSEN-ANHALT,DEUTSCHLAND,"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    11.4,
+                    52.16667
+                ]
+            },
+            "properties": {
+                "PLAC": "Eichenbarleben,,,SACHSEN-ANHALT,DEUTSCHLAND,"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    11.294797,
+                    52.18651
+                ]
+            },
+            "properties": {
+                "PLAC": "Groppendorf,,Börde,SACHSEN-ANHALT,DEUTSCHLAND,"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    11.0919,
+                    52.31824
+                ]
+            },
+            "properties": {
+                "PLAC": "Siestedt,,,SACHSEN-ANHALT,DEUTSCHLAND,"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    11.436031,
+                    52.144681
+                ]
+            },
+            "properties": {
+                "PLAC": "Wellen,39167,Börde,SACHSEN-ANHALT,DEUTSCHLAND,"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    11.399517,
+                    52.212708
+                ]
+            },
+            "properties": {
+                "PLAC": "Rottmersleben,,Börde,SACHSEN-ANHALT,DEUTSCHLAND,"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    11.509951,
+                    52.143711
+                ]
+            },
+            "properties": {
+                "PLAC": "Niederndodeleben,,Börde,SACHSEN-ANHALT,DEUTSCHLAND,"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    11.82575,
+                    52.56049
+                ]
+            },
+            "properties": {
+                "PLAC": "Dahlen,,,SACHSEN-ANHALT,DEUTSCHLAND,"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    11.61667,
+                    51.63333
+                ]
+            },
+            "properties": {
+                "PLAC": "Gerbstedt,,,SACHSEN-ANHALT,DEUTSCHLAND,"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    11.67008,
+                    52.077432
+                ]
+            },
+            "properties": {
+                "PLAC": "Salbke,39122,Magdeburg,SACHSEN-ANHALT,DEUTSCHLAND,"
+            }
+        }
+    ]
+}
