@@ -25,6 +25,7 @@
               "src/assets"
             ],
             "styles": [
+              "node_modules/@coreui/coreui/scss/coreui.scss",
               "src/normalize.css",
               "src/styles.css"
             ],
