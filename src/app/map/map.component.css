@@ -8,3 +8,7 @@
     position: absolute;
     inset: 0;
 }
+
+.leaflet-overlay-pane > svg {
+    transition: opacity 50ms ease-in-out;
+}

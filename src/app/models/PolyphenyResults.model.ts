@@ -12,4 +12,19 @@ export class PolyphenyResults {
         this.data = data;
         this.is_ordered = is_ordered;
     }
+
+    [Symbol.iterator](): Iterator<PolyphenyResult> {
+        let index = 0;
+        const data = this.data;
+
+        return {
+            next: (): IteratorResult<PolyphenyResult> => {
+                if (index < data.length) {
+                    return { value: data[index++], done: false };
+                } else {
+                    return { done: true } as IteratorResult<PolyphenyResult>;
+                }
+            }
+        };
+    }
 }

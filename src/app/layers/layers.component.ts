@@ -1,6 +1,11 @@
-import { Component } from '@angular/core';
-import { LayerSettingsService } from '../services/layersettings.service';
-import { FormControlDirective, FormLabelDirective } from '@coreui/angular';
+import {Component} from '@angular/core';
+import {LayerSettingsService} from '../services/layersettings.service';
+import {FormControlDirective, FormLabelDirective} from '@coreui/angular';
+import {PolyphenyResult} from '../models/PolyphenyResult.model';
+import {FeatureCollection, GeoJSON} from 'geojson';
+import {PolyphenyResults} from '../models/PolyphenyResults.model';
+import {MapLayer} from "../models/MapLayer.model";
+import {SingleColorVisualization} from "../models/visualization/SingleColorVisualization.model";
 
 @Component({
     selector: 'app-layers',
@@ -19,18 +24,22 @@ export class LayersComponent {
         // 'https://{s}.tile.openstreetmap.fr/hot/{z}/{x}/{y}.png', // OSM Hot
     ];
 
-    constructor(protected layerSettings: LayerSettingsService) {}
+    constructor(protected layerSettings: LayerSettingsService) {
+    }
 
-    addLayerFromGeoJsonFile($event: Event) {
+    async addLayerFromGeoJsonFile($event: Event) {
         if (!event) {
-            console.log('Event is undefined.');
             return;
         }
 
         const input = event.target as HTMLInputElement;
         if (input.files && input.files.length) {
             const file = input.files[0];
-            console.log('Selected file:', file); // You can handle the file here
+            const geoJson: FeatureCollection = JSON.parse(await file.text());
+            const layer = new MapLayer(geoJson.features.map(
+                (f, i) => new PolyphenyResult(i, f.geometry),
+            ), new SingleColorVisualization("red", 5))
+            this.layerSettings.setLayers([layer])
         }
     }
 }
