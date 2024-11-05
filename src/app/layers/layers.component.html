@@ -23,4 +23,17 @@
             />
         </div>
     </div>
+
+    @for (layer of layers; track layer.name) {
+        <div>
+            <div class="m-3">
+                <label for="{{layer.name}}">{{ layer.name }}</label>
+                <ng-container *ngIf="layer.visualization.configurationComponentType"
+                              [ngComponentOutlet]="layer.visualization.configurationComponentType"
+                              [ngComponentOutletInjector]="createInjector(layer.visualization)">
+                </ng-container>
+            </div>
+        </div>
+    }
+
 </div>
