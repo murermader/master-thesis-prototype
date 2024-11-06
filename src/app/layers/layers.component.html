@@ -30,7 +30,7 @@
                 <label for="{{layer.name}}">{{ layer.name }}</label>
                 <ng-container *ngIf="layer.visualization.configurationComponentType"
                               [ngComponentOutlet]="layer.visualization.configurationComponentType"
-                              [ngComponentOutletInjector]="createInjector(layer.visualization)">
+                              [ngComponentOutletInjector]="layer.injector">
                 </ng-container>
             </div>
         </div>
