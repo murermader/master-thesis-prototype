@@ -1,4 +1,4 @@
-import {GeoJSON, Geometry, Point} from 'geojson';
+import {Geometry, Point} from 'geojson';
 
 /**
  * Represents one row in the results returned by Polypheny.

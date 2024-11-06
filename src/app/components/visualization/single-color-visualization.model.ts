@@ -1,21 +1,15 @@
-import { Type } from '@angular/core';
-import { Visualization } from '../Visualization.model';
-import { SingleColorVisualizationConfigurationComponent } from './single-color-visualization-configuration/single-color-visualization-configuration.component';
-import { VisualizationConfiguration } from '../VizualizationConfiguration';
+import { Visualization } from '../../models/visualization.interface';
+import { SingleColorComponent } from './single-color/single-color.component';
 
 export class SingleColorVisualization implements Visualization {
     color: string; // CSS-color, e.g. HEX
     size: number; // px
-    configurationComponentType = SingleColorVisualizationConfigurationComponent
+    configurationComponentType = SingleColorComponent
 
     constructor(color: string, size: number) {
         this.color = color;
         this.size = size;
     }
-
-    // getConfigurationComponentType(): Type<VisualizationConfiguration> {
-    //     return SingleColorVisualizationConfigurationComponent;
-    // }
 
     getValueForAttribute(attr: string): string | number {
         switch (attr) {

@@ -1,4 +1,4 @@
-import { Visualization } from './visualization/Visualization.model';
+import { Visualization } from './visualization.interface';
 import {PolyphenyResult} from "./PolyphenyResult.model";
 import {Injector} from "@angular/core";
 
