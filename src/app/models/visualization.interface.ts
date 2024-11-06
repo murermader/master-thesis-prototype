@@ -6,5 +6,7 @@ export interface Visualization {
 
     apply(): void;
 
+    copy(): Visualization;
+
     getValueForAttribute(attr: string): string | number;
 }

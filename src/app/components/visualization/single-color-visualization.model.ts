@@ -4,11 +4,15 @@ import { SingleColorComponent } from './single-color/single-color.component';
 export class SingleColorVisualization implements Visualization {
     color: string; // CSS-color, e.g. HEX
     size: number; // px
-    configurationComponentType = SingleColorComponent
+    configurationComponentType = SingleColorComponent;
 
     constructor(color: string, size: number) {
         this.color = color;
         this.size = size;
+    }
+
+    copy(): Visualization {
+        return new SingleColorVisualization(this.color, this.size);
     }
 
     getValueForAttribute(attr: string): string | number {

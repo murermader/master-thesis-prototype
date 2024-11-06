@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { BehaviorSubject } from 'rxjs';
+import {BehaviorSubject, Subject} from 'rxjs';
 import { MapLayer } from '../models/MapLayer.model';
 import {Visualization} from "../models/visualization.interface";
 
@@ -23,5 +23,17 @@ export class LayerSettingsService {
     modifiedVisualization$ = this.modifiedVisualization.asObservable();
     visualizationConfigurationChanged(visualization: Visualization): void {
         this.modifiedVisualization.next(visualization);
+    }
+
+    private canRerenderLayers = new BehaviorSubject(false);
+    canRerenderLayers$ = this.canRerenderLayers.asObservable();
+    setCanRerenderLayers(canRerenderMap: boolean){
+        this.canRerenderLayers.next(canRerenderMap);
+    }
+
+    private rerenderButtonClickedSubject = new Subject<void>();
+    rerenderButtonClicked$ = this.rerenderButtonClickedSubject.asObservable();
+    rerenderButtonClicked(){
+        this.rerenderButtonClickedSubject.next();
     }
 }

@@ -19,15 +19,11 @@ export class SingleColorComponent implements VisualizationConfiguration {
         @Inject('config') protected config: SingleColorVisualization,
         private layerSettings: LayerSettingsService,
     ) {
-        console.log(config);
-        console.log('LayerSettings: ', layerSettings);
         this.size = config.size;
         this.color = config.color;
     }
 
     configChanged() {
-        console.log('Config Changed');
-        console.log(this.config);
         this.layerSettings.visualizationConfigurationChanged(this.config);
     }
 }

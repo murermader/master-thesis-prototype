@@ -4,15 +4,15 @@ import * as L from 'leaflet';
 import 'leaflet/dist/leaflet.css';
 import { LayerSettingsService } from '../../services/layersettings.service';
 import { MapLayer } from '../../models/MapLayer.model';
-import { PolyphenyResult } from '../../models/PolyphenyResult.model';
+import { RowResult } from '../../models/RowResult.model';
 import { Visualization } from '../../models/visualization.interface';
-import { SpinnerComponent } from '@coreui/angular';
+import {ButtonDirective, SpinnerComponent} from '@coreui/angular';
 import { NgIf } from '@angular/common';
 
 @Component({
     selector: 'app-map',
     standalone: true,
-    imports: [SpinnerComponent, NgIf],
+    imports: [SpinnerComponent, NgIf, ButtonDirective],
     templateUrl: './map.component.html',
     styleUrls: ['./map.component.css'],
 })
@@ -20,7 +20,9 @@ export class MapComponent implements OnInit, AfterViewInit {
     currentBaseLayer: L.TileLayer | undefined;
     layers: MapLayer[] = [];
     isLoading: boolean = false;
-    isLoadingMessage: string = "TODO isLoadingMessage"
+    isLoadingMessage: string = 'TODO isLoadingMessage';
+    canRerenderLayers: boolean = false;
+
 
     readonly MIN_ZOOM = 0;
     readonly MAX_ZOOM = 19;
@@ -31,7 +33,7 @@ export class MapComponent implements OnInit, AfterViewInit {
         | undefined;
     private g: d3.Selection<SVGGElement, unknown, null, undefined> | undefined;
 
-    constructor(private layerSettings: LayerSettingsService) {}
+    constructor(protected layerSettings: LayerSettingsService) {}
 
     ngOnInit() {
         this.layerSettings.selectedBaseLayer$.subscribe((item) => {
@@ -60,6 +62,10 @@ export class MapComponent implements OnInit, AfterViewInit {
             this.layers = item;
             this.renderLayersWithD3();
         });
+
+        this.layerSettings.canRerenderLayers$.subscribe((canRerenderLayers) => {
+            this.canRerenderLayers = canRerenderLayers
+        });
     }
 
     ngAfterViewInit(): void {
@@ -75,7 +81,9 @@ export class MapComponent implements OnInit, AfterViewInit {
             }
             const bounds = this.map.getBounds();
             const topLeft = this.map.latLngToLayerPoint(bounds.getNorthWest());
-            const bottomRight = this.map.latLngToLayerPoint(bounds.getSouthEast());
+            const bottomRight = this.map.latLngToLayerPoint(
+                bounds.getSouthEast(),
+            );
             this.svg
                 .style('width', '999999px')
                 .style('height', '999999px')
@@ -94,13 +102,13 @@ export class MapComponent implements OnInit, AfterViewInit {
         ).addTo(this.map);
     }
 
-    showLoadingSpinner(message: string){
+    showLoadingSpinner(message: string) {
         this.isLoading = true;
         this.isLoadingMessage = message;
     }
 
     updateSvgPosition() {
-        this.showLoadingSpinner("Reposition shapes on map")
+        this.showLoadingSpinner('Reposition shapes on map');
 
         setTimeout(() => {
             try {
@@ -111,7 +119,7 @@ export class MapComponent implements OnInit, AfterViewInit {
                 this.g
                     .selectAll('circle')
                     .each((d) => {
-                        if (!(d instanceof PolyphenyResult)) {
+                        if (!(d instanceof RowResult)) {
                             return;
                         }
                         const layerPoint = this.map.latLngToLayerPoint([
@@ -122,10 +130,10 @@ export class MapComponent implements OnInit, AfterViewInit {
                         d.cache['y'] = layerPoint.y;
                     })
                     .attr('cx', (d) =>
-                        d instanceof PolyphenyResult ? d.cache['x'] : null,
+                        d instanceof RowResult ? d.cache['x'] : null,
                     )
                     .attr('cy', (d) =>
-                        d instanceof PolyphenyResult ? d.cache['y'] : null,
+                        d instanceof RowResult ? d.cache['y'] : null,
                     );
             } finally {
                 this.isLoading = false;
@@ -133,9 +141,8 @@ export class MapComponent implements OnInit, AfterViewInit {
         }, 0);
     }
 
-
     renderLayersWithD3() {
-        this.showLoadingSpinner("Rendering layers")
+        this.showLoadingSpinner('Rendering layers');
 
         setTimeout(() => {
             try {
@@ -149,7 +156,7 @@ export class MapComponent implements OnInit, AfterViewInit {
                 // Render each layer individually
                 for (const layer of this.layers) {
                     const points = layer.data.filter(
-                        (d) => d.geometry.type === 'Point'
+                        (d) => d.geometry.type === 'Point',
                     );
                     this.createPoints(points, layer.visualization);
                 }
@@ -162,7 +169,7 @@ export class MapComponent implements OnInit, AfterViewInit {
         }, 0);
     }
 
-    createPoints(points: PolyphenyResult[], visualization: Visualization) {
+    createPoints(points: RowResult[], visualization: Visualization) {
         if (!this.g) {
             return;
         }

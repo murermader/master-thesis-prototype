@@ -1,12 +1,13 @@
 import {ChangeDetectionStrategy, Component, Injector, OnInit, ChangeDetectorRef } from '@angular/core';
 import { LayerSettingsService } from '../../services/layersettings.service';
 import { FormControlDirective, FormLabelDirective } from '@coreui/angular';
-import { PolyphenyResult } from '../../models/PolyphenyResult.model';
+import { RowResult } from '../../models/RowResult.model';
 import { FeatureCollection } from 'geojson';
 import { MapLayer } from '../../models/MapLayer.model';
 import { SingleColorVisualization } from '../visualization/single-color-visualization.model';
 import {AsyncPipe, NgComponentOutlet, NgIf} from '@angular/common';
 import {Visualization} from "../../models/visualization.interface";
+import isEqual from 'lodash/isEqual';
 
 @Component({
     selector: 'app-layers',
@@ -32,8 +33,7 @@ export class LayersComponent implements OnInit {
         // 'https://{s}.tile.openstreetmap.fr/hot/{z}/{x}/{y}.png', // OSM Hot
     ];
     protected layers: MapLayer[] = [];
-    protected layersStringified: string = ""
-    protected canRerenderLayers: boolean = false;
+    protected renderedLayers: MapLayer[] = []
 
     constructor(protected layerSettings: LayerSettingsService, private cdRef: ChangeDetectorRef) {}
 
@@ -44,8 +44,9 @@ export class LayersComponent implements OnInit {
             }
 
             this.layers = layers;
-            this.layersStringified = JSON.stringify(layers)
-            console.log(this.layersStringified)
+            this.renderedLayers = this.deepCopyLayers(layers);
+            this.layerSettings.setCanRerenderLayers(false);
+
             // Disable Change Detection and manually trigger to prevent rerenders when mouse moves
             this.cdRef.markForCheck();
         });
@@ -55,9 +56,18 @@ export class LayersComponent implements OnInit {
                 return;
             }
 
-            this.canRerenderLayers = this.layersStringified != JSON.stringify(this.layers)
-            console.log("Config changed. Rerender layers?", this.canRerenderLayers)
+            const canRerenderLayers = !isEqual(this.deepCopyLayers(this.layers), this.renderedLayers)
+            console.log("Config changed. Rerender layers?", canRerenderLayers)
+            this.layerSettings.setCanRerenderLayers(canRerenderLayers);
         });
+
+        this.layerSettings.rerenderButtonClicked$.subscribe(() => {
+            this.layerSettings.setLayers(this.layers);
+        });
+    }
+
+    deepCopyLayers(layers: MapLayer[]){
+        return layers.map(layer => layer.copy());
     }
 
     async addLayerFromGeoJsonFile($event: Event) {
@@ -72,7 +82,7 @@ export class LayersComponent implements OnInit {
             const layer = new MapLayer(
                 file.name,
                 geoJson.features.map(
-                    (f, i) => new PolyphenyResult(i, f.geometry),
+                    (f, i) => new RowResult(i, f.geometry),
                 ),
                 new SingleColorVisualization('red', 5),
             );
