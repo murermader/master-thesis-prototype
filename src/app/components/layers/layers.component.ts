@@ -1,12 +1,18 @@
-import {ChangeDetectionStrategy, Component, Injector, OnInit, ChangeDetectorRef } from '@angular/core';
+import {
+    ChangeDetectionStrategy,
+    Component,
+    Injector,
+    OnInit,
+    ChangeDetectorRef,
+} from '@angular/core';
 import { LayerSettingsService } from '../../services/layersettings.service';
 import { FormControlDirective, FormLabelDirective } from '@coreui/angular';
 import { RowResult } from '../../models/RowResult.model';
 import { FeatureCollection } from 'geojson';
 import { MapLayer } from '../../models/MapLayer.model';
 import { SingleColorVisualization } from '../visualization/single-color-visualization.model';
-import {AsyncPipe, NgComponentOutlet, NgIf} from '@angular/common';
-import {Visualization} from "../../models/visualization.interface";
+import { AsyncPipe, NgComponentOutlet, NgIf } from '@angular/common';
+import { Visualization } from '../../models/visualization.interface';
 import isEqual from 'lodash/isEqual';
 
 @Component({
@@ -20,8 +26,8 @@ import isEqual from 'lodash/isEqual';
         NgIf,
     ],
     templateUrl: './layers.component.html',
-    styleUrl: './layers.component.css',
-    changeDetection: ChangeDetectionStrategy.OnPush
+    styleUrl: './layers.component.scss',
+    changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class LayersComponent implements OnInit {
     protected baseLayerUrls = [
@@ -33,9 +39,12 @@ export class LayersComponent implements OnInit {
         // 'https://{s}.tile.openstreetmap.fr/hot/{z}/{x}/{y}.png', // OSM Hot
     ];
     protected layers: MapLayer[] = [];
-    protected renderedLayers: MapLayer[] = []
+    protected renderedLayers: MapLayer[] = [];
 
-    constructor(protected layerSettings: LayerSettingsService, private cdRef: ChangeDetectorRef) {}
+    constructor(
+        protected layerSettings: LayerSettingsService,
+        private cdRef: ChangeDetectorRef,
+    ) {}
 
     ngOnInit(): void {
         this.layerSettings.layers$.subscribe((layers) => {
@@ -56,18 +65,36 @@ export class LayersComponent implements OnInit {
                 return;
             }
 
-            const canRerenderLayers = !isEqual(this.deepCopyLayers(this.layers), this.renderedLayers)
-            console.log("Config changed. Rerender layers?", canRerenderLayers)
+            const canRerenderLayers = !isEqual(
+                this.deepCopyLayers(this.layers),
+                this.renderedLayers,
+            );
+            console.log('Config changed. Rerender layers?', canRerenderLayers);
             this.layerSettings.setCanRerenderLayers(canRerenderLayers);
         });
 
         this.layerSettings.rerenderButtonClicked$.subscribe(() => {
             this.layerSettings.setLayers(this.layers);
         });
+
+        this.layerSettings.setLayers([
+            new MapLayer(
+                'Test GeoJSON 100',
+                1,
+                [],
+                new SingleColorVisualization('red', 5),
+            ),
+            new MapLayer(
+                'Test GeoJSON full',
+                2,
+                [],
+                new SingleColorVisualization('#FFFF00', 10),
+            )
+        ]);
     }
 
-    deepCopyLayers(layers: MapLayer[]){
-        return layers.map(layer => layer.copy());
+    deepCopyLayers(layers: MapLayer[]) {
+        return layers.map((layer) => layer.copy());
     }
 
     async addLayerFromGeoJsonFile($event: Event) {
@@ -78,12 +105,12 @@ export class LayersComponent implements OnInit {
         const input = event.target as HTMLInputElement;
         if (input.files && input.files.length) {
             const file = input.files[0];
+
             const geoJson: FeatureCollection = JSON.parse(await file.text());
             const layer = new MapLayer(
                 file.name,
-                geoJson.features.map(
-                    (f, i) => new RowResult(i, f.geometry),
-                ),
+                this.layers.length + 1,
+                geoJson.features.map((f, i) => new RowResult(i, f.geometry)),
                 new SingleColorVisualization('red', 5),
             );
             const newLayers = [...this.layers, layer];

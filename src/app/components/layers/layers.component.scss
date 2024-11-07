@@ -1,0 +1,126 @@
+.layers-container {
+    position: relative;
+    height: 100%;
+    display: flex;
+    flex-direction: column-reverse;
+    padding: 1rem;
+    grid-gap: 1rem;
+}
+
+.base-layers {
+    display: flex;
+    justify-content: space-evenly;
+    padding: 0.5rem 0.25rem;
+}
+
+.base-layers > div {
+    display: grid;
+    place-items: center;
+    height: 50px;
+    width: 50px;
+    border-radius: 0.2rem;
+    transition: all 100ms ease-in-out;
+}
+
+.base-layers > div:hover {
+    background: #f1f1f1;
+    cursor: pointer;
+}
+
+.base-layers > div > svg {
+    width: 30px;
+    fill: #bfdab3;
+}
+
+.add-layer-button {
+    all: unset;
+    border-radius: 100%;
+    border: 1px solid #1a186c;
+    background: #4b49b6;
+    position: absolute;
+    bottom: -1.75rem;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 1.5rem;
+    display: grid;
+    place-items: center;
+    cursor: pointer;
+}
+
+.add-layer-button > svg {
+    width: 1rem;
+    transform: scale(1.2);
+    fill: #f3f4f7;
+}
+
+.layer-card {
+    display: flex;
+    gap: 1rem;
+    padding: 1rem;
+    border: 1px solid lightgray;
+    flex-direction: column;
+    background: white;
+
+    & > .card-header {
+        display: grid;
+        place-items: center;
+        grid-gap: 0.5rem;
+        grid-template-columns: 1fr 1fr 1fr;
+        color: lightgray;
+
+        & > span {
+            width: 100%;
+            user-select: none;
+        }
+
+        & > .resize-grip {
+            display: grid;
+            place-items: center;
+            width: 2rem;
+            height: 18px;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: repeat(2, 1fr);
+            cursor: grab;
+
+            & > span {
+                height: 3px;
+                width: 3px;
+                background-color: #bbb;
+                border-radius: 50%;
+                display: inline-block;
+            }
+        }
+
+        & > .icons {
+            display: flex;
+            gap: 0.35rem;
+            width: 100%;
+            justify-content: flex-end;
+
+            & > .eye, & > .remove {
+                & > svg {
+                    width: 1rem;
+                    fill: lightgray;
+                    transition: all 100ms ease-in-out;
+                    cursor: pointer;
+
+                    &:hover {
+                        fill: #4b49b6;
+                    }
+                }
+            }
+        }
+    }
+
+    & > .title {
+        text-transform: uppercase;
+        color: slategray;
+        letter-spacing: 0.5px;
+        font-size: 0.9rem;
+    }
+
+    & > .config-container {
+        flex: 1;
+    }
+}
+
