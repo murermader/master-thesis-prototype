@@ -1,5 +1,6 @@
 import { AfterViewInit, Component, OnInit } from '@angular/core';
 import * as d3 from 'd3';
+import * as d3Geo from 'd3-geo';
 import * as L from 'leaflet';
 import 'leaflet/dist/leaflet.css';
 import { LayerSettingsService } from '../../services/layersettings.service';
@@ -7,6 +8,7 @@ import { MapLayer } from '../../models/MapLayer.model';
 import { RowResult } from '../../models/RowResult.model';
 import { ButtonDirective, SpinnerComponent } from '@coreui/angular';
 import { NgIf } from '@angular/common';
+import {GeoTransformPrototype} from "d3-geo";
 
 @Component({
     selector: 'app-map',
@@ -124,9 +126,10 @@ export class MapComponent implements OnInit, AfterViewInit {
                         if (!(d instanceof RowResult)) {
                             return;
                         }
+
                         const layerPoint = this.map.latLngToLayerPoint([
-                            d.getPoint().coordinates[1],
-                            d.getPoint().coordinates[0],
+                            d.getPoint()!.coordinates[1],
+                            d.getPoint()!.coordinates[0],
                         ]);
                         d.cache['x'] = layerPoint.x;
                         d.cache['y'] = layerPoint.y;
@@ -182,11 +185,19 @@ export class MapComponent implements OnInit, AfterViewInit {
                             (d) => d.geometry.type === 'Point',
                         ),
                     );
+                    paths.push(
+                        ...layer.data.filter(
+                            (d) => d.geometry.type !== 'Point',
+                        ),
+                    );
                 }
 
                 // Render all points
                 console.log('Create Points: ', points);
                 this.createPoints(points);
+
+                console.log('Create Paths: ', paths);
+                this.createPaths(paths);
 
                 // Set SVG position correctly
                 this.updateSvgPosition();
@@ -221,6 +232,35 @@ export class MapComponent implements OnInit, AfterViewInit {
             })
             .attr('cx', (d) => d.cache['x'])
             .attr('cy', (d) => d.cache['y']);
+    }
+
+    createPaths(paths: RowResult[]) {
+        if (!this.g) {
+            return;
+        }
+
+        const leafletMap = this.map;
+        function projectPoint(this:any, x : number, y : number) {
+            var point = leafletMap.latLngToLayerPoint(new L.LatLng(y, x));
+            this.stream.point(point.x, point.y);
+        }
+
+        const transform = d3Geo.geoTransform({point: projectPoint});
+        const path = d3Geo.geoPath().projection(transform);
+
+        this.g
+            .selectAll('.paths')
+            .data(paths)
+            .enter()
+            .append('path')
+            .attr('d', (d) => path(d.geometry))
+            .attr('stroke', 'black')
+            .attr('stroke-width', (d) =>
+                d.layer!.visualization.getValueForAttribute('r'),
+            )
+            .attr('fill', (d) =>
+                d.layer!.visualization.getValueForAttribute('fill'),
+            );
     }
 
     toggleLayerVisibility(layer: MapLayer) {
