@@ -53,7 +53,7 @@ export class MapComponent implements OnInit, AfterViewInit {
         });
 
         this.layerSettings.layers$.subscribe((layers) => {
-            if (!layers) {
+            if (!layers || !layers.length) {
                 return;
             }
 
@@ -185,7 +185,7 @@ export class MapComponent implements OnInit, AfterViewInit {
                 }
 
                 // Render all points
-                console.log("Create Points: ", points)
+                console.log('Create Points: ', points);
                 this.createPoints(points);
 
                 // Set SVG position correctly
@@ -206,9 +206,11 @@ export class MapComponent implements OnInit, AfterViewInit {
             .data(points)
             .enter()
             .append('circle')
-            .attr('layer-name', d => d.layer!.name)
-            .attr('r', d => d.layer!.visualization.getValueForAttribute('r'))
-            .attr('fill', d => d.layer!.visualization.getValueForAttribute('fill'))
+            .attr('layer-name', (d) => d.layer!.name)
+            .attr('r', (d) => d.layer!.visualization.getValueForAttribute('r'))
+            .attr('fill', (d) =>
+                d.layer!.visualization.getValueForAttribute('fill'),
+            )
             .each((d) => {
                 const layerPoint = this.map.latLngToLayerPoint([
                     d.getPoint().coordinates[1],
