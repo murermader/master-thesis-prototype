@@ -1,18 +1,16 @@
 import {
     ChangeDetectionStrategy,
-    Component,
-    Injector,
-    OnInit,
     ChangeDetectorRef,
+    Component,
+    OnInit,
 } from '@angular/core';
 import { LayerSettingsService } from '../../services/layersettings.service';
 import { FormControlDirective, FormLabelDirective } from '@coreui/angular';
 import { RowResult } from '../../models/RowResult.model';
-import { FeatureCollection } from 'geojson';
+import * as GeoJSON from 'geojson';
 import { MapLayer } from '../../models/MapLayer.model';
 import { SingleColorVisualization } from '../visualization/single-color-visualization.model';
 import { AsyncPipe, NgComponentOutlet, NgIf } from '@angular/common';
-import { Visualization } from '../../models/visualization.interface';
 import isEqual from 'lodash/isEqual';
 
 @Component({
@@ -77,19 +75,115 @@ export class LayersComponent implements OnInit {
             this.layerSettings.setLayers(this.layers);
         });
 
+        const data = `
+        {
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.554898,
+          52.333956
+        ]
+      },
+      "properties": {
+        "PLAC": "Kiekebusch,,Dahme-Spreewald,BRANDENBURG,DEUTSCHLAND,"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.983899,
+          52.027206
+        ]
+      },
+      "properties": {
+        "PLAC": "Krugau,,Dahme-Spreewald,BRANDENBURG,DEUTSCHLAND,"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.958323,
+          52.059514
+        ]
+      },
+      "properties": {
+        "PLAC": "Kuschkow,,Dahme-Spreewald,BRANDENBURG,DEUTSCHLAND,"
+      }
+    }
+  ]
+}`;
+        const geoJson: GeoJSON.FeatureCollection = JSON.parse(data);
+        console.log(geoJson)
+
+        const data2 = `
+        {
+  "type": "FeatureCollection",
+  "features": [
+    {
+        "type": "Feature",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                11.82575,
+                52.56049
+            ]
+        },
+        "properties": {
+            "PLAC": "Dahlen,,,SACHSEN-ANHALT,DEUTSCHLAND,"
+        }
+    },
+    {
+        "type": "Feature",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                11.61667,
+                51.63333
+            ]
+        },
+        "properties": {
+            "PLAC": "Gerbstedt,,,SACHSEN-ANHALT,DEUTSCHLAND,"
+        }
+    },
+    {
+        "type": "Feature",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                11.67008,
+                52.077432
+            ]
+        },
+        "properties": {
+            "PLAC": "Salbke,39122,Magdeburg,SACHSEN-ANHALT,DEUTSCHLAND,"
+        }
+    }
+  ]
+}`;
+        const geoJson2: GeoJSON.FeatureCollection = JSON.parse(data2);
+        console.log(geoJson2)
+
         this.layerSettings.setLayers([
             new MapLayer(
-                'Test GeoJSON 100',
+                's',
                 1,
-                [],
+                geoJson.features.map((f, i) => new RowResult(i, f.geometry)),
                 new SingleColorVisualization('red', 5),
             ),
             new MapLayer(
-                'Test GeoJSON full',
+                'b',
                 2,
-                [],
-                new SingleColorVisualization('#FFFF00', 10),
-            )
+                geoJson2.features.map((f, i) => new RowResult(i, f.geometry)),
+                new SingleColorVisualization('green', 10),
+            ),
         ]);
     }
 
@@ -106,7 +200,9 @@ export class LayersComponent implements OnInit {
         if (input.files && input.files.length) {
             const file = input.files[0];
 
-            const geoJson: FeatureCollection = JSON.parse(await file.text());
+            const geoJson: GeoJSON.FeatureCollection = JSON.parse(
+                await file.text(),
+            );
             const layer = new MapLayer(
                 file.name,
                 this.layers.length + 1,
@@ -118,9 +214,15 @@ export class LayersComponent implements OnInit {
         }
     }
 
-    createInjector(visualization: Visualization): Injector {
-        return Injector.create({
-            providers: [{ provide: 'config', useValue: visualization }],
-        });
+    removeLayer(layer: MapLayer) {
+        layer.isRemoved = true;
+        if (layer.isActive) {
+            this.toggleLayerVisibility(layer);
+        }
+    }
+
+    toggleLayerVisibility(layer: MapLayer) {
+        layer.isActive = !layer.isActive;
+        this.layerSettings.toggleLayerVisibility(layer);
     }
 }

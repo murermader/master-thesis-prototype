@@ -98,6 +98,8 @@
             justify-content: flex-end;
 
             & > .eye, & > .remove {
+                all: unset;
+
                 & > svg {
                     width: 1rem;
                     fill: lightgray;

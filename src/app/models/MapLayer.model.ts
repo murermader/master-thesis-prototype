@@ -6,9 +6,9 @@ export class MapLayer {
     name: string;
     data: RowResult[];
     isActive: boolean = true;
+    isRemoved: boolean = false;
     index: number;
     visualization: Visualization;
-    is_active: boolean;
     injector: Injector;
 
     constructor(name: string, index: number, data: RowResult[], visualization: Visualization) {
@@ -16,13 +16,15 @@ export class MapLayer {
         this.index = index;
         this.data = data;
         this.visualization = visualization;
-        this.is_active = true;
         this.injector = Injector.create({
             providers: [{ provide: 'config', useValue: visualization }],
         });
     }
 
     copy() {
+        // Do not copy isActive and isRemoved, because we use the copy to check if
+        // anything changes so we need to rerender, but in these cases we do not need
+        // to rerender.
         return new MapLayer(
             this.name,
             this.index,

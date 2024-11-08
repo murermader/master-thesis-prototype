@@ -5,8 +5,7 @@ import 'leaflet/dist/leaflet.css';
 import { LayerSettingsService } from '../../services/layersettings.service';
 import { MapLayer } from '../../models/MapLayer.model';
 import { RowResult } from '../../models/RowResult.model';
-import { Visualization } from '../../models/visualization.interface';
-import {ButtonDirective, SpinnerComponent} from '@coreui/angular';
+import { ButtonDirective, SpinnerComponent } from '@coreui/angular';
 import { NgIf } from '@angular/common';
 
 @Component({
@@ -22,7 +21,6 @@ export class MapComponent implements OnInit, AfterViewInit {
     isLoading: boolean = false;
     isLoadingMessage: string = 'TODO isLoadingMessage';
     canRerenderLayers: boolean = false;
-
 
     readonly MIN_ZOOM = 0;
     readonly MAX_ZOOM = 19;
@@ -54,17 +52,21 @@ export class MapComponent implements OnInit, AfterViewInit {
             }
         });
 
-        this.layerSettings.layers$.subscribe((item) => {
-            if (!item) {
+        this.layerSettings.layers$.subscribe((layers) => {
+            if (!layers) {
                 return;
             }
 
-            this.layers = item;
+            this.layers = layers;
             this.renderLayersWithD3();
         });
 
         this.layerSettings.canRerenderLayers$.subscribe((canRerenderLayers) => {
-            this.canRerenderLayers = canRerenderLayers
+            this.canRerenderLayers = canRerenderLayers;
+        });
+
+        this.layerSettings.toggleLayerVisibility$.subscribe((layer) => {
+            this.toggleLayerVisibility(layer);
         });
     }
 
@@ -112,7 +114,7 @@ export class MapComponent implements OnInit, AfterViewInit {
 
         setTimeout(() => {
             try {
-                if (!this.g) {
+                if (!this.g || !this.svg) {
                     return;
                 }
 
@@ -135,6 +137,23 @@ export class MapComponent implements OnInit, AfterViewInit {
                     .attr('cy', (d) =>
                         d instanceof RowResult ? d.cache['y'] : null,
                     );
+
+                const bounds = this.map.getBounds();
+                const topLeft = this.map.latLngToLayerPoint(
+                    bounds.getNorthWest(),
+                );
+                const bottomRight = this.map.latLngToLayerPoint(
+                    bounds.getSouthEast(),
+                );
+                this.svg
+                    .style('width', '999999px')
+                    .style('height', '999999px')
+                    .style('left', topLeft.x + 'px')
+                    .style('top', topLeft.y + 'px');
+                this.g.attr(
+                    'transform',
+                    `translate(${-topLeft.x}, ${-topLeft.y})`,
+                );
             } finally {
                 this.isLoading = false;
             }
@@ -158,7 +177,7 @@ export class MapComponent implements OnInit, AfterViewInit {
                     const points = layer.data.filter(
                         (d) => d.geometry.type === 'Point',
                     );
-                    this.createPoints(points, layer.visualization);
+                    this.createPoints(points, layer);
                 }
 
                 // Set SVG position correctly
@@ -169,7 +188,7 @@ export class MapComponent implements OnInit, AfterViewInit {
         }, 0);
     }
 
-    createPoints(points: RowResult[], visualization: Visualization) {
+    createPoints(points: RowResult[], layer: MapLayer) {
         if (!this.g) {
             return;
         }
@@ -179,8 +198,9 @@ export class MapComponent implements OnInit, AfterViewInit {
             .data(points)
             .enter()
             .append('circle')
-            .attr('r', visualization.getValueForAttribute('r'))
-            .attr('fill', visualization.getValueForAttribute('fill'))
+            .attr('layer-name', layer.name)
+            .attr('r', layer.visualization.getValueForAttribute('r'))
+            .attr('fill', layer.visualization.getValueForAttribute('fill'))
             .each((d) => {
                 const layerPoint = this.map.latLngToLayerPoint([
                     d.getPoint().coordinates[1],
@@ -191,5 +211,28 @@ export class MapComponent implements OnInit, AfterViewInit {
             })
             .attr('cx', (d) => d.cache['x'])
             .attr('cy', (d) => d.cache['y']);
+    }
+
+    toggleLayerVisibility(layer: MapLayer) {
+        if (!this.g?.node()) {
+            throw new Error('SVG g does not exist.');
+        }
+
+        const layerElements = this.g
+            .node()!
+            .querySelectorAll(`circle[layer-name='${layer.name}']`);
+
+        if (!layerElements.length) {
+            // Nothing to do
+            return;
+        }
+
+        layerElements.forEach((elem) => {
+            if (layer.isActive) {
+                elem.classList.remove('layer-hidden');
+            } else {
+                elem.classList.add('layer-hidden');
+            }
+        });
     }
 }

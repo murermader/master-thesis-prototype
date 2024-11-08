@@ -36,4 +36,10 @@ export class LayerSettingsService {
     rerenderButtonClicked(){
         this.rerenderButtonClickedSubject.next();
     }
+
+    private toggleLayerVisibilitySubject = new Subject<MapLayer>();
+    toggleLayerVisibility$ = this.toggleLayerVisibilitySubject.asObservable();
+    toggleLayerVisibility(layer: MapLayer){
+        this.toggleLayerVisibilitySubject.next(layer);
+    }
 }
