@@ -120,9 +120,6 @@ export class LayersComponent implements OnInit {
     }
   ]
 }`;
-        const geoJson: GeoJSON.FeatureCollection = JSON.parse(data);
-        console.log(geoJson)
-
         const data2 = `
         {
   "type": "FeatureCollection",
@@ -168,21 +165,23 @@ export class LayersComponent implements OnInit {
     }
   ]
 }`;
+        const geoJson: GeoJSON.FeatureCollection = JSON.parse(data);
         const geoJson2: GeoJSON.FeatureCollection = JSON.parse(data2);
-        console.log(geoJson2)
 
         this.layerSettings.setLayers([
             new MapLayer(
-                's',
+                'a',
                 1,
-                geoJson.features.map((f, i) => new RowResult(i, f.geometry)),
                 new SingleColorVisualization('red', 5),
+            ).addData(
+                geoJson.features.map((f, i) => new RowResult(i, f.geometry)),
             ),
             new MapLayer(
                 'b',
                 2,
+                new SingleColorVisualization('green', 5),
+            ).addData(
                 geoJson2.features.map((f, i) => new RowResult(i, f.geometry)),
-                new SingleColorVisualization('green', 10),
             ),
         ]);
     }
@@ -191,28 +190,28 @@ export class LayersComponent implements OnInit {
         return layers.map((layer) => layer.copy());
     }
 
-    async addLayerFromGeoJsonFile($event: Event) {
-        if (!event) {
-            return;
-        }
-
-        const input = event.target as HTMLInputElement;
-        if (input.files && input.files.length) {
-            const file = input.files[0];
-
-            const geoJson: GeoJSON.FeatureCollection = JSON.parse(
-                await file.text(),
-            );
-            const layer = new MapLayer(
-                file.name,
-                this.layers.length + 1,
-                geoJson.features.map((f, i) => new RowResult(i, f.geometry)),
-                new SingleColorVisualization('red', 5),
-            );
-            const newLayers = [...this.layers, layer];
-            this.layerSettings.setLayers(newLayers);
-        }
-    }
+    // async addLayerFromGeoJsonFile($event: Event) {
+    //     if (!event) {
+    //         return;
+    //     }
+    //
+    //     const input = event.target as HTMLInputElement;
+    //     if (input.files && input.files.length) {
+    //         const file = input.files[0];
+    //
+    //         const geoJson: GeoJSON.FeatureCollection = JSON.parse(
+    //             await file.text(),
+    //         );
+    //         const layer = new MapLayer(
+    //             file.name,
+    //             this.layers.length + 1,
+    //             geoJson.features.map((f, i) => new RowResult(i, f.geometry)),
+    //             new SingleColorVisualization('red', 5),
+    //         );
+    //         const newLayers = [...this.layers, layer];
+    //         this.layerSettings.setLayers(newLayers);
+    //     }
+    // }
 
     removeLayer(layer: MapLayer) {
         layer.isRemoved = true;

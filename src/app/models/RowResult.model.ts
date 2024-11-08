@@ -1,4 +1,5 @@
 import {Geometry, Point} from 'geojson';
+import {MapLayer} from "./MapLayer.model";
 
 /**
  * Represents one row in the results returned by Polypheny.
@@ -11,6 +12,7 @@ export class RowResult {
     geometry: Geometry;
     data: Record<string, any> = {};
     cache: Record<string, number> = {};
+    layer?: MapLayer = undefined;
 
     constructor(
         index: number,

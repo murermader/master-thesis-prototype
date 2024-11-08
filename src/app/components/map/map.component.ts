@@ -172,13 +172,21 @@ export class MapComponent implements OnInit, AfterViewInit {
                 // Remove all previously added elements
                 this.g.selectAll('*').remove();
 
-                // Render each layer individually
+                const points: RowResult[] = [];
+                const paths: RowResult[] = [];
+
+                // Add shapes from each layer to array
                 for (const layer of this.layers) {
-                    const points = layer.data.filter(
-                        (d) => d.geometry.type === 'Point',
+                    points.push(
+                        ...layer.data.filter(
+                            (d) => d.geometry.type === 'Point',
+                        ),
                     );
-                    this.createPoints(points, layer);
                 }
+
+                // Render all points
+                console.log("Create Points: ", points)
+                this.createPoints(points);
 
                 // Set SVG position correctly
                 this.updateSvgPosition();
@@ -188,7 +196,7 @@ export class MapComponent implements OnInit, AfterViewInit {
         }, 0);
     }
 
-    createPoints(points: RowResult[], layer: MapLayer) {
+    createPoints(points: RowResult[]) {
         if (!this.g) {
             return;
         }
@@ -198,9 +206,9 @@ export class MapComponent implements OnInit, AfterViewInit {
             .data(points)
             .enter()
             .append('circle')
-            .attr('layer-name', layer.name)
-            .attr('r', layer.visualization.getValueForAttribute('r'))
-            .attr('fill', layer.visualization.getValueForAttribute('fill'))
+            .attr('layer-name', d => d.layer!.name)
+            .attr('r', d => d.layer!.visualization.getValueForAttribute('r'))
+            .attr('fill', d => d.layer!.visualization.getValueForAttribute('fill'))
             .each((d) => {
                 const layerPoint = this.map.latLngToLayerPoint([
                     d.getPoint().coordinates[1],
