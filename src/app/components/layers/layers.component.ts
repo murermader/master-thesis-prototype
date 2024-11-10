@@ -4,14 +4,33 @@ import {
     Component,
     OnInit,
 } from '@angular/core';
+import { LayerContext } from '../../models/LayerContext.model';
 import { LayerSettingsService } from '../../services/layersettings.service';
-import { FormControlDirective, FormLabelDirective } from '@coreui/angular';
+import {
+    ButtonCloseDirective,
+    ButtonDirective,
+    FormControlDirective,
+    FormLabelDirective,
+    ModalBodyComponent,
+    ModalComponent,
+    ModalFooterComponent,
+    ModalHeaderComponent,
+    ModalTitleDirective,
+} from '@coreui/angular';
 import { RowResult } from '../../models/RowResult.model';
 import * as GeoJSON from 'geojson';
 import { MapLayer } from '../../models/MapLayer.model';
 import { SingleColorVisualization } from '../visualization/single-color-visualization.model';
 import { AsyncPipe, NgComponentOutlet, NgIf } from '@angular/common';
 import isEqual from 'lodash/isEqual';
+import {
+    CdkDrag,
+    CdkDragDrop,
+    CdkDragHandle,
+    CdkDragPlaceholder,
+    CdkDropList,
+    moveItemInArray,
+} from '@angular/cdk/drag-drop';
 
 @Component({
     selector: 'app-layers',
@@ -22,6 +41,17 @@ import isEqual from 'lodash/isEqual';
         AsyncPipe,
         NgComponentOutlet,
         NgIf,
+        ModalComponent,
+        ModalHeaderComponent,
+        ModalBodyComponent,
+        ModalFooterComponent,
+        ModalTitleDirective,
+        ButtonCloseDirective,
+        ButtonDirective,
+        CdkDropList,
+        CdkDrag,
+        CdkDragPlaceholder,
+        CdkDragHandle,
     ],
     templateUrl: './layers.component.html',
     styleUrl: './layers.component.scss',
@@ -38,6 +68,11 @@ export class LayersComponent implements OnInit {
     ];
     protected layers: MapLayer[] = [];
     protected renderedLayers: MapLayer[] = [];
+    protected isAddLayerModalVisible = false;
+    protected loadedGeoJsonFile?: GeoJSON.FeatureCollection = undefined;
+    protected loadedGeoJsonFileName: string = '';
+    protected addLayerContext: LayerContext = LayerContext.External;
+    protected anyLayersVisible = false;
 
     constructor(
         protected layerSettings: LayerSettingsService,
@@ -72,7 +107,7 @@ export class LayersComponent implements OnInit {
         });
 
         this.layerSettings.rerenderButtonClicked$.subscribe(() => {
-            this.layerSettings.setLayers(this.layers);
+            this.updateLayers(this.layers);
         });
 
         const data = `
@@ -363,7 +398,7 @@ export class LayersComponent implements OnInit {
         const geoJson2: GeoJSON.FeatureCollection = JSON.parse(data2);
         const geoJson3: GeoJSON.FeatureCollection = JSON.parse(data3);
 
-        this.layerSettings.setLayers([
+        this.updateLayers([
             new MapLayer(
                 'a',
                 1,
@@ -379,12 +414,12 @@ export class LayersComponent implements OnInit {
                 geoJson2.features.map((f, i) => new RowResult(i, f.geometry)),
             ),
             new MapLayer(
-                "Landkreise",
+                'Landkreise',
                 3,
                 new SingleColorVisualization('pink', 2),
             ).addData(
                 geoJson3.features.map((f, i) => new RowResult(i, f.geometry)),
-            )
+            ),
         ]);
     }
 
@@ -392,38 +427,97 @@ export class LayersComponent implements OnInit {
         return layers.map((layer) => layer.copy());
     }
 
-    // async addLayerFromGeoJsonFile($event: Event) {
-    //     if (!event) {
-    //         return;
-    //     }
-    //
-    //     const input = event.target as HTMLInputElement;
-    //     if (input.files && input.files.length) {
-    //         const file = input.files[0];
-    //
-    //         const geoJson: GeoJSON.FeatureCollection = JSON.parse(
-    //             await file.text(),
-    //         );
-    //         const layer = new MapLayer(
-    //             file.name,
-    //             this.layers.length + 1,
-    //             geoJson.features.map((f, i) => new RowResult(i, f.geometry)),
-    //             new SingleColorVisualization('red', 5),
-    //         );
-    //         const newLayers = [...this.layers, layer];
-    //         this.layerSettings.setLayers(newLayers);
-    //     }
-    // }
+    async loadGeoJsonFile($event: Event) {
+        if (!event) {
+            return;
+        }
+        try {
+            const input = event.target as HTMLInputElement;
+            if (input.files && input.files.length) {
+                const file = input.files[0];
+                this.loadedGeoJsonFileName = file.name;
+                this.loadedGeoJsonFile = JSON.parse(await file.text());
+            }
+        } catch (error) {
+            if (error instanceof Error) {
+                alert(`Failed to load file: ${error.message}`);
+            }
+            this.loadedGeoJsonFile = undefined;
+        }
+    }
 
     removeLayer(layer: MapLayer) {
         layer.isRemoved = true;
         if (layer.isActive) {
             this.toggleLayerVisibility(layer);
+            this.updateIsAnyLayerVisible()
         }
+    }
+
+    addLayer() {
+        switch (this.addLayerContext) {
+            case LayerContext.Results:
+                alert('TODO');
+                break;
+            case LayerContext.Query:
+                alert('TODO');
+                break;
+            case LayerContext.DB:
+                alert('TODO');
+                break;
+            case LayerContext.External:
+                if (this.loadedGeoJsonFile) {
+                    const layer = new MapLayer(
+                        this.loadedGeoJsonFileName,
+                        this.layers.length + 1,
+                        new SingleColorVisualization('red', 5),
+                    ).addData(
+                        this.loadedGeoJsonFile.features.map(
+                            (f, i) => new RowResult(i, f.geometry),
+                        ),
+                    );
+                    const newLayers = [
+                        ...this.layers.filter((l) => !l.isRemoved),
+                        layer,
+                    ].map((v, i) => {
+                        v.index = i + 1;
+                        return v;
+                    });
+                    this.updateLayers(newLayers)
+                } else {
+                    alert(`No file selected / File could not be loaded.`);
+                }
+                break;
+        }
+        this.isAddLayerModalVisible = false;
+    }
+
+    dropLayer(event: CdkDragDrop<MapLayer[]>) {
+        console.log(event);
+        moveItemInArray(this.layers, event.previousIndex, event.currentIndex);
+        this.updateLayers(this.layers);
+    }
+
+    updateLayers(newLayers: MapLayer[]) {
+        this.layerSettings.setLayers(newLayers);
+        this.updateIsAnyLayerVisible();
     }
 
     toggleLayerVisibility(layer: MapLayer) {
         layer.isActive = !layer.isActive;
         this.layerSettings.toggleLayerVisibility(layer);
+    }
+
+    toggleAddLayerModalVisibility() {
+        this.isAddLayerModalVisible = !this.isAddLayerModalVisible;
+    }
+
+    addLayerModalVisibilityChanged(event: any) {
+        this.isAddLayerModalVisible = event;
+    }
+
+    updateIsAnyLayerVisible(){
+        this.anyLayersVisible = this.layers.filter((d) => !d.isRemoved).length > 0;
+        console.log("AnyLayerVisible: ", this.anyLayersVisible, this.layers);
     }
 }

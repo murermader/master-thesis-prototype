@@ -2,9 +2,38 @@
     position: relative;
     height: 100%;
     display: flex;
-    flex-direction: column-reverse;
+    flex-direction: column;
     padding: 1rem;
     grid-gap: 1rem;
+
+    & > .spacer-top {
+        flex: 1;
+    }
+
+    & > .spacer-bottom {
+        margin-bottom: 2rem;
+    }
+}
+
+.drag-drop-layers {
+    display: flex;
+    flex-direction: column;
+    grid-gap: 1rem;
+}
+
+.top-bottom-label {
+    text-align: center;
+    color: lightgray;
+    margin: 0 6rem;
+    letter-spacing: 0.5px;
+}
+
+.top-label {
+    border-bottom: 1px solid lightgray;
+}
+
+.bottom-label {
+    border-top: 1px solid lightgray;
 }
 
 .base-layers {
@@ -126,3 +155,8 @@
     }
 }
 
+.layer-card-placeholder {
+    border: 2px dashed #007bff;
+    background-color: #e9f5ff;
+    height: 50px;
+}
