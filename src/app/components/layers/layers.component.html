@@ -12,17 +12,17 @@
         }
     </div>
 
-<!--    <div>-->
-<!--        <div class="m-3">-->
-<!--            <label cLabel for="formFile">Upload GeoJSON File</label>-->
-<!--            <input-->
-<!--                cFormControl-->
-<!--                id="formFile"-->
-<!--                type="file"-->
-<!--                (change)="addLayerFromGeoJsonFile($event)"-->
-<!--            />-->
-<!--        </div>-->
-<!--    </div>-->
+    <!--    <div>-->
+    <!--        <div class="m-3">-->
+    <!--            <label cLabel for="formFile">Upload GeoJSON File</label>-->
+    <!--            <input-->
+    <!--                cFormControl-->
+    <!--                id="formFile"-->
+    <!--                type="file"-->
+    <!--                (change)="addLayerFromGeoJsonFile($event)"-->
+    <!--            />-->
+    <!--        </div>-->
+    <!--    </div>-->
 
     @for (layer of layers; track layer.name) {
         <div *ngIf="!layer.isRemoved" class="layer-card shadow-sm">
@@ -59,7 +59,7 @@
                 </div>
             </div>
             <div class="title">
-                <span>{{ layer.name }}</span>
+                <span>{{ layer.name }}</span><span> ({{ layer.data.length }})</span>
             </div>
             <div class="config-container">
                 <ng-container *ngIf="layer.visualization.configurationComponentType"
