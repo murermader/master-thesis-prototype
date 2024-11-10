@@ -260,13 +260,16 @@ export class MapComponent implements OnInit, AfterViewInit {
             .append('path')
             .attr('layer-name', (d) => d.layer!.name)
             .attr('d', (d) => this.pathGenerator(d.geometry))
-            .attr('stroke', 'black')
             .attr('stroke-width', (d) =>
                 d.layer!.visualization.getValueForAttribute('r'),
             )
+            .attr('stroke', (d) =>
+                d.layer!.visualization.getValueForAttribute('fill'),
+            )
             .attr('fill', (d) =>
                 d.layer!.visualization.getValueForAttribute('fill'),
-            );
+            )
+            .attr('fill-opacity', '0.25');
     }
 
     toggleLayerVisibility(layer: MapLayer) {
