@@ -258,6 +258,7 @@ export class MapComponent implements OnInit, AfterViewInit {
             .data(paths)
             .enter()
             .append('path')
+            .attr('layer-name', (d) => d.layer!.name)
             .attr('d', (d) => this.pathGenerator(d.geometry))
             .attr('stroke', 'black')
             .attr('stroke-width', (d) =>
@@ -275,7 +276,7 @@ export class MapComponent implements OnInit, AfterViewInit {
 
         const layerElements = this.g
             .node()!
-            .querySelectorAll(`circle[layer-name='${layer.name}']`);
+            .querySelectorAll(`[layer-name='${layer.name}']`);
 
         if (!layerElements.length) {
             // Nothing to do
