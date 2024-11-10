@@ -1,5 +1,6 @@
 import { AfterViewInit, Component, OnInit } from '@angular/core';
 import * as d3 from 'd3';
+import { GeoPath, GeoPermissibleObjects } from 'd3';
 import * as d3Geo from 'd3-geo';
 import * as L from 'leaflet';
 import 'leaflet/dist/leaflet.css';
@@ -8,7 +9,6 @@ import { MapLayer } from '../../models/MapLayer.model';
 import { RowResult } from '../../models/RowResult.model';
 import { ButtonDirective, SpinnerComponent } from '@coreui/angular';
 import { NgIf } from '@angular/common';
-import {GeoTransformPrototype} from "d3-geo";
 
 @Component({
     selector: 'app-map',
@@ -32,6 +32,13 @@ export class MapComponent implements OnInit, AfterViewInit {
         | d3.Selection<SVGSVGElement, unknown, null, undefined>
         | undefined;
     private g: d3.Selection<SVGGElement, unknown, null, undefined> | undefined;
+    private circles:
+        | d3.Selection<SVGCircleElement, RowResult, SVGGElement, unknown>
+        | undefined;
+    private paths:
+        | d3.Selection<SVGPathElement, RowResult, SVGGElement, unknown>
+        | undefined;
+    private pathGenerator!: GeoPath<any, GeoPermissibleObjects>;
 
     constructor(protected layerSettings: LayerSettingsService) {}
 
@@ -73,9 +80,19 @@ export class MapComponent implements OnInit, AfterViewInit {
     }
 
     ngAfterViewInit(): void {
-        this.map = L.map('map').setView([52, 10], this.INITIAL_ZOOM);
+        const leafletMap = L.map('map').setView([52, 10], this.INITIAL_ZOOM);
+        this.map = leafletMap;
         this.svg = d3.select(this.map.getPanes().overlayPane).append('svg');
         this.g = this.svg.append('g').attr('class', 'leaflet-zoom-hide');
+
+        function projectPoint(this: any, x: number, y: number) {
+            const point = leafletMap.latLngToLayerPoint(new L.LatLng(y, x));
+            this.stream.point(point.x, point.y);
+        }
+
+        const transform = d3Geo.geoTransform({ point: projectPoint });
+        this.pathGenerator = d3Geo.geoPath().projection(transform);
+
         this.map.on('zoomend', () => {
             this.updateSvgPosition();
         });
@@ -120,26 +137,23 @@ export class MapComponent implements OnInit, AfterViewInit {
                     return;
                 }
 
-                this.g
-                    .selectAll('circle')
-                    .each((d) => {
-                        if (!(d instanceof RowResult)) {
-                            return;
-                        }
+                if (this.paths) {
+                    this.paths.attr('d', (d) => this.pathGenerator(d.geometry));
+                }
 
-                        const layerPoint = this.map.latLngToLayerPoint([
-                            d.getPoint()!.coordinates[1],
-                            d.getPoint()!.coordinates[0],
-                        ]);
-                        d.cache['x'] = layerPoint.x;
-                        d.cache['y'] = layerPoint.y;
-                    })
-                    .attr('cx', (d) =>
-                        d instanceof RowResult ? d.cache['x'] : null,
-                    )
-                    .attr('cy', (d) =>
-                        d instanceof RowResult ? d.cache['y'] : null,
-                    );
+                if (this.circles) {
+                    this.circles
+                        .each((d) => {
+                            const layerPoint = this.map.latLngToLayerPoint([
+                                d.getPoint()!.coordinates[1],
+                                d.getPoint()!.coordinates[0],
+                            ]);
+                            d.cache['x'] = layerPoint.x;
+                            d.cache['y'] = layerPoint.y;
+                        })
+                        .attr('cx', (d) => d.cache['x'])
+                        .attr('cy', (d) => d.cache['y']);
+                }
 
                 const bounds = this.map.getBounds();
                 const topLeft = this.map.latLngToLayerPoint(
@@ -194,10 +208,10 @@ export class MapComponent implements OnInit, AfterViewInit {
 
                 // Render all points
                 console.log('Create Points: ', points);
-                this.createPoints(points);
+                this.circles = this.createPoints(points);
 
                 console.log('Create Paths: ', paths);
-                this.createPaths(paths);
+                this.paths = this.createPaths(paths);
 
                 // Set SVG position correctly
                 this.updateSvgPosition();
@@ -212,7 +226,7 @@ export class MapComponent implements OnInit, AfterViewInit {
             return;
         }
 
-        this.g
+        return this.g
             .selectAll('circle')
             .data(points)
             .enter()
@@ -239,21 +253,12 @@ export class MapComponent implements OnInit, AfterViewInit {
             return;
         }
 
-        const leafletMap = this.map;
-        function projectPoint(this:any, x : number, y : number) {
-            var point = leafletMap.latLngToLayerPoint(new L.LatLng(y, x));
-            this.stream.point(point.x, point.y);
-        }
-
-        const transform = d3Geo.geoTransform({point: projectPoint});
-        const path = d3Geo.geoPath().projection(transform);
-
-        this.g
+        return this.g
             .selectAll('.paths')
             .data(paths)
             .enter()
             .append('path')
-            .attr('d', (d) => path(d.geometry))
+            .attr('d', (d) => this.pathGenerator(d.geometry))
             .attr('stroke', 'black')
             .attr('stroke-width', (d) =>
                 d.layer!.visualization.getValueForAttribute('r'),
