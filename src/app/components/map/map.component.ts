@@ -232,6 +232,7 @@ export class MapComponent implements OnInit, AfterViewInit {
             .enter()
             .append('circle')
             .attr('layer-name', (d) => d.layer!.name)
+            .attr('layer-index', (d) => d.layer!.index.toString())
             .attr('r', (d) => d.layer!.visualization.getValueForAttribute('r'))
             .attr('fill', (d) =>
                 d.layer!.visualization.getValueForAttribute('fill'),
