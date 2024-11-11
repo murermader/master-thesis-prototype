@@ -193,7 +193,7 @@ export class MapComponent implements OnInit, AfterViewInit {
                 const paths: RowResult[] = [];
 
                 // Add shapes from each layer to array
-                for (const layer of this.layers.reverse()) {
+                for (const layer of this.layers.slice().reverse()) {
                     points.push(
                         ...layer.data.filter(
                             (d) => d.geometry.type === 'Point',
@@ -259,6 +259,7 @@ export class MapComponent implements OnInit, AfterViewInit {
             .enter()
             .append('path')
             .attr('layer-name', (d) => d.layer!.name)
+            .attr('layer-index', (d) => d.layer!.index.toString())
             .attr('d', (d) => this.pathGenerator(d.geometry))
             .attr('stroke-width', (d) =>
                 d.layer!.visualization.getValueForAttribute('r'),
@@ -279,7 +280,7 @@ export class MapComponent implements OnInit, AfterViewInit {
 
         const layerElements = this.g
             .node()!
-            .querySelectorAll(`[layer-name='${layer.name}']`);
+            .querySelectorAll(`[layer-name='${layer.name}'][layer-index='${layer.index.toString()}']`);
 
         if (!layerElements.length) {
             // Nothing to do

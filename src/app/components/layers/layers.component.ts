@@ -55,7 +55,7 @@ import {
     ],
     templateUrl: './layers.component.html',
     styleUrl: './layers.component.scss',
-    changeDetection: ChangeDetectionStrategy.OnPush,
+    // changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class LayersComponent implements OnInit {
     protected baseLayerUrls = [
@@ -76,7 +76,7 @@ export class LayersComponent implements OnInit {
 
     constructor(
         protected layerSettings: LayerSettingsService,
-        private cdRef: ChangeDetectorRef,
+        // private cdRef: ChangeDetectorRef,
     ) {}
 
     ngOnInit(): void {
@@ -90,7 +90,7 @@ export class LayersComponent implements OnInit {
             this.layerSettings.setCanRerenderLayers(false);
 
             // Disable Change Detection and manually trigger to prevent rerenders when mouse moves
-            this.cdRef.markForCheck();
+            // this.cdRef.markForCheck();
         });
 
         this.layerSettings.modifiedVisualization$.subscribe((config) => {
