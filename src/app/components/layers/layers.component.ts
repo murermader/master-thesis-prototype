@@ -399,23 +399,14 @@ export class LayersComponent implements OnInit {
         const geoJson3: GeoJSON.FeatureCollection = JSON.parse(data3);
 
         this.updateLayers([
-            new MapLayer(
-                'a',
-                1,
-                new SingleColorVisualization('red', 5),
-            ).addData(
+            new MapLayer('a', new SingleColorVisualization('red', 5)).addData(
                 geoJson.features.map((f, i) => new RowResult(i, f.geometry)),
             ),
-            new MapLayer(
-                'b',
-                2,
-                new SingleColorVisualization('green', 5),
-            ).addData(
+            new MapLayer('b', new SingleColorVisualization('green', 5)).addData(
                 geoJson2.features.map((f, i) => new RowResult(i, f.geometry)),
             ),
             new MapLayer(
                 'Landkreise',
-                3,
                 new SingleColorVisualization('pink', 2),
             ).addData(
                 geoJson3.features.map((f, i) => new RowResult(i, f.geometry)),
@@ -450,7 +441,7 @@ export class LayersComponent implements OnInit {
         layer.isRemoved = true;
         if (layer.isActive) {
             this.toggleLayerVisibility(layer);
-            this.updateIsAnyLayerVisible()
+            this.updateLayerUi();
         }
     }
 
@@ -469,7 +460,6 @@ export class LayersComponent implements OnInit {
                 if (this.loadedGeoJsonFile) {
                     const layer = new MapLayer(
                         this.loadedGeoJsonFileName,
-                        this.layers.length + 1,
                         new SingleColorVisualization('red', 5),
                     ).addData(
                         this.loadedGeoJsonFile.features.map(
@@ -483,7 +473,7 @@ export class LayersComponent implements OnInit {
                         v.index = i + 1;
                         return v;
                     });
-                    this.updateLayers(newLayers)
+                    this.updateLayers(newLayers);
                 } else {
                     alert(`No file selected / File could not be loaded.`);
                 }
@@ -493,14 +483,14 @@ export class LayersComponent implements OnInit {
     }
 
     dropLayer(event: CdkDragDrop<MapLayer[]>) {
-        console.log(event);
+        // TODO: After dropping a layer, the UI is very buggy
         moveItemInArray(this.layers, event.previousIndex, event.currentIndex);
         this.updateLayers(this.layers);
     }
 
     updateLayers(newLayers: MapLayer[]) {
         this.layerSettings.setLayers(newLayers);
-        this.updateIsAnyLayerVisible();
+        this.updateLayerUi();
     }
 
     toggleLayerVisibility(layer: MapLayer) {
@@ -516,8 +506,14 @@ export class LayersComponent implements OnInit {
         this.isAddLayerModalVisible = event;
     }
 
-    updateIsAnyLayerVisible(){
-        this.anyLayersVisible = this.layers.filter((d) => !d.isRemoved).length > 0;
-        console.log("AnyLayerVisible: ", this.anyLayersVisible, this.layers);
+    updateLayerUi() {
+        // Layers which are first in the array are rendered first, and will be drawn over by other layers.
+        // Layers: BOTTOM -> TOP
+        const visibleLayers = this.layers.filter((d) => !d.isRemoved);
+        for (let i = 0; i < visibleLayers.length; i++) {
+            visibleLayers[visibleLayers.length - 1 - i].index = i + 1;
+        }
+        this.anyLayersVisible =
+            this.layers.filter((d) => !d.isRemoved).length > 0;
     }
 }

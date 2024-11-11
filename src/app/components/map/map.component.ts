@@ -193,7 +193,7 @@ export class MapComponent implements OnInit, AfterViewInit {
                 const paths: RowResult[] = [];
 
                 // Add shapes from each layer to array
-                for (const layer of this.layers) {
+                for (const layer of this.layers.reverse()) {
                     points.push(
                         ...layer.data.filter(
                             (d) => d.geometry.type === 'Point',

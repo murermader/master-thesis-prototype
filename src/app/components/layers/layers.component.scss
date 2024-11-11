@@ -145,9 +145,12 @@
 
     & > .title {
         text-transform: uppercase;
-        color: slategray;
         letter-spacing: 0.5px;
-        font-size: 0.9rem;
+        word-break: break-all;
+
+        & > .layer-name {
+            font-weight: bold;
+        }
     }
 
     & > .config-container {
