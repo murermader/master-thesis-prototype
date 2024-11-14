@@ -190,7 +190,7 @@ export class LayersComponent implements OnInit {
                         this.loadedGeoJsonFileName,
                     ).addData(
                         this.loadedGeoJsonFile.features.map(
-                            (f, i) => new RowResult(i, f.geometry),
+                            (f, i) => new RowResult(i, f.geometry, f),
                         ),
                     );
                     const newLayers = [

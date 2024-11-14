@@ -1,5 +1,6 @@
 import { Visualization } from '../../models/visualization.interface';
 import { SingleColorComponent } from './single-color/single-color.component';
+import {RowResult} from "../../models/RowResult.model";
 
 export class SingleColorVisualization implements Visualization {
     name = 'Static Color';
@@ -13,6 +14,10 @@ export class SingleColorVisualization implements Visualization {
         this.size = size;
     }
 
+    init(data: RowResult[]): void {
+        // Nothing to do.
+    }
+
     copy(): Visualization {
         return new SingleColorVisualization(this.color, this.size);
     }
@@ -20,12 +25,14 @@ export class SingleColorVisualization implements Visualization {
     getValueForAttribute(attr: string): string | number {
         switch (attr) {
             case 'r':
+            case 'stroke-width':
                 return this.size;
-
-            case 'fill':
-                // TODO: This value is different, depending on it is used with a path or a
-                //       circle. Should somehow be able to control that.
+            case 'stroke':
                 return this.color;
+            case "fill-opacity":
+                return 0.25;
+            case 'fill':
+                return this.color
         }
 
         throw new Error(`Visualization does not support attribute [${attr}]`);

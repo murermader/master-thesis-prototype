@@ -23,6 +23,7 @@
     "@coreui/coreui": "^5.1.0",
     "@coreui/icons-angular": "~5.1.11",
     "@popperjs/core": "~2.11.8",
+    "@turf/turf": "^7.1.0",
     "@types/geojson": "^7946.0.14",
     "d3": "^7.9.0",
     "geojson": "^0.5.0",

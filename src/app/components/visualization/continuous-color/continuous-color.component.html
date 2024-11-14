@@ -1,25 +1,5 @@
 <div>
     <c-input-group>
-        <span cInputGroupText>Size</span>
-        <input aria-label="Size"
-               cFormControl
-               placeholder="Size"
-               [(ngModel)]="config.size"
-               (ngModelChange)="configChanged()"
-        />
-    </c-input-group>
-
-    <c-input-group>
-        <span cInputGroupText>Color</span>
-        <input aria-label="Size"
-               cFormControl
-               placeholder="Color"
-               [(ngModel)]="config.color"
-               (ngModelChange)="configChanged()"
-        />
-    </c-input-group>
-
-    <c-input-group>
         <span cInputGroupText>Variable</span>
         <input aria-label="Variable"
                cFormControl
@@ -28,4 +8,10 @@
                (ngModelChange)="configChanged()"
         />
     </c-input-group>
+
+    <c-form-check>
+        <input cFormCheckInput [(ngModel)]="config.normalizeByArea" (ngModelChange)="configChanged()" id="normalize"
+               type="checkbox"/>
+        <label cFormCheckLabel for="normalize">Normalize value by area</label>
+    </c-form-check>
 </div>

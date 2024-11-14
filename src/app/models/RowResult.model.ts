@@ -38,4 +38,22 @@ export class RowResult {
         // We leave out cache on purpose, because we will use the copy to compare both if the layer has changed.
         return new RowResult(this.index, this.geometry, this.data);
     }
+
+    getNumberValueFromField(fieldName: string): number {
+        let finalValue: any = this.data;
+
+        for (const key of fieldName.split(".")) {
+            if (finalValue && typeof finalValue === "object") {
+                finalValue = finalValue[key];
+            } else {
+                return NaN;
+            }
+        }
+
+        if (typeof finalValue === "number") {
+            return finalValue;
+        }
+
+        return NaN;
+    }
 }

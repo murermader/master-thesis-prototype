@@ -1,5 +1,6 @@
 import { VisualizationConfiguration } from './visualization-configuration.interface';
 import { Type } from '@angular/core';
+import {RowResult} from "./RowResult.model";
 
 export interface Visualization {
     name: string;
@@ -9,5 +10,7 @@ export interface Visualization {
 
     copy(): Visualization;
 
-    getValueForAttribute(attr: string): string | number;
+    init(data: RowResult[]): void;
+
+    getValueForAttribute(attr: string, data: RowResult): string | number;
 }
