@@ -3,11 +3,17 @@ import { SingleColorVisualization } from '../single-color-visualization.model';
 import { VisualizationConfiguration } from '../../../models/visualization-configuration.interface';
 import { FormsModule } from '@angular/forms';
 import { LayerSettingsService } from '../../../services/layersettings.service';
+import {FormControlDirective, InputGroupComponent, InputGroupTextDirective} from "@coreui/angular";
 
 @Component({
     selector: 'app-single-color',
     standalone: true,
-    imports: [FormsModule],
+    imports: [
+        FormsModule,
+        InputGroupComponent,
+        InputGroupTextDirective,
+        FormControlDirective,
+    ],
     templateUrl: './single-color.component.html',
     styleUrl: './single-color.component.css',
 })

@@ -1,25 +1,55 @@
 <div>
-    <div class="form-group">
-        <label for="sizeInput">Size</label>
-        <input
-            type="number"
-            id="sizeInput"
-            class="form-control"
-            [(ngModel)]="config.size"
-            (ngModelChange)="configChanged()"
-            placeholder="Enter size"
+    <c-input-group>
+        <span cInputGroupText>Size</span>
+        <input aria-label="Size"
+               cFormControl
+               placeholder="Size"
+               [(ngModel)]="config.size"
+               (ngModelChange)="configChanged()"
         />
-    </div>
+    </c-input-group>
 
-    <div class="form-group mt-3">
-        <label for="colourInput">Colour</label>
-        <input
-            type="text"
-            id="colourInput"
-            class="form-control"
-            [(ngModel)]="config.color"
-            (ngModelChange)="configChanged()"
-            placeholder="Enter color"
+    <c-input-group>
+        <span cInputGroupText>Color</span>
+        <input aria-label="Size"
+               cFormControl
+               placeholder="Color"
+               [(ngModel)]="config.color"
+               (ngModelChange)="configChanged()"
         />
-    </div>
+    </c-input-group>
+
+    <!--    <div class="form-group">-->
+
+    <!--        <c-input-group class="mb-3">-->
+    <!--            <span cInputGroupText id="sizeInput">Size</span>-->
+    <!--            <input aria-label="Size"-->
+    <!--                   cFormControl-->
+    <!--                   placeholder="Size"-->
+    <!--                   [(ngModel)]="config.size"-->
+    <!--                   (ngModelChange)="configChanged()"-->
+    <!--            />-->
+    <!--        </c-input-group>-->
+    <!--        -->
+    <!--        <label for="sizeInput">Size</label>-->
+    <!--        <input-->
+    <!--            type="number"-->
+    <!--            id="sizeInput"-->
+    <!--            class="form-control"-->
+
+    <!--            placeholder="Enter size"-->
+    <!--        />-->
+    <!--    </div>-->
+
+    <!--    <div class="form-group mt-3">-->
+    <!--        <label for="colourInput">Colour</label>-->
+    <!--        <input-->
+    <!--            type="text"-->
+    <!--            id="colourInput"-->
+    <!--            class="form-control"-->
+    <!--            [(ngModel)]="config.color"-->
+    <!--            (ngModelChange)="configChanged()"-->
+    <!--            placeholder="Enter color"-->
+    <!--        />-->
+    <!--    </div>-->
 </div>
