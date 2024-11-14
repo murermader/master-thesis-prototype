@@ -5,7 +5,7 @@ import {
     ButtonCloseDirective,
     ButtonDirective,
     FormControlDirective,
-    FormLabelDirective,
+    FormLabelDirective, FormSelectDirective, InputGroupComponent, InputGroupTextDirective,
     ModalBodyComponent,
     ModalComponent,
     ModalFooterComponent,
@@ -16,7 +16,7 @@ import { RowResult } from '../../models/RowResult.model';
 import * as GeoJSON from 'geojson';
 import { MapLayer } from '../../models/MapLayer.model';
 import { SingleColorVisualization } from '../visualization/single-color-visualization.model';
-import { AsyncPipe, NgComponentOutlet, NgIf } from '@angular/common';
+import {AsyncPipe, NgComponentOutlet, NgForOf, NgIf} from '@angular/common';
 import isEqual from 'lodash/isEqual';
 import {
     CdkDrag,
@@ -27,6 +27,9 @@ import {
     moveItemInArray,
 } from '@angular/cdk/drag-drop';
 import { getSampleMapLayers } from '../../models/get-sample-maplayers';
+import {FormsModule} from "@angular/forms";
+
+type BaseLayer = { name: string, value: string }
 
 @Component({
     selector: 'app-layers',
@@ -48,20 +51,32 @@ import { getSampleMapLayers } from '../../models/get-sample-maplayers';
         CdkDrag,
         CdkDragPlaceholder,
         CdkDragHandle,
+        InputGroupComponent,
+        InputGroupTextDirective,
+        FormSelectDirective,
+        FormsModule,
+        NgForOf,
     ],
     templateUrl: './layers.component.html',
     styleUrl: './layers.component.scss',
     // changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class LayersComponent implements OnInit {
-    protected baseLayerUrls = [
-        'EMPTY',
-        'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', // OSM
-        'https://{s}.tile.openstreetmap.fr/hot/{z}/{x}/{y}.png', // OSM Hot
-
-        // TODO: Jawg oder so hieß die andere coole map.
-        // 'https://{s}.tile.openstreetmap.fr/hot/{z}/{x}/{y}.png', // OSM Hot
+    protected baseLayers: BaseLayer[] = [
+        {
+            name: 'OSM',
+            value: 'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
+        },
+        {
+            name: 'OSM Hot',
+            value: 'https://{s}.tile.openstreetmap.fr/hot/{z}/{x}/{y}.png',
+        },
+        {
+            name: 'Grey Background',
+            value: 'EMPTY',
+        },
     ];
+    protected selectedBaseLayer: BaseLayer = this.baseLayers[0];
     protected layers: MapLayer[] = [];
     protected renderedLayers: MapLayer[] = [];
     protected isAddLayerModalVisible = false;
@@ -138,6 +153,10 @@ export class LayersComponent implements OnInit {
             this.toggleLayerVisibility(layer);
             this.updateLayerUi();
         }
+    }
+
+    onBaseLayerChange(selectedLayer: BaseLayer): void {
+        this.layerSettings.setBaseLayer(selectedLayer.value);
     }
 
     addLayer() {
