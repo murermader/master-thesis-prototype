@@ -194,6 +194,7 @@ export class MapComponent implements OnInit, AfterViewInit {
 
                 // Add shapes from each layer to array
                 for (const layer of this.layers.slice().reverse()) {
+                    console.log(`Render layer [${layer.name}] with visualization [${layer.visualization.name}]`)
                     points.push(
                         ...layer.data.filter(
                             (d) => d.geometry.type === 'Point',

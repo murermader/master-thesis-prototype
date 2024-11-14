@@ -43,18 +43,18 @@
                     </div>
                 </div>
                 <div class="title">
-                    <span class="layer-name">{{ layer.name }}</span><span class="layer-size"> ({{ layer.data.length }}
-                    )</span>
+                    <span class="layer-name">{{ layer.name }}</span><span class="layer-size"> ({{ layer.data.length }})</span>
                 </div>
                 <div class="config-general">
                     <c-input-group>
-                        <label cInputGroupText for="inputGroupSelect01">
+                        <label cInputGroupText for="layerVisualizationSelect">
                             Visualization
                         </label>
-                        <select cSelect id="inputGroupSelect01">
-                            <option value="1">Single Color</option>
-                            <option value="2">Two</option>
-                            <option value="3">Three</option>
+                        <select [(ngModel)]="layer.visualization" (ngModelChange)="onLayerVisualizationChange(layer, $event)" cSelect id="layerVisualizationSelect">
+                            <option
+                                *ngFor="let visualization of layer.visualizations"
+                                [ngValue]="visualization">{{ visualization.name }}
+                            </option>
                         </select>
                     </c-input-group>
                 </div>

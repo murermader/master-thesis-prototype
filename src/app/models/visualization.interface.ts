@@ -2,6 +2,7 @@ import { VisualizationConfiguration } from './visualization-configuration.interf
 import { Type } from '@angular/core';
 
 export interface Visualization {
+    name: string;
     configurationComponentType: Type<VisualizationConfiguration>;
 
     apply(): void;

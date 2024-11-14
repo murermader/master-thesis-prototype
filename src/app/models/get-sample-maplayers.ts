@@ -1,10 +1,9 @@
-import {MapLayer} from "./MapLayer.model";
-import * as GeoJSON from "geojson";
-import {SingleColorVisualization} from "../components/visualization/single-color-visualization.model";
-import {RowResult} from "./RowResult.model";
+import { MapLayer } from './MapLayer.model';
+import * as GeoJSON from 'geojson';
+import { SingleColorVisualization } from '../components/visualization/single-color-visualization.model';
+import { RowResult } from './RowResult.model';
 
-export function getSampleMapLayers() : MapLayer[] {
-
+export function getSampleMapLayers(): MapLayer[] {
     const data = `
         {
   "type": "FeatureCollection",
@@ -294,17 +293,14 @@ export function getSampleMapLayers() : MapLayer[] {
     const geoJson3: GeoJSON.FeatureCollection = JSON.parse(data3);
 
     return [
-        new MapLayer('a', new SingleColorVisualization('red', 5)).addData(
+        new MapLayer('a').addData(
             geoJson.features.map((f, i) => new RowResult(i, f.geometry)),
         ),
-        new MapLayer('b', new SingleColorVisualization('green', 5)).addData(
+        new MapLayer('b').addData(
             geoJson2.features.map((f, i) => new RowResult(i, f.geometry)),
         ),
-        new MapLayer(
-            'Landkreise',
-            new SingleColorVisualization('pink', 2),
-        ).addData(
+        new MapLayer('Landkreise').addData(
             geoJson3.features.map((f, i) => new RowResult(i, f.geometry)),
         ),
-    ]
+    ];
 }

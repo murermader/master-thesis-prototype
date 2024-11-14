@@ -2,9 +2,11 @@ import { Visualization } from '../../models/visualization.interface';
 import { SingleColorComponent } from './single-color/single-color.component';
 
 export class SingleColorVisualization implements Visualization {
+    name = 'Static Color';
+    configurationComponentType = SingleColorComponent;
+
     color: string; // CSS-color, e.g. HEX
     size: number; // px
-    configurationComponentType = SingleColorComponent;
 
     constructor(color: string, size: number) {
         this.color = color;

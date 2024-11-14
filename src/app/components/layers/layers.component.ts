@@ -5,7 +5,10 @@ import {
     ButtonCloseDirective,
     ButtonDirective,
     FormControlDirective,
-    FormLabelDirective, FormSelectDirective, InputGroupComponent, InputGroupTextDirective,
+    FormLabelDirective,
+    FormSelectDirective,
+    InputGroupComponent,
+    InputGroupTextDirective,
     ModalBodyComponent,
     ModalComponent,
     ModalFooterComponent,
@@ -16,7 +19,7 @@ import { RowResult } from '../../models/RowResult.model';
 import * as GeoJSON from 'geojson';
 import { MapLayer } from '../../models/MapLayer.model';
 import { SingleColorVisualization } from '../visualization/single-color-visualization.model';
-import {AsyncPipe, NgComponentOutlet, NgForOf, NgIf} from '@angular/common';
+import { AsyncPipe, NgComponentOutlet, NgForOf, NgIf } from '@angular/common';
 import isEqual from 'lodash/isEqual';
 import {
     CdkDrag,
@@ -27,9 +30,10 @@ import {
     moveItemInArray,
 } from '@angular/cdk/drag-drop';
 import { getSampleMapLayers } from '../../models/get-sample-maplayers';
-import {FormsModule} from "@angular/forms";
+import { FormsModule } from '@angular/forms';
+import { Visualization } from '../../models/visualization.interface';
 
-type BaseLayer = { name: string, value: string }
+type BaseLayer = { name: string; value: string };
 
 @Component({
     selector: 'app-layers',
@@ -159,6 +163,16 @@ export class LayersComponent implements OnInit {
         this.layerSettings.setBaseLayer(selectedLayer.value);
     }
 
+    onLayerVisualizationChange(
+        selectedLayer: MapLayer,
+        selectedVisualization: Visualization,
+    ) {
+        selectedLayer.updateConfigInjector();
+        this.layerSettings.visualizationConfigurationChanged(
+            selectedLayer.visualization,
+        );
+    }
+
     addLayer() {
         switch (this.addLayerContext) {
             case LayerContext.Results:
@@ -174,7 +188,6 @@ export class LayersComponent implements OnInit {
                 if (this.loadedGeoJsonFile) {
                     const layer = new MapLayer(
                         this.loadedGeoJsonFileName,
-                        new SingleColorVisualization('red', 5),
                     ).addData(
                         this.loadedGeoJsonFile.features.map(
                             (f, i) => new RowResult(i, f.geometry),
