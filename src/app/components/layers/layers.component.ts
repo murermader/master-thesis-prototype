@@ -3,7 +3,7 @@ import { LayerContext } from '../../models/LayerContext.model';
 import { LayerSettingsService } from '../../services/layersettings.service';
 import {
     ButtonCloseDirective,
-    ButtonDirective,
+    ButtonDirective, CardBodyComponent, CardComponent, CardHeaderComponent,
     FormControlDirective,
     FormLabelDirective,
     FormSelectDirective,
@@ -60,6 +60,9 @@ type BaseLayer = { name: string; value: string };
         FormSelectDirective,
         FormsModule,
         NgForOf,
+        CardComponent,
+        CardHeaderComponent,
+        CardBodyComponent,
     ],
     templateUrl: './layers.component.html',
     styleUrl: './layers.component.scss',
@@ -193,6 +196,7 @@ export class LayersComponent implements OnInit {
                             (f, i) => new RowResult(i, f.geometry, f),
                         ),
                     );
+                    console.log('Added GeoJSON layer: ', layer);
                     const newLayers = [
                         ...this.layers.filter((l) => !l.isRemoved),
                         layer,

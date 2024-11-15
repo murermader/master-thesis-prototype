@@ -1,6 +1,12 @@
 <div class="layers-container">
+
     <div class="spacer-top"></div>
-    <span class="top-bottom-label top-label">TOP</span>
+
+    <button (click)="toggleAddLayerModalVisibility()" cButton color="primary" class="mx-5">Add layer...</button>
+
+
+
+<!--    <span class="top-bottom-label top-label">TOP</span>-->
     <div
         *ngIf="this.anyLayersVisible"
         cdkDropList
@@ -10,12 +16,12 @@
         cdkDropListSortingDisabled="false"
     >
         @for (layer of layers; track layer.name) {
-            <div
+            <c-card
                 *ngIf="!layer.isRemoved"
                 cdkDrag
                 class="layer-card shadow-sm"
             >
-                <div class="card-header">
+                <c-card-header>
                     <span>{{ layer.index }}</span>
                     <div cdkDragHandle class="resize-grip">
                         <span></span><span></span><span></span><span></span><span></span><span></span>
@@ -41,66 +47,63 @@
                             </svg>
                         </button>
                     </div>
-                </div>
-                <div class="title">
-                    <span class="layer-name">{{ layer.name }}</span><span class="layer-size"> ({{ layer.data.length }})</span>
-                </div>
-                <div class="config-general">
-                    <c-input-group>
-                        <label cInputGroupText for="layerVisualizationSelect">
-                            Visualization
-                        </label>
-                        <select [(ngModel)]="layer.visualization" (ngModelChange)="onLayerVisualizationChange(layer, $event)" cSelect id="layerVisualizationSelect">
-                            <option
-                                *ngFor="let visualization of layer.visualizations"
-                                [ngValue]="visualization">{{ visualization.name }}
-                            </option>
-                        </select>
-                    </c-input-group>
-                </div>
-                <div class="config-container">
-                    <ng-container *ngIf="layer.visualization.configurationComponentType"
-                                  [ngComponentOutlet]="layer.visualization.configurationComponentType"
-                                  [ngComponentOutletInjector]="layer.injector">
-                    </ng-container>
-                </div>
-            </div>
+                </c-card-header>
+                <c-card-body class="layer-card-body">
+                    <div class="title">
+                        <span class="layer-name">{{ layer.name }}</span><span class="layer-size"> ({{ layer.data.length }})</span>
+                    </div>
+                    <div class="config-general">
+                        <c-input-group>
+                            <label cInputGroupText for="layerVisualizationSelect">
+                                Visualization
+                            </label>
+                            <select [(ngModel)]="layer.visualization" (ngModelChange)="onLayerVisualizationChange(layer, $event)" cSelect id="layerVisualizationSelect">
+                                <option
+                                    *ngFor="let visualization of layer.visualizations"
+                                    [ngValue]="visualization">{{ visualization.name }}
+                                </option>
+                            </select>
+                        </c-input-group>
+                    </div>
+                    <div class="config-container">
+                        <ng-container *ngIf="layer.visualization.configurationComponentType"
+                                      [ngComponentOutlet]="layer.visualization.configurationComponentType"
+                                      [ngComponentOutletInjector]="layer.injector">
+                        </ng-container>
+                    </div>
+                </c-card-body>
+            </c-card>
         }
     </div>
 
-    <div
+    <c-card
         class="layer-card shadow-sm"
     >
-        <div class="title">
-            <span class="layer-name">Base Layer</span>
-        </div>
-        <div class="config-general">
-            <c-input-group>
-                <label cInputGroupText for="baseLayerInputGroup">
-                    Tile Map
-                </label>
-                <select [(ngModel)]="selectedBaseLayer" (ngModelChange)="onBaseLayerChange($event)" cSelect
-                        id="baseLayerInputGroup">
-                    <option
-                        *ngFor="let baseLayer of baseLayers"
-                        [ngValue]="baseLayer">{{ baseLayer.name }}
-                    </option>
-                </select>
-            </c-input-group>
-        </div>
-    </div>
-
-    <span class="top-bottom-label bottom-label">BOTTOM</span>
-    <div class="spacer-bottom"></div>
+        <c-card-header>
+            <span>0</span>
+        </c-card-header>
+        <c-card-body class="layer-card-body">
+            <div class="title">
+                <span class="layer-name">Base Layer</span>
+            </div>
+            <div class="config-general">
+                <c-input-group>
+                    <label cInputGroupText for="baseLayerInputGroup">
+                        Tile Map
+                    </label>
+                    <select [(ngModel)]="selectedBaseLayer" (ngModelChange)="onBaseLayerChange($event)" cSelect
+                            id="baseLayerInputGroup">
+                        <option
+                            *ngFor="let baseLayer of baseLayers"
+                            [ngValue]="baseLayer">{{ baseLayer.name }}
+                        </option>
+                    </select>
+                </c-input-group>
+            </div>
+        </c-card-body>
+    </c-card>
 
     <ng-container>
-        <button (click)="toggleAddLayerModalVisibility()" class="add-layer-button shadow-sm">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
-                <!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
-                <path
-                    d="M256 80c0-17.7-14.3-32-32-32s-32 14.3-32 32l0 144L48 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l144 0 0 144c0 17.7 14.3 32 32 32s32-14.3 32-32l0-144 144 0c17.7 0 32-14.3 32-32s-14.3-32-32-32l-144 0 0-144z"/>
-            </svg>
-        </button>
 
         <c-modal id="add-layer-modal" [visible]="this.isAddLayerModalVisible"
                  (visibleChange)="addLayerModalVisibilityChanged($event)">
