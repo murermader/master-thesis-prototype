@@ -1,5 +1,15 @@
 <div>
     <c-input-group>
+        <span cInputGroupText>Size</span>
+        <input aria-label="Size"
+               cFormControl
+               placeholder="Size"
+               [(ngModel)]="config.size"
+               (ngModelChange)="configChanged()"
+        />
+    </c-input-group>
+
+    <c-input-group>
         <span cInputGroupText>Variable</span>
         <input aria-label="Variable"
                cFormControl

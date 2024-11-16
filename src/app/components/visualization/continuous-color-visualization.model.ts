@@ -14,7 +14,12 @@ export class ContinuousColorVisualization implements Visualization {
     normalizeByArea: boolean = false;
     colorScale?: d3.ScaleSequential<string>;
 
-    constructor(color: string, size: number, fieldName: string, normalizeByArea: boolean) {
+    constructor(
+        color: string,
+        size: number,
+        fieldName: string,
+        normalizeByArea: boolean,
+    ) {
         this.color = color;
         this.size = size;
         this.fieldName = fieldName;
@@ -60,17 +65,28 @@ export class ContinuousColorVisualization implements Visualization {
     }
 
     getValueForAttribute(attr: string, data: RowResult): string | number {
-        switch (attr) {
-            case 'stroke-width':
-                return 1;
-            case 'stroke':
-                return "black";
-            case 'fill-opacity':
-                return 1;
-            case 'fill':
-                return this.colorScale!(
-                    data.getNumberValueFromField(this.fieldName),
-                );
+        if (data.isPoint()) {
+            switch (attr) {
+                case 'r':
+                    return this.size;
+                case 'fill':
+                    return this.colorScale!(
+                        data.getNumberValueFromField(this.fieldName),
+                    );
+            }
+        } else {
+            switch (attr) {
+                case 'stroke-width':
+                    return 1;
+                case 'stroke':
+                    return 'black';
+                case 'fill-opacity':
+                    return 1;
+                case 'fill':
+                    return this.colorScale!(
+                        data.getNumberValueFromField(this.fieldName),
+                    );
+            }
         }
         throw new Error(`Visualization does not support attribute [${attr}]`);
     }

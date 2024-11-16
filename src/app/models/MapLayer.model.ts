@@ -11,7 +11,7 @@ export class MapLayer {
 
     visualizations: Visualization[] = [
         new SingleColorVisualization('green', 2),
-        new ContinuousColorVisualization('red', 0, '', false),
+        new ContinuousColorVisualization('red', 2, '', false),
     ];
 
     visualization: Visualization = this.visualizations[0];

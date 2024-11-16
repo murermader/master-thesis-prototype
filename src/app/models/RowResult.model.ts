@@ -27,8 +27,12 @@ export class RowResult {
         }
     }
 
+    isPoint(){
+        return this.geometry.type == "Point"
+    }
+
     getPoint() {
-        if (this.geometry.type == "Point"){
+        if (this.isPoint()){
             return this.geometry as Point;
         }
         throw new Error("Can only call getPoint() if geometry is actually of type Point!")
