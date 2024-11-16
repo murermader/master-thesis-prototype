@@ -1,12 +1,8 @@
 <div class="layers-container">
-
     <div class="spacer-top"></div>
 
     <button (click)="toggleAddLayerModalVisibility()" cButton color="primary" class="mx-5">Add layer...</button>
 
-
-
-<!--    <span class="top-bottom-label top-label">TOP</span>-->
     <div
         *ngIf="this.anyLayersVisible"
         cdkDropList
@@ -16,6 +12,20 @@
         cdkDropListSortingDisabled="false"
     >
         @for (layer of layers; track layer.name) {
+            <ng-template #dataPopover>
+                <h3 class="popover-header">
+                    Preview data
+                </h3>
+                <div class="popover-body json-viewer-popover-body">
+                    <div *ngIf="Object.keys(layer.data[0].data).length !== 0">
+                        <span class="d-block mb-2">First data point:</span>
+                        <ngx-json-viewer [depth]="0"
+                                         [json]="layer.data[0].data"></ngx-json-viewer>
+                    </div>
+                    <span *ngIf="Object.keys(layer.data[0].data).length === 0">No data</span>
+                </div>
+            </ng-template>
+
             <c-card
                 *ngIf="!layer.isRemoved"
                 cdkDrag
@@ -50,14 +60,20 @@
                 </c-card-header>
                 <c-card-body class="layer-card-body">
                     <div class="title">
-                        <span class="layer-name">{{ layer.name }}</span><span class="layer-size"> ({{ layer.data.length }})</span>
+                        <span class="layer-name">{{ layer.name }}</span><span
+                        class="layer-size"> ({{ layer.data.length }}) </span><span [cPopover]="dataPopover"
+                                                                                   cPopoverPlacement="left"
+                                                                                   [cPopoverTrigger]="'click'"
+                                                                                   class="preview-data">Data...</span>
                     </div>
                     <div class="config-general">
                         <c-input-group>
                             <label cInputGroupText for="layerVisualizationSelect">
                                 Visualization
                             </label>
-                            <select [(ngModel)]="layer.visualization" (ngModelChange)="onLayerVisualizationChange(layer, $event)" cSelect id="layerVisualizationSelect">
+                            <select [(ngModel)]="layer.visualization"
+                                    (ngModelChange)="onLayerVisualizationChange(layer, $event)" cSelect
+                                    id="layerVisualizationSelect">
                                 <option
                                     *ngFor="let visualization of layer.visualizations"
                                     [ngValue]="visualization">{{ visualization.name }}
@@ -103,31 +119,28 @@
         </c-card-body>
     </c-card>
 
-    <ng-container>
-
-        <c-modal id="add-layer-modal" [visible]="this.isAddLayerModalVisible"
-                 (visibleChange)="addLayerModalVisibilityChanged($event)">
-            <c-modal-header>
-                <h5 cModalTitle>Add layer</h5>
-                <button (click)="toggleAddLayerModalVisibility()" cButtonClose></button>
-            </c-modal-header>
-            <c-modal-body>
-                <div>
-                    <label cLabel for="formFile">Upload GeoJSON File</label>
-                    <input
-                        cFormControl
-                        id="formFile"
-                        type="file"
-                        (change)="loadGeoJsonFile($event)"
-                    />
-                </div>
-            </c-modal-body>
-            <c-modal-footer>
-                <button (click)="toggleAddLayerModalVisibility()" cButton color="secondary">
-                    Cancel
-                </button>
-                <button (click)="addLayer()" cButton color="primary">Add</button>
-            </c-modal-footer>
-        </c-modal>
-    </ng-container>
+    <c-modal id="add-layer-modal" [visible]="this.isAddLayerModalVisible"
+             (visibleChange)="addLayerModalVisibilityChanged($event)">
+        <c-modal-header>
+            <h5 cModalTitle>Add layer</h5>
+            <button (click)="toggleAddLayerModalVisibility()" cButtonClose></button>
+        </c-modal-header>
+        <c-modal-body>
+            <div>
+                <label cLabel for="formFile">Upload GeoJSON File</label>
+                <input
+                    cFormControl
+                    id="formFile"
+                    type="file"
+                    (change)="loadGeoJsonFile($event)"
+                />
+            </div>
+        </c-modal-body>
+        <c-modal-footer>
+            <button (click)="toggleAddLayerModalVisibility()" cButton color="secondary">
+                Cancel
+            </button>
+            <button (click)="addLayer()" cButton color="primary">Add</button>
+        </c-modal-footer>
+    </c-modal>
 </div>

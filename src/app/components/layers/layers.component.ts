@@ -3,7 +3,10 @@ import { LayerContext } from '../../models/LayerContext.model';
 import { LayerSettingsService } from '../../services/layersettings.service';
 import {
     ButtonCloseDirective,
-    ButtonDirective, CardBodyComponent, CardComponent, CardHeaderComponent,
+    ButtonDirective,
+    CardBodyComponent,
+    CardComponent,
+    CardHeaderComponent,
     FormControlDirective,
     FormLabelDirective,
     FormSelectDirective,
@@ -14,11 +17,11 @@ import {
     ModalFooterComponent,
     ModalHeaderComponent,
     ModalTitleDirective,
+    PopoverDirective,
 } from '@coreui/angular';
 import { RowResult } from '../../models/RowResult.model';
 import * as GeoJSON from 'geojson';
 import { MapLayer } from '../../models/MapLayer.model';
-import { SingleColorVisualization } from '../visualization/single-color-visualization.model';
 import { AsyncPipe, NgComponentOutlet, NgForOf, NgIf } from '@angular/common';
 import isEqual from 'lodash/isEqual';
 import {
@@ -32,6 +35,7 @@ import {
 import { getSampleMapLayers } from '../../models/get-sample-maplayers';
 import { FormsModule } from '@angular/forms';
 import { Visualization } from '../../models/visualization.interface';
+import { NgxJsonViewerModule } from 'ngx-json-viewer';
 
 type BaseLayer = { name: string; value: string };
 
@@ -63,6 +67,8 @@ type BaseLayer = { name: string; value: string };
         CardComponent,
         CardHeaderComponent,
         CardBodyComponent,
+        PopoverDirective,
+        NgxJsonViewerModule,
     ],
     templateUrl: './layers.component.html',
     styleUrl: './layers.component.scss',
@@ -193,13 +199,18 @@ export class LayersComponent implements OnInit {
                         this.loadedGeoJsonFileName,
                     ).addData(
                         this.loadedGeoJsonFile.features.map(
-                            (f, i) => new RowResult(i, f.geometry, f),
+                            (f, i) =>
+                                new RowResult(
+                                    i,
+                                    f.geometry,
+                                    f.properties ? f.properties : {},
+                                ),
                         ),
                     );
                     console.log('Added GeoJSON layer: ', layer);
                     const newLayers = [
-                        ...this.layers.filter((l) => !l.isRemoved),
                         layer,
+                        ...this.layers.filter((l) => !l.isRemoved),
                     ].map((v, i) => {
                         v.index = i + 1;
                         return v;
@@ -247,4 +258,6 @@ export class LayersComponent implements OnInit {
         this.anyLayersVisible =
             this.layers.filter((d) => !d.isRemoved).length > 0;
     }
+
+    protected readonly Object = Object;
 }

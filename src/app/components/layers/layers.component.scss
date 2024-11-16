@@ -152,12 +152,27 @@
     }
 
     & .title {
-        text-transform: uppercase;
-        letter-spacing: 0.5px;
         word-break: break-all;
 
         & > .layer-name {
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
             font-weight: bold;
+        }
+
+        & > .layer-size {
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        & > .preview-data {
+            all: unset;
+            color: #4645ab;
+            cursor: pointer;
+            user-select: none;
+            &:hover {
+                text-decoration: underline;
+            }
         }
     }
 
@@ -175,3 +190,9 @@
     background-color: #e9f5ff;
     height: 50px;
 }
+
+.json-viewer-popover-body {
+    max-height: 40vh;
+    overflow-y: auto;
+}
+
