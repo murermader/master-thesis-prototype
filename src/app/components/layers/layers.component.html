@@ -63,7 +63,8 @@
                         <span class="layer-name">{{ layer.name }}</span><span [cPopover]="dataPopover"
                                                                               cPopoverPlacement="left"
                                                                               [cPopoverTrigger]="'click'"
-                                                                              class="preview-data">({{ layer.data.length }}) </span>
+                                                                              class="preview-data">({{ layer.data.length }}
+                        ) </span>
                     </div>
                     <div class="config-sections">
                         <app-config-section [title]="layer.pointShapeVisualization.name"
@@ -72,6 +73,8 @@
                                             [config]="layer.areaShapeVisualization"></app-config-section>
                         <app-config-section [title]="layer.colorVisualization.name"
                                             [config]="layer.colorVisualization"></app-config-section>
+                        <app-config-section [title]="layer.labelVisualization.name"
+                                            [config]="layer.labelVisualization"></app-config-section>
                     </div>
                 </c-card-body>
             </c-card>

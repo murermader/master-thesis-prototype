@@ -3,6 +3,7 @@ import { RowResult } from './RowResult.model';
 import { PointShapeVisualization } from '../components/visualization/point-shape-visualization.model';
 import { AreaShapeVisualization } from '../components/visualization/area-shape-visualization.model';
 import { ColorVisualization } from '../components/visualization/color-visualization-model';
+import {LabelVisualization} from "../components/visualization/label-visualization-model";
 
 export class MapLayer {
     name: string;
@@ -11,6 +12,7 @@ export class MapLayer {
     pointShapeVisualization: Visualization = new PointShapeVisualization(3);
     areaShapeVisualization: Visualization = new AreaShapeVisualization(2);
     colorVisualization: Visualization = new ColorVisualization('red');
+    labelVisualization: Visualization = new LabelVisualization();
 
     // Computed (Not used in copy)
     isActive: boolean = true;
@@ -31,6 +33,7 @@ export class MapLayer {
         copy.pointShapeVisualization = this.pointShapeVisualization.copy();
         copy.areaShapeVisualization = this.areaShapeVisualization.copy();
         copy.colorVisualization = this.colorVisualization.copy();
+        copy.labelVisualization = this.labelVisualization.copy();
         return copy;
     }
 
