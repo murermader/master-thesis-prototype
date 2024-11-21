@@ -3,7 +3,7 @@ import { RowResult } from '../../models/RowResult.model';
 import {EmptyComponent} from "./empty/empty.component";
 
 export class AreaShapeVisualization implements Visualization {
-    name = 'Shape: Area';
+    name = 'Area Shape';
     // TODO: Change to own component
     configurationComponentType = EmptyComponent;
 

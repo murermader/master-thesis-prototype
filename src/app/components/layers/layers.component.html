@@ -67,11 +67,11 @@
                                                                                    class="preview-data">Data...</span>
                     </div>
                     <div class="config-sections">
-                        <app-config-section [title]="'Point shape'"
+                        <app-config-section [title]="layer.pointShapeVisualization.name"
                                             [config]="layer.pointShapeVisualization"></app-config-section>
-                        <app-config-section [title]="'Area shape'"
+                        <app-config-section [title]="layer.areaShapeVisualization.name"
                                             [config]="layer.areaShapeVisualization"></app-config-section>
-                        <app-config-section [title]="'Color'" [config]="layer.colorVisualization"></app-config-section>
+                        <app-config-section [title]="layer.colorVisualization.name" [config]="layer.colorVisualization"></app-config-section>
                     </div>
                 </c-card-body>
             </c-card>

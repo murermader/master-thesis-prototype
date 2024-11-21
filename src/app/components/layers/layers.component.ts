@@ -136,7 +136,7 @@ export class LayersComponent implements OnInit {
             this.updateLayers(this.layers);
         });
 
-        // this.updateLayers(getSampleMapLayers());
+        this.updateLayers(getSampleMapLayers());
     }
 
     deepCopyLayers(layers: MapLayer[]) {

@@ -2,7 +2,6 @@
     all: unset;
     box-sizing: border-box;
     width: 100%;
-    cursor: pointer;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -12,13 +11,18 @@
     //background: #F8F8F9;
     transition: all 100ms ease-in-out;
 
-    //&:hover {
-    //    background: #f0f0f0;
-    //}
+    &:hover {
+        color: #5856D5;
+
+        & > svg {
+            fill: #5856D5;
+        }
+    }
 
     & > svg {
-        width: 10px;
-        fill: black;
+        width: 20px;
+        height: 20px;
+        fill: #BBBBBB;
     }
 }
 

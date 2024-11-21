@@ -13,6 +13,7 @@ import {
 } from '@coreui/angular';
 import { ColorVisualization } from '../color-visualization-model';
 import { NgForOf, NgIf } from '@angular/common';
+import {PointShapeVisualization} from "../point-shape-visualization.model";
 
 @Component({
     selector: 'app-single-color',
@@ -29,12 +30,12 @@ import { NgForOf, NgIf } from '@angular/common';
         FormCheckInputDirective,
         FormCheckLabelDirective,
     ],
-    templateUrl: './shape-point.component.html',
-    styleUrl: './shape-point.component.css',
+    templateUrl: './point-shape.component.html',
+    styleUrl: './point-shape.component.css',
 })
-export class ShapePointComponent implements VisualizationConfiguration {
+export class PointShapeComponent implements VisualizationConfiguration {
     constructor(
-        @Inject('config') protected config: ColorVisualization,
+        @Inject('config') protected config: PointShapeVisualization,
         private layerSettings: LayerSettingsService,
     ) {
         //

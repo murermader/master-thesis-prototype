@@ -1,5 +1,15 @@
 <div>
     <c-input-group>
+        <span cInputGroupText>Size</span>
+        <input aria-label="Radius"
+               cFormControl
+               placeholder="r"
+               [(ngModel)]="config.size"
+               (ngModelChange)="configChanged()"
+        />
+    </c-input-group>
+
+    <c-input-group>
         <label cInputGroupText for="layerVisualizationSelect">
             Mode
         </label>
@@ -14,17 +24,7 @@
         </select>
     </c-input-group>
 
-    <c-input-group *ngIf="config.selectedMode == 'Static'">
-        <span cInputGroupText>Color</span>
-        <input aria-label="Color"
-               cFormControl
-               placeholder="Color"
-               [(ngModel)]="config.color"
-               (ngModelChange)="configChanged()"
-        />
-    </c-input-group>
-
-    <c-input-group *ngIf="config.selectedMode == 'Gradient'">
+    <c-input-group *ngIf="config.selectedMode == 'Icon'">
         <span cInputGroupText>Variable</span>
         <input aria-label="Variable"
                cFormControl
@@ -33,11 +33,5 @@
                (ngModelChange)="configChanged()"
         />
     </c-input-group>
-
-    <c-form-check *ngIf="config.selectedMode == 'Gradient'">
-        <input cFormCheckInput [(ngModel)]="config.normalizeByArea" (ngModelChange)="configChanged()" id="normalize"
-               type="checkbox"/>
-        <label cFormCheckLabel for="normalize">Normalize value by area</label>
-    </c-form-check>
 
 </div>
