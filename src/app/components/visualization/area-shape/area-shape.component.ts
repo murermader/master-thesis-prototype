@@ -11,12 +11,11 @@ import {
     InputGroupComponent,
     InputGroupTextDirective,
 } from '@coreui/angular';
-import { ColorVisualization } from '../color-visualization-model';
 import { NgForOf, NgIf } from '@angular/common';
-import {PointShapeVisualization} from "../point-shape-visualization.model";
+import {AreaShapeVisualization} from "../area-shape-visualization.model";
 
 @Component({
-    selector: 'app-point-shape',
+    selector: 'app-area-shape',
     standalone: true,
     imports: [
         FormsModule,
@@ -30,12 +29,12 @@ import {PointShapeVisualization} from "../point-shape-visualization.model";
         FormCheckInputDirective,
         FormCheckLabelDirective,
     ],
-    templateUrl: './point-shape.component.html',
-    styleUrl: './point-shape.component.css',
+    templateUrl: './area-shape.component.html',
+    styleUrl: './area-shape.component.css',
 })
-export class PointShapeComponent implements VisualizationConfiguration {
+export class AreaShapeComponent implements VisualizationConfiguration {
     constructor(
-        @Inject('config') protected config: PointShapeVisualization,
+        @Inject('config') protected config: AreaShapeVisualization,
         private layerSettings: LayerSettingsService,
     ) {
         //

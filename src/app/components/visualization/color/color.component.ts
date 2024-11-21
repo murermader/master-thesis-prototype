@@ -15,7 +15,7 @@ import { ColorVisualization } from '../color-visualization-model';
 import { NgForOf, NgIf } from '@angular/common';
 
 @Component({
-    selector: 'app-single-color',
+    selector: 'app-color',
     standalone: true,
     imports: [
         FormsModule,

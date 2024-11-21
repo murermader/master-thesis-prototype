@@ -22,7 +22,7 @@
                         <ngx-json-viewer [depth]="0"
                                          [json]="layer.data[0].data"></ngx-json-viewer>
                     </div>
-                    <span *ngIf="Object.keys(layer.data[0].data).length === 0">No data</span>
+                    <span *ngIf="Object.keys(layer.data[0].data).length === 0">No data attached to geometries</span>
                 </div>
             </ng-template>
 
@@ -60,18 +60,18 @@
                 </c-card-header>
                 <c-card-body class="layer-card-body">
                     <div class="title">
-                        <span class="layer-name">{{ layer.name }}</span><span
-                        class="layer-size"> ({{ layer.data.length }}) </span><span [cPopover]="dataPopover"
-                                                                                   cPopoverPlacement="left"
-                                                                                   [cPopoverTrigger]="'click'"
-                                                                                   class="preview-data">Data...</span>
+                        <span class="layer-name">{{ layer.name }}</span><span [cPopover]="dataPopover"
+                                                                              cPopoverPlacement="left"
+                                                                              [cPopoverTrigger]="'click'"
+                                                                              class="preview-data">({{ layer.data.length }}) </span>
                     </div>
                     <div class="config-sections">
                         <app-config-section [title]="layer.pointShapeVisualization.name"
                                             [config]="layer.pointShapeVisualization"></app-config-section>
                         <app-config-section [title]="layer.areaShapeVisualization.name"
                                             [config]="layer.areaShapeVisualization"></app-config-section>
-                        <app-config-section [title]="layer.colorVisualization.name" [config]="layer.colorVisualization"></app-config-section>
+                        <app-config-section [title]="layer.colorVisualization.name"
+                                            [config]="layer.colorVisualization"></app-config-section>
                     </div>
                 </c-card-body>
             </c-card>

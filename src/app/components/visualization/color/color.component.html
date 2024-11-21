@@ -24,6 +24,18 @@
         />
     </c-input-group>
 
+    <c-input-group>
+        <span cInputGroupText>Area Fill Opacity</span>
+        <input aria-label="Area Fill Opacity"
+               cFormControl
+               placeholder="0.25"
+               [min]="0"
+               [max]="1"
+               [(ngModel)]="config.fillOpacity"
+               (ngModelChange)="configChanged()"
+        />
+    </c-input-group>
+
     <c-input-group *ngIf="config.selectedMode == 'Gradient'">
         <span cInputGroupText>Variable</span>
         <input aria-label="Variable"
