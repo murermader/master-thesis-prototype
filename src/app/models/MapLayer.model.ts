@@ -10,7 +10,7 @@ export class MapLayer {
     data: RowResult[] = [];
 
     pointShapeVisualization: Visualization = new PointShapeVisualization(3);
-    areaShapeVisualization: Visualization = new AreaShapeVisualization(2);
+    areaShapeVisualization: Visualization = new AreaShapeVisualization(1);
     colorVisualization: Visualization = new ColorVisualization('red');
     labelVisualization: Visualization = new LabelVisualization();
 

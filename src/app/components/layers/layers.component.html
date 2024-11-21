@@ -60,11 +60,11 @@
                 </c-card-header>
                 <c-card-body class="layer-card-body">
                     <div class="title">
-                        <span class="layer-name">{{ layer.name }}</span><span [cPopover]="dataPopover"
-                                                                              cPopoverPlacement="left"
-                                                                              [cPopoverTrigger]="'click'"
-                                                                              class="preview-data">({{ layer.data.length }}
-                        ) </span>
+                        <span class="layer-name">{{ layer.name }}</span><!-- prettier-ignore --><span
+                        [cPopover]="dataPopover"
+                        cPopoverPlacement="left"
+                        [cPopoverTrigger]="'click'"
+                        class="preview-data">({{ layer.data.length }})</span>
                     </div>
                     <div class="config-sections">
                         <app-config-section [title]="layer.pointShapeVisualization.name"

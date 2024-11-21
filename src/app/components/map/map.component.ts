@@ -216,6 +216,7 @@ export class MapComponent implements OnInit, AfterViewInit {
                 }
 
                 // Render all points
+                // TODO: Circles are always on the bottom this way...
                 console.log('Create Points: ', points);
                 this.circles = this.createPoints(points);
 
