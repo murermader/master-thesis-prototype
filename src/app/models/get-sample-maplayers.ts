@@ -1,6 +1,5 @@
 import { MapLayer } from './MapLayer.model';
 import * as GeoJSON from 'geojson';
-import { SingleColorVisualization } from '../components/visualization/single-color-visualization.model';
 import { RowResult } from './RowResult.model';
 
 export function getSampleMapLayers(): MapLayer[] {

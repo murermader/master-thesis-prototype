@@ -66,26 +66,12 @@
                                                                                    [cPopoverTrigger]="'click'"
                                                                                    class="preview-data">Data...</span>
                     </div>
-                    <div class="config-general">
-                        <c-input-group>
-                            <label cInputGroupText for="layerVisualizationSelect">
-                                Visualization
-                            </label>
-                            <select [(ngModel)]="layer.visualization"
-                                    (ngModelChange)="onLayerVisualizationChange(layer, $event)" cSelect
-                                    id="layerVisualizationSelect">
-                                <option
-                                    *ngFor="let visualization of layer.visualizations"
-                                    [ngValue]="visualization">{{ visualization.name }}
-                                </option>
-                            </select>
-                        </c-input-group>
-                    </div>
-                    <div class="config-container">
-                        <ng-container *ngIf="layer.visualization.configurationComponentType"
-                                      [ngComponentOutlet]="layer.visualization.configurationComponentType"
-                                      [ngComponentOutletInjector]="layer.injector">
-                        </ng-container>
+                    <div class="config-sections">
+                        <app-config-section [title]="'Point shape'"
+                                            [config]="layer.pointShapeVisualization"></app-config-section>
+                        <app-config-section [title]="'Area shape'"
+                                            [config]="layer.areaShapeVisualization"></app-config-section>
+                        <app-config-section [title]="'Color'" [config]="layer.colorVisualization"></app-config-section>
                     </div>
                 </c-card-body>
             </c-card>

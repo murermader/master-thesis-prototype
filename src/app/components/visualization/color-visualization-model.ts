@@ -1,32 +1,35 @@
 import { Visualization } from '../../models/visualization.interface';
-import { ContinuousColorComponent } from './continuous-color/continuous-color.component';
 import { RowResult } from '../../models/RowResult.model';
 import * as d3 from 'd3';
 import * as turf from '@turf/turf';
+import { ColorComponent } from './color/color.component';
 
-export class ContinuousColorVisualization implements Visualization {
-    name = 'Continuous Color';
-    configurationComponentType = ContinuousColorComponent;
+export class ColorVisualization implements Visualization {
+    name = 'Color';
+    configurationComponentType = ColorComponent;
 
+    modes: string[] = ['Static', 'Gradient'];
+    selectedMode: string = this.modes[0];
+
+    // Static
     color: string;
-    size: number;
-    fieldName: string;
+    fillOpacity: number = 0.25;
+
+    // Gradient
+    fieldName: string = '';
     normalizeByArea: boolean = false;
     colorScale?: d3.ScaleSequential<string>;
 
-    constructor(
-        color: string,
-        size: number,
-        fieldName: string,
-        normalizeByArea: boolean,
-    ) {
+    constructor(color: string) {
         this.color = color;
-        this.size = size;
-        this.fieldName = fieldName;
-        this.normalizeByArea = normalizeByArea;
     }
 
     init(data: RowResult[]): void {
+        if (this.selectedMode === this.modes[0]) {
+            // Nothing to do
+            return;
+        }
+
         const values = this.normalizeByArea
             ? data
                   .map((d) => [
@@ -56,38 +59,37 @@ export class ContinuousColorVisualization implements Visualization {
     }
 
     copy(): Visualization {
-        return new ContinuousColorVisualization(
-            this.color,
-            this.size,
-            this.fieldName,
-            this.normalizeByArea,
-        );
+        const copy = new ColorVisualization(this.color);
+        copy.selectedMode = this.selectedMode;
+        copy.fillOpacity = this.fillOpacity;
+        copy.fieldName = this.fieldName;
+        copy.normalizeByArea = this.normalizeByArea;
+        return copy;
     }
 
     getValueForAttribute(attr: string, data: RowResult): string | number {
-        if (data.isPoint()) {
-            switch (attr) {
-                case 'r':
-                    return this.size;
-                case 'fill':
-                    return this.colorScale!(
-                        data.getNumberValueFromField(this.fieldName),
-                    );
-            }
-        } else {
-            switch (attr) {
-                case 'stroke-width':
-                    return 1;
-                case 'stroke':
-                    return 'black';
-                case 'fill-opacity':
-                    return 1;
-                case 'fill':
-                    return this.colorScale!(
-                        data.getNumberValueFromField(this.fieldName),
-                    );
-            }
+        switch (attr) {
+            case 'stroke':
+                switch (this.selectedMode) {
+                    case 'Static':
+                        return this.color;
+                    case 'Gradient':
+                        return 'black';
+                }
+                return this.color;
+            case 'fill-opacity':
+                return this.fillOpacity;
+            case 'fill':
+                switch (this.selectedMode) {
+                    case 'Static':
+                        return this.color;
+                    case 'Gradient':
+                        return this.colorScale!(
+                            data.getNumberValueFromField(this.fieldName),
+                        );
+                }
         }
+
         throw new Error(`Visualization does not support attribute [${attr}]`);
     }
 

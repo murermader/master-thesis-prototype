@@ -36,6 +36,7 @@ import { getSampleMapLayers } from '../../models/get-sample-maplayers';
 import { FormsModule } from '@angular/forms';
 import { Visualization } from '../../models/visualization.interface';
 import { NgxJsonViewerModule } from 'ngx-json-viewer';
+import {ConfigSectionComponent} from "../config-section/config-section.component";
 
 type BaseLayer = { name: string; value: string };
 
@@ -69,6 +70,7 @@ type BaseLayer = { name: string; value: string };
         CardBodyComponent,
         PopoverDirective,
         NgxJsonViewerModule,
+        ConfigSectionComponent,
     ],
     templateUrl: './layers.component.html',
     styleUrl: './layers.component.scss',
@@ -172,15 +174,15 @@ export class LayersComponent implements OnInit {
         this.layerSettings.setBaseLayer(selectedLayer.value);
     }
 
-    onLayerVisualizationChange(
-        selectedLayer: MapLayer,
-        selectedVisualization: Visualization,
-    ) {
-        selectedLayer.updateConfigInjector();
-        this.layerSettings.visualizationConfigurationChanged(
-            selectedLayer.visualization,
-        );
-    }
+    // onLayerVisualizationChange(
+    //     selectedLayer: MapLayer,
+    //     selectedVisualization: Visualization,
+    // ) {
+    //     selectedLayer.updateConfigInjector();
+    //     this.layerSettings.visualizationConfigurationChanged(
+    //         selectedLayer.visualization,
+    //     );
+    // }
 
     addLayer() {
         switch (this.addLayerContext) {

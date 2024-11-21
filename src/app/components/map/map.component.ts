@@ -195,9 +195,14 @@ export class MapComponent implements OnInit, AfterViewInit {
                 // Add shapes from each layer to array
                 for (const layer of this.layers.slice().reverse()) {
                     console.log(
-                        `Render layer [${layer.name}] with visualization [${layer.visualization.name}]. Initialize...`,
+                        `Render layer [${layer.name}]. Initialize...`,
                     );
-                    layer.visualization.init(layer.data);
+
+                    // Initialize all configs
+                    layer.pointShapeVisualization.init(layer.data);
+                    layer.areaShapeVisualization.init(layer.data);
+                    layer.colorVisualization.init(layer.data);
+
                     points.push(
                         ...layer.data.filter(
                             (d) => d.geometry.type === 'Point',
@@ -238,10 +243,10 @@ export class MapComponent implements OnInit, AfterViewInit {
             .attr('layer-name', (d) => d.layer!.name)
             .attr('layer-index', (d) => d.layer!.index.toString())
             .attr('r', (d) =>
-                d.layer!.visualization.getValueForAttribute('r', d),
+                d.layer!.pointShapeVisualization.getValueForAttribute('r', d),
             )
             .attr('fill', (d) =>
-                d.layer!.visualization.getValueForAttribute('fill', d),
+                d.layer!.colorVisualization.getValueForAttribute('fill', d),
             )
             .each((d) => {
                 const layerPoint = this.map.latLngToLayerPoint([
@@ -269,16 +274,16 @@ export class MapComponent implements OnInit, AfterViewInit {
             .attr('layer-index', (d) => d.layer!.index.toString())
             .attr('d', (d) => this.pathGenerator(d.geometry))
             .attr('stroke-width', (d) =>
-                d.layer!.visualization.getValueForAttribute('stroke-width', d),
+                d.layer!.areaShapeVisualization.getValueForAttribute('stroke-width', d),
             )
             .attr('stroke', (d) =>
-                d.layer!.visualization.getValueForAttribute('stroke', d),
+                d.layer!.colorVisualization.getValueForAttribute('stroke', d),
             )
             .attr('fill', (d) =>
-                d.layer!.visualization.getValueForAttribute('fill', d),
+                d.layer!.colorVisualization.getValueForAttribute('fill', d),
             )
             .attr('fill-opacity', (d) =>
-                d.layer!.visualization.getValueForAttribute('fill-opacity', d),
+                d.layer!.colorVisualization.getValueForAttribute('fill-opacity', d),
             )
     }
 

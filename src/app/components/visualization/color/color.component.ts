@@ -7,31 +7,38 @@ import {
     FormCheckInputDirective,
     FormCheckLabelDirective,
     FormControlDirective,
+    FormSelectDirective,
     InputGroupComponent,
     InputGroupTextDirective,
 } from '@coreui/angular';
-import { ContinuousColorVisualization } from '../continuous-color-visualization.model';
+import { ColorVisualization } from '../color-visualization-model';
+import { NgForOf, NgIf } from '@angular/common';
 
 @Component({
-    selector: 'app-continuous-color',
+    selector: 'app-single-color',
     standalone: true,
     imports: [
         FormsModule,
         InputGroupComponent,
         InputGroupTextDirective,
         FormControlDirective,
+        FormSelectDirective,
+        NgForOf,
+        NgIf,
         FormCheckComponent,
         FormCheckInputDirective,
         FormCheckLabelDirective,
     ],
-    templateUrl: './continuous-color.component.html',
-    styleUrl: './continuous-color.component.css',
+    templateUrl: './color.component.html',
+    styleUrl: './color.component.css',
 })
-export class ContinuousColorComponent implements VisualizationConfiguration {
+export class ColorComponent implements VisualizationConfiguration {
     constructor(
-        @Inject('config') protected config: ContinuousColorVisualization,
+        @Inject('config') protected config: ColorVisualization,
         private layerSettings: LayerSettingsService,
-    ) {}
+    ) {
+        //
+    }
 
     configChanged() {
         this.layerSettings.visualizationConfigurationChanged(this.config);
