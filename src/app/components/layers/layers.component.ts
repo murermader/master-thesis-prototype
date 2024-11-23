@@ -12,6 +12,8 @@ import {
     FormSelectDirective,
     InputGroupComponent,
     InputGroupTextDirective,
+    ListGroupDirective,
+    ListGroupItemDirective,
     ModalBodyComponent,
     ModalComponent,
     ModalFooterComponent,
@@ -32,11 +34,9 @@ import {
     CdkDropList,
     moveItemInArray,
 } from '@angular/cdk/drag-drop';
-import { getSampleMapLayers } from '../../models/get-sample-maplayers';
 import { FormsModule } from '@angular/forms';
-import { Visualization } from '../../models/visualization.interface';
 import { NgxJsonViewerModule } from 'ngx-json-viewer';
-import {ConfigSectionComponent} from "../config-section/config-section.component";
+import { ConfigSectionComponent } from '../config-section/config-section.component';
 
 type BaseLayer = { name: string; value: string };
 
@@ -71,6 +71,8 @@ type BaseLayer = { name: string; value: string };
         PopoverDirective,
         NgxJsonViewerModule,
         ConfigSectionComponent,
+        ListGroupDirective,
+        ListGroupItemDirective,
     ],
     templateUrl: './layers.component.html',
     styleUrl: './layers.component.scss',
@@ -97,8 +99,20 @@ export class LayersComponent implements OnInit {
     protected isAddLayerModalVisible = false;
     protected loadedGeoJsonFile?: GeoJSON.FeatureCollection = undefined;
     protected loadedGeoJsonFileName: string = '';
-    protected addLayerContext: LayerContext = LayerContext.External;
     protected anyLayersVisible = false;
+    protected addLayerModes: LayerContext[] = [
+        LayerContext.Results,
+        LayerContext.Query,
+        LayerContext.DB,
+        LayerContext.External
+    ];
+    protected addLayerMode: LayerContext = LayerContext.External;
+    protected polyphenyDatasets = [
+        'Geneaology',
+        'Basel traffic',
+        'Swiss weather',
+    ];
+    protected selectedPolyphenyDataset = '';
 
     constructor(
         protected layerSettings: LayerSettingsService,
@@ -185,15 +199,11 @@ export class LayersComponent implements OnInit {
     // }
 
     addLayer() {
-        switch (this.addLayerContext) {
-            case LayerContext.Results:
-                alert('TODO');
-                break;
+        switch (this.addLayerMode) {
             case LayerContext.Query:
-                alert('TODO');
-                break;
+            case LayerContext.Results:
             case LayerContext.DB:
-                alert('TODO');
+                alert(`TODO: Add data from [${this.addLayerMode}]`);
                 break;
             case LayerContext.External:
                 if (this.loadedGeoJsonFile) {
@@ -262,4 +272,5 @@ export class LayersComponent implements OnInit {
     }
 
     protected readonly Object = Object;
+    protected readonly LayerContext = LayerContext;
 }

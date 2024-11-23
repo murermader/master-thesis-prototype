@@ -1,6 +1,6 @@
 export enum LayerContext {
-    Results = "results",
-    Query = "query",
-    DB = "db",
-    External = "external"
+    Results = "Results",
+    Query = "Query",
+    DB = "Polypheny",
+    External = "External file (GeoJSON)"
 }

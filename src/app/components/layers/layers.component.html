@@ -115,14 +115,52 @@
             <button (click)="toggleAddLayerModalVisibility()" cButtonClose></button>
         </c-modal-header>
         <c-modal-body>
-            <div>
-                <label cLabel for="formFile">Upload GeoJSON File</label>
-                <input
-                    cFormControl
-                    id="formFile"
-                    type="file"
-                    (change)="loadGeoJsonFile($event)"
-                />
+            <div class="add-layer-modal-body">
+
+                <c-input-group>
+                    <label cInputGroupText for="layerVisualizationSelect">
+                        From
+                    </label>
+                    <select [(ngModel)]="addLayerMode"
+                            cSelect
+                            id="layerVisualizationSelect">
+                        <option
+                            *ngFor="let mode of addLayerModes"
+                            [ngValue]="mode">{{ mode }}
+                        </option>
+                    </select>
+                </c-input-group>
+
+                <div *ngIf="addLayerMode === LayerContext.External">
+                    <span>TODO</span>
+                </div>
+
+                <div *ngIf="addLayerMode === LayerContext.Query">
+                    <span>TODO</span>
+                </div>
+
+                <div *ngIf="addLayerMode === LayerContext.DB">
+                    <span class="mb-1">Select which dataset will be loaded</span>
+                    <div cListGroup>
+                        <button
+                            cListGroupItem
+                            (click)="selectedPolyphenyDataset = dataset"
+                            [active]="dataset === selectedPolyphenyDataset"
+                            *ngFor="let dataset of polyphenyDatasets">{{ dataset }}
+                        </button>
+                    </div>
+                </div>
+
+                <div *ngIf="addLayerMode === LayerContext.External">
+                    <label cLabel for="formFile">Upload GeoJSON File</label>
+                    <input
+                        cFormControl
+                        id="formFile"
+                        type="file"
+                        (change)="loadGeoJsonFile($event)"
+                    />
+                </div>
+
             </div>
         </c-modal-body>
         <c-modal-footer>
