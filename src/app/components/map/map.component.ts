@@ -3,7 +3,6 @@ import * as d3 from 'd3';
 import { GeoPath, GeoPermissibleObjects } from 'd3';
 import * as d3Geo from 'd3-geo';
 import * as L from 'leaflet';
-import 'leaflet/dist/leaflet.css';
 import { LayerSettingsService } from '../../services/layersettings.service';
 import { MapLayer } from '../../models/MapLayer.model';
 import { RowResult } from '../../models/RowResult.model';
