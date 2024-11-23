@@ -108,12 +108,12 @@ export class LayersComponent implements OnInit {
         LayerContext.External,
     ];
     protected addLayerMode: LayerContext = LayerContext.External;
-    protected polyphenyDatasets = [
-        'Genealogy (100)',
-        'Landkreise',
-        // 'Basel traffic',
-        // 'Swiss weather',
-    ];
+    protected datasetToUrl = new Map<string, string>([
+        ['Genealogy (100, data)', "gedcom_coordinates_100_data.geojson"],
+        ['Genealogy (Full, no data)', "gedcom_coordinates_full.geojson"],
+        ['Landkreise', "landkreise_simplify200.geojson"]
+    ]);
+    protected polyphenyDatasets = Array.from(this.datasetToUrl.keys())
     protected selectedPolyphenyDataset = '';
 
     constructor(
@@ -227,39 +227,24 @@ export class LayersComponent implements OnInit {
             case LayerContext.Query:
             case LayerContext.Results:
             case LayerContext.DB:
-                if (this.selectedPolyphenyDataset == 'Genealogy (100)') {
-                    const geojson = await this.fetchGeoJsonFile(
-                        'assets/gedcom_coordinates_100_data.geojson',
-                    );
-                    const layer = new MapLayer('Genealogy').addData(
-                        geojson.features.map(
-                            (f, i) =>
-                                new RowResult(
-                                    i,
-                                    f.geometry,
-                                    f.properties ? f.properties : {},
-                                ),
-                        ),
-                    );
-                    this.addLayerInternal(layer);
-                } else if (this.selectedPolyphenyDataset == 'Landkreise') {
-                    const geojson = await this.fetchGeoJsonFile(
-                        'assets/landkreise_simplify200.geojson',
-                    );
-                    const layer = new MapLayer('Landkreise (D)').addData(
-                        geojson.features.map(
-                            (f, i) =>
-                                new RowResult(
-                                    i,
-                                    f.geometry,
-                                    f.properties ? f.properties : {},
-                                ),
-                        ),
-                    );
-                    this.addLayerInternal(layer);
-                } else {
-                    alert(`TODO: Add data from [${this.addLayerMode}]`);
+                if (!this.selectedPolyphenyDataset){
+                    break
                 }
+                const url = `assets/${this.datasetToUrl.get(this.selectedPolyphenyDataset)}`;
+                const geojson = await this.fetchGeoJsonFile(url);
+                const layer = new MapLayer(
+                    this.selectedPolyphenyDataset,
+                ).addData(
+                    geojson.features.map(
+                        (f, i) =>
+                            new RowResult(
+                                i,
+                                f.geometry,
+                                f.properties ? f.properties : {},
+                            ),
+                    ),
+                );
+                this.addLayerInternal(layer);
                 break;
             case LayerContext.External:
                 if (this.loadedGeoJsonFile) {
