@@ -23,6 +23,7 @@ import {
 } from '@coreui/angular';
 import { RowResult } from '../../models/RowResult.model';
 import * as GeoJSON from 'geojson';
+import { FeatureCollection } from 'geojson';
 import { MapLayer } from '../../models/MapLayer.model';
 import { AsyncPipe, NgComponentOutlet, NgForOf, NgIf } from '@angular/common';
 import isEqual from 'lodash/isEqual';
@@ -104,13 +105,14 @@ export class LayersComponent implements OnInit {
         LayerContext.Results,
         LayerContext.Query,
         LayerContext.DB,
-        LayerContext.External
+        LayerContext.External,
     ];
     protected addLayerMode: LayerContext = LayerContext.External;
     protected polyphenyDatasets = [
-        'Geneaology',
-        'Basel traffic',
-        'Swiss weather',
+        'Genealogy (100)',
+        'Landkreise',
+        // 'Basel traffic',
+        // 'Swiss weather',
     ];
     protected selectedPolyphenyDataset = '';
 
@@ -198,12 +200,66 @@ export class LayersComponent implements OnInit {
     //     );
     // }
 
-    addLayer() {
+    addLayerInternal(layer: MapLayer) {
+        const newLayers = [
+            layer,
+            ...this.layers.filter((l) => !l.isRemoved),
+        ].map((v, i) => {
+            v.index = i + 1;
+            return v;
+        });
+        this.updateLayers(newLayers);
+    }
+
+    async fetchGeoJsonFile(url: string): Promise<FeatureCollection> {
+        const response = await window.fetch(url, {
+            method: 'GET',
+            headers: {
+                'content-type': 'application/json;charset=UTF-8',
+            },
+        });
+        const geojson: GeoJSON.FeatureCollection = await response.json();
+        return geojson;
+    }
+
+    async addLayer() {
         switch (this.addLayerMode) {
             case LayerContext.Query:
             case LayerContext.Results:
             case LayerContext.DB:
-                alert(`TODO: Add data from [${this.addLayerMode}]`);
+                if (this.selectedPolyphenyDataset == 'Genealogy (100)') {
+                    const geojson = await this.fetchGeoJsonFile(
+                        'assets/gedcom_coordinates_100_data.geojson',
+                    );
+                    const layer = new MapLayer('Genealogy').addData(
+                        geojson.features.map(
+                            (f, i) =>
+                                new RowResult(
+                                    i,
+                                    f.geometry,
+                                    f.properties ? f.properties : {},
+                                ),
+                        ),
+                    );
+                    this.addLayerInternal(layer);
+                } else if (this.selectedPolyphenyDataset == 'Landkreise') {
+                    const geojson = await this.fetchGeoJsonFile(
+                        'assets/landkreise_simplify200.geojson',
+                    );
+                    const layer = new MapLayer('Landkreise (D)').addData(
+                        geojson.features.map(
+                            (f, i) =>
+                                new RowResult(
+                                    i,
+                                    f.geometry,
+                                    f.properties ? f.properties : {},
+                                ),
+                        ),
+                    );
+                    this.addLayerInternal(layer);
+                } else {
+                    alert(`TODO: Add data from [${this.addLayerMode}]`);
+                }
                 break;
             case LayerContext.External:
                 if (this.loadedGeoJsonFile) {
@@ -220,14 +276,7 @@ export class LayersComponent implements OnInit {
                         ),
                     );
                     console.log('Added GeoJSON layer: ', layer);
-                    const newLayers = [
-                        layer,
-                        ...this.layers.filter((l) => !l.isRemoved),
-                    ].map((v, i) => {
-                        v.index = i + 1;
-                        return v;
-                    });
-                    this.updateLayers(newLayers);
+                    this.addLayerInternal(layer);
                 } else {
                     alert(`No file selected / File could not be loaded.`);
                 }
