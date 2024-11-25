@@ -39,7 +39,7 @@ import { FormsModule } from '@angular/forms';
 import { NgxJsonViewerModule } from 'ngx-json-viewer';
 import { ConfigSectionComponent } from '../config-section/config-section.component';
 // noinspection ES6UnusedImports
-import {getSampleMapLayers} from "../../models/get-sample-maplayers";
+import { getSampleMapLayers } from '../../models/get-sample-maplayers';
 
 type BaseLayer = { name: string; value: string };
 
@@ -109,13 +109,16 @@ export class LayersComponent implements OnInit {
         LayerContext.DB,
         LayerContext.External,
     ];
-    protected addLayerMode: LayerContext = LayerContext.External;
+    protected addLayerMode: LayerContext = LayerContext.DB;
     protected datasetToUrl = new Map<string, string>([
-        ['Genealogy (100, data)', "gedcom_coordinates_100_data.geojson"],
-        ['Genealogy (Full, no data)', "gedcom_coordinates_full.geojson"],
-        ['Landkreise', "landkreise_simplify200.geojson"]
+        ['Genealogy (100, data)', 'gedcom_coordinates_100_data.geojson'],
+        ['Genealogy (Full, no data)', 'gedcom_coordinates_full.geojson'],
+        ['Landkreise (D)', 'landkreise_simplify200.geojson'],
+        ['Basel Stadt Bevölkerung Quartiere', 'bs-stadt-bevoelkerung.geojson'],
+        ['Leeds Litter Bins', 'LitterBins20211201.geojson'],
+        ['Bern Urban Heat', 'bern-urban-heat.json'],
     ]);
-    protected polyphenyDatasets = Array.from(this.datasetToUrl.keys())
+    protected polyphenyDatasets = Array.from(this.datasetToUrl.keys());
     protected selectedPolyphenyDataset = '';
 
     constructor(
@@ -229,8 +232,8 @@ export class LayersComponent implements OnInit {
             case LayerContext.Query:
             case LayerContext.Results:
             case LayerContext.DB:
-                if (!this.selectedPolyphenyDataset){
-                    break
+                if (!this.selectedPolyphenyDataset) {
+                    break;
                 }
                 const url = `assets/${this.datasetToUrl.get(this.selectedPolyphenyDataset)}`;
                 const geojson = await this.fetchGeoJsonFile(url);
