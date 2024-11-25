@@ -88,6 +88,8 @@ export class MapComponent implements OnInit, AfterViewInit {
             .select('body')
             .append('div')
             .style('position', 'absolute')
+            .style('font-size', '0.75rem')
+            .style('font-family', 'monospace')
             .style('background', 'white')
             .style('border', '1px solid #ccc')
             .style('padding', '5px')
@@ -271,7 +273,7 @@ export class MapComponent implements OnInit, AfterViewInit {
             .style("pointer-events", "auto")
             .style("cursor", "pointer")
             .on('mouseover', function (event, d) {
-                tt.style('display', 'block').html(JSON.stringify(d.data, null, 2));
+                tt.style('display', 'block').html(JSON.stringify(d.data, null, 1));
             })
             .on('mousemove', function (event) {
                 tt.style('top', event.pageY + 10 + 'px').style(
