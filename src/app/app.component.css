@@ -9,6 +9,8 @@
 
 header {
     display: flex;
+    justify-content: space-between;
+    padding: 0 1rem;
     width: 100%;
     background: white;
     border-bottom: 1px solid lightgray;
@@ -17,7 +19,7 @@ header {
 }
 
 header > h1 {
-    margin: 0 1rem;
+    margin: 0;
     font-size: 2rem;
 }
 
