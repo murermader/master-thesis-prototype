@@ -38,6 +38,8 @@ import {
 import { FormsModule } from '@angular/forms';
 import { NgxJsonViewerModule } from 'ngx-json-viewer';
 import { ConfigSectionComponent } from '../config-section/config-section.component';
+// noinspection ES6UnusedImports
+import {getSampleMapLayers} from "../../models/get-sample-maplayers";
 
 type BaseLayer = { name: string; value: string };
 
