@@ -38,6 +38,7 @@ export class MapComponent implements OnInit, AfterViewInit {
         | d3.Selection<SVGPathElement, RowResult, SVGGElement, unknown>
         | undefined;
     private pathGenerator!: GeoPath<any, GeoPermissibleObjects>;
+    private tooltip!: d3.Selection<HTMLDivElement, unknown, HTMLElement, any>;
 
     constructor(protected layerSettings: LayerSettingsService) {}
 
@@ -83,6 +84,15 @@ export class MapComponent implements OnInit, AfterViewInit {
         this.map = leafletMap;
         this.svg = d3.select(this.map.getPanes().overlayPane).append('svg');
         this.g = this.svg.append('g').attr('class', 'leaflet-zoom-hide');
+        this.tooltip = d3
+            .select('body')
+            .append('div')
+            .style('position', 'absolute')
+            .style('background', 'white')
+            .style('border', '1px solid #ccc')
+            .style('padding', '5px')
+            .style('display', 'none')
+            .style('z-index', '9999');
 
         function projectPoint(this: any, x: number, y: number) {
             const point = leafletMap.latLngToLayerPoint(new L.LatLng(y, x));
@@ -193,9 +203,7 @@ export class MapComponent implements OnInit, AfterViewInit {
 
                 // Add shapes from each layer to array
                 for (const layer of this.layers.slice().reverse()) {
-                    console.log(
-                        `Render layer [${layer.name}]. Initialize...`,
-                    );
+                    console.log(`Render layer [${layer.name}]. Initialize...`);
 
                     // Initialize all configs
                     layer.pointShapeVisualization.init(layer.data);
@@ -235,6 +243,8 @@ export class MapComponent implements OnInit, AfterViewInit {
             return;
         }
 
+        const tt = this.tooltip;
+
         return this.g
             .selectAll('circle')
             .data(points)
@@ -257,13 +267,29 @@ export class MapComponent implements OnInit, AfterViewInit {
                 d.cache['y'] = layerPoint.y;
             })
             .attr('cx', (d) => d.cache['x'])
-            .attr('cy', (d) => d.cache['y']);
+            .attr('cy', (d) => d.cache['y'])
+            .style("pointer-events", "auto")
+            .style("cursor", "pointer")
+            .on('mouseover', function (event, d) {
+                tt.style('display', 'block').html(JSON.stringify(d.data, null, 2));
+            })
+            .on('mousemove', function (event) {
+                tt.style('top', event.pageY + 10 + 'px').style(
+                    'left',
+                    event.pageX + 10 + 'px',
+                );
+            })
+            .on('mouseout', function () {
+                tt.style('display', 'none');
+            });
     }
 
     createPaths(paths: RowResult[]) {
         if (!this.g) {
             return;
         }
+
+        const tt = this.tooltip
 
         return this.g
             .selectAll('.paths')
@@ -274,7 +300,10 @@ export class MapComponent implements OnInit, AfterViewInit {
             .attr('layer-index', (d) => d.layer!.index.toString())
             .attr('d', (d) => this.pathGenerator(d.geometry))
             .attr('stroke-width', (d) =>
-                d.layer!.areaShapeVisualization.getValueForAttribute('stroke-width', d),
+                d.layer!.areaShapeVisualization.getValueForAttribute(
+                    'stroke-width',
+                    d,
+                ),
             )
             .attr('stroke', (d) =>
                 d.layer!.colorVisualization.getValueForAttribute('stroke', d),
@@ -283,8 +312,26 @@ export class MapComponent implements OnInit, AfterViewInit {
                 d.layer!.colorVisualization.getValueForAttribute('fill', d),
             )
             .attr('fill-opacity', (d) =>
-                d.layer!.colorVisualization.getValueForAttribute('fill-opacity', d),
+                d.layer!.colorVisualization.getValueForAttribute(
+                    'fill-opacity',
+                    d,
+                ),
             )
+            .style("pointer-events", "auto")
+            .style("cursor", "pointer")
+            .on('mouseover', function (event, d) {
+                console.log("hover")
+                tt.style('display', 'block').html(JSON.stringify(d.data, null, 2));
+            })
+            .on('mousemove', function (event) {
+                tt.style('top', event.pageY + 10 + 'px').style(
+                    'left',
+                    event.pageX + 10 + 'px',
+                );
+            })
+            .on('mouseout', function () {
+                tt.style('display', 'none');
+            });
     }
 
     toggleLayerVisibility(layer: MapLayer) {
