@@ -234,6 +234,23 @@ export class MapComponent implements OnInit, AfterViewInit {
 
                 // Set SVG position correctly
                 this.updateSvgPosition();
+
+                // Center the map around the data.
+                // TODO: Do the same thing for paths.
+                const latLngs : L.LatLng[] = [];
+                this.circles!.each(d => {
+                    // d has the property geometry, which is a GeoJSON point of type
+                    latLngs.push(L.latLng(d.getPoint().coordinates[1], d.getPoint().coordinates[0],));
+                });
+                console.log(latLngs)
+                // TODO: Currently, only do this, if the dataset is not too big. Otherwise we zoom way out,
+                // and zooming back in can be very slow. (if the points are all over the world)
+                if (latLngs.length > 0 && latLngs.length <= 1000) {
+                    const latLngBounds = L.latLngBounds(latLngs);
+                    if (latLngBounds.isValid()){
+                        this.map.fitBounds(latLngBounds);
+                    }
+                }
             } finally {
                 this.isLoading = false;
             }
