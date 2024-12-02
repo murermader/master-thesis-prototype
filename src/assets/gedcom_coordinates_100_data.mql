@@ -1,0 +1,1701 @@
+db.geoCollection2.insertMany([
+{
+	"type": "Feature",
+	"geometry": {
+		"type": "Point",
+		"coordinates": [
+			13.554898,
+			52.333956
+		]
+	},
+	"properties": {
+		"PLAC": "Kiekebusch,,Dahme-Spreewald,BRANDENBURG,DEUTSCHLAND,",
+		"sum": 65.888854,
+		"diff": 38.779058,
+		"counter": 0,
+		"rand": -0.034652804622266636
+	}
+},
+{
+	"type": "Feature",
+	"geometry": {
+		"type": "Point",
+		"coordinates": [
+			13.983899,
+			52.027206
+		]
+	},
+	"properties": {
+		"PLAC": "Krugau,,Dahme-Spreewald,BRANDENBURG,DEUTSCHLAND,",
+		"sum": 66.011105,
+		"diff": 38.043307,
+		"counter": 1,
+		"rand": -0.14649471820907617
+	}
+},
+{
+	"type": "Feature",
+	"geometry": {
+		"type": "Point",
+		"coordinates": [
+			13.958323,
+			52.059514
+		]
+	},
+	"properties": {
+		"PLAC": "Kuschkow,,Dahme-Spreewald,BRANDENBURG,DEUTSCHLAND,",
+		"sum": 66.017837,
+		"diff": 38.101191,
+		"counter": 2,
+		"rand": -2.454480586005776
+	}
+},
+{
+	"type": "Feature",
+	"geometry": {
+		"type": "Point",
+		"coordinates": [
+			16.246596,
+			52.293444
+		]
+	},
+	"properties": {
+		"PLAC": "Bukowiec,64-333,Powiat Nowotomyski,WOIWODSCHAFT GRO\u00dfPOLEN,POLEN,",
+		"sum": 68.54004,
+		"diff": 36.046848,
+		"counter": 3,
+		"rand": 0.916725679843215
+	}
+},
+{
+	"type": "Feature",
+	"geometry": {
+		"type": "Point",
+		"coordinates": [
+			13.496318,
+			52.415562
+		]
+	},
+	"properties": {
+		"PLAC": "Rudow,,Berlin,BERLIN,DEUTSCHLAND,",
+		"sum": 65.91188,
+		"diff": 38.919244,
+		"counter": 4,
+		"rand": -0.8959156541783442
+	}
+},
+{
+	"type": "Feature",
+	"geometry": {
+		"type": "Point",
+		"coordinates": [
+			13.765507,
+			52.250446
+		]
+	},
+	"properties": {
+		"PLAC": "Dolgenbrodt,,Dahme-Spreewald,BRANDENBURG,DEUTSCHLAND,",
+		"sum": 66.015953,
+		"diff": 38.484939,
+		"counter": 5,
+		"rand": -1.1869601175375963
+	}
+},
+{
+	"type": "Feature",
+	"geometry": {
+		"type": "Point",
+		"coordinates": [
+			14.300451,
+			51.985081
+		]
+	},
+	"properties": {
+		"PLAC": "Lieberose,15868,Dahme-Spreewald,BRANDENBURG,DEUTSCHLAND,",
+		"sum": 66.285532,
+		"diff": 37.68463,
+		"counter": 6,
+		"rand": -0.33228029419055055
+	}
+},
+{
+	"type": "Feature",
+	"geometry": {
+		"type": "Point",
+		"coordinates": [
+			13.822173,
+			52.206633
+		]
+	},
+	"properties": {
+		"PLAC": "Streganz,,Dahme-Spreewald,BRANDENBURG,DEUTSCHLAND,",
+		"sum": 66.028806,
+		"diff": 38.38446,
+		"counter": 7,
+		"rand": -0.06279884789179073
+	}
+},
+{
+	"type": "Feature",
+	"geometry": {
+		"type": "Point",
+		"coordinates": [
+			13.600887,
+			51.835373
+		]
+	},
+	"properties": {
+		"PLAC": "Langengrassau,,Dahme-Spreewald,BRANDENBURG,DEUTSCHLAND,",
+		"sum": 65.43626,
+		"diff": 38.234486,
+		"counter": 8,
+		"rand": 1.4356165568314907
+	}
+},
+{
+	"type": "Feature",
+	"geometry": {
+		"type": "Point",
+		"coordinates": [
+			13.438875,
+			52.318635
+		]
+	},
+	"properties": {
+		"PLAC": "Dahlewitz,,Teltow-Fl\u00e4ming,BRANDENBURG,DEUTSCHLAND,",
+		"sum": 65.75751,
+		"diff": 38.879760000000005,
+		"counter": 9,
+		"rand": -0.08978865623611869
+	}
+},
+{
+	"type": "Feature",
+	"geometry": {
+		"type": "Point",
+		"coordinates": [
+			20.755983,
+			54.470935
+		]
+	},
+	"properties": {
+		"PLAC": "Nowosjolki,,\u0411\u0430\u0433\u0440\u0430\u0442\u0438\u043e\u043d\u043e\u0432\u0441\u043a\u0438\u0439 \u0413\u043e\u0440\u043e\u0434\u0441\u043a\u043e\u0439 \u041e\u043a\u0440\u0443\u0433,OBLAST KALININGRAD,RUSSLAND,",
+		"sum": 75.226918,
+		"diff": 33.714952,
+		"counter": 10,
+		"rand": -0.9433878329075245
+	}
+},
+{
+	"type": "Feature",
+	"geometry": {
+		"type": "Point",
+		"coordinates": [
+			13.42895,
+			52.418662
+		]
+	},
+	"properties": {
+		"PLAC": "Buckow,,,BERLIN,DEUTSCHLAND,",
+		"sum": 65.847612,
+		"diff": 38.989712,
+		"counter": 11,
+		"rand": 0.24378663150630112
+	}
+},
+{
+	"type": "Feature",
+	"geometry": {
+		"type": "Point",
+		"coordinates": [
+			13.40204,
+			52.393456
+		]
+	},
+	"properties": {
+		"PLAC": "Lichtenrade,,,BERLIN,DEUTSCHLAND,",
+		"sum": 65.795496,
+		"diff": 38.991416,
+		"counter": 12,
+		"rand": -0.25912865895480885
+	}
+},
+{
+	"type": "Feature",
+	"geometry": {
+		"type": "Point",
+		"coordinates": [
+			13.70682,
+			53.02919
+		]
+	},
+	"properties": {
+		"PLAC": "Friedrichswalde,12060068,,BRANDENBURG,DEUTSCHLAND,",
+		"sum": 66.73601,
+		"diff": 39.32237,
+		"counter": 13,
+		"rand": -1.0227015892356768
+	}
+},
+{
+	"type": "Feature",
+	"geometry": {
+		"type": "Point",
+		"coordinates": [
+			13.477419,
+			52.278706
+		]
+	},
+	"properties": {
+		"PLAC": "Gro\u00df Machnow,,Teltow-Fl\u00e4ming,BRANDENBURG,DEUTSCHLAND,",
+		"sum": 65.756125,
+		"diff": 38.801287,
+		"counter": 14,
+		"rand": 1.734947133211824
+	}
+},
+{
+	"type": "Feature",
+	"geometry": {
+		"type": "Point",
+		"coordinates": [
+			14.046312,
+			52.683462
+		]
+	},
+	"properties": {
+		"PLAC": "Frankenfelde,,M\u00e4rkisch-Oderland,BRANDENBURG,DEUTSCHLAND,",
+		"sum": 66.72977399999999,
+		"diff": 38.63715,
+		"counter": 15,
+		"rand": -0.13202980952370333
+	}
+},
+{
+	"type": "Feature",
+	"geometry": {
+		"type": "Point",
+		"coordinates": [
+			13.32564,
+			52.63353
+		]
+	},
+	"properties": {
+		"PLAC": "Glienicke,,,BRANDENBURG,DEUTSCHLAND,",
+		"sum": 65.95917,
+		"diff": 39.30789,
+		"counter": 16,
+		"rand": 0.3113252121279101
+	}
+},
+{
+	"type": "Feature",
+	"geometry": {
+		"type": "Point",
+		"coordinates": [
+			13.596091,
+			52.364316
+		]
+	},
+	"properties": {
+		"PLAC": "Schulzendorf,,Dahme-Spreewald,BRANDENBURG,DEUTSCHLAND,",
+		"sum": 65.960407,
+		"diff": 38.768225,
+		"counter": 17,
+		"rand": 0.28585343649637146
+	}
+},
+{
+	"type": "Feature",
+	"geometry": {
+		"type": "Point",
+		"coordinates": [
+			13.576413,
+			52.45391
+		]
+	},
+	"properties": {
+		"PLAC": "K\u00f6penick,,,BERLIN,DEUTSCHLAND,",
+		"sum": 66.030323,
+		"diff": 38.877497,
+		"counter": 18,
+		"rand": -1.7657951835126875
+	}
+},
+{
+	"type": "Feature",
+	"geometry": {
+		"type": "Point",
+		"coordinates": [
+			13.29243,
+			52.189029
+		]
+	},
+	"properties": {
+		"PLAC": "L\u00fcdersdorf,,Teltow-Fl\u00e4ming,BRANDENBURG,DEUTSCHLAND,",
+		"sum": 65.481459,
+		"diff": 38.896598999999995,
+		"counter": 19,
+		"rand": -0.820003443840147
+	}
+},
+{
+	"type": "Feature",
+	"geometry": {
+		"type": "Point",
+		"coordinates": [
+			13.477521,
+			52.309722
+		]
+	},
+	"properties": {
+		"PLAC": "Klein Kienitz,,Teltow-Fl\u00e4ming,BRANDENBURG,DEUTSCHLAND,",
+		"sum": 65.787243,
+		"diff": 38.832201,
+		"counter": 20,
+		"rand": 2.100963625121312
+	}
+},
+{
+	"type": "Feature",
+	"geometry": {
+		"type": "Point",
+		"coordinates": [
+			13.472378,
+			52.380978
+		]
+	},
+	"properties": {
+		"PLAC": "Wa\u00dfmannsdorf,,Dahme-Spreewald,BRANDENBURG,DEUTSCHLAND,",
+		"sum": 65.853356,
+		"diff": 38.9086,
+		"counter": 21,
+		"rand": -0.10650704985370257
+	}
+},
+{
+	"type": "Feature",
+	"geometry": {
+		"type": "Point",
+		"coordinates": [
+			13.495473,
+			52.246881
+		]
+	},
+	"properties": {
+		"PLAC": "Telz,,Dahme-Spreewald,BRANDENBURG,DEUTSCHLAND,",
+		"sum": 65.742354,
+		"diff": 38.751408,
+		"counter": 22,
+		"rand": 1.5331275618333922
+	}
+},
+{
+	"type": "Feature",
+	"geometry": {
+		"type": "Point",
+		"coordinates": [
+			13.712732,
+			52.393458
+		]
+	},
+	"properties": {
+		"PLAC": "Gosen,,Oder-Spree,BRANDENBURG,DEUTSCHLAND,",
+		"sum": 66.10619,
+		"diff": 38.680726,
+		"counter": 23,
+		"rand": 0.4551094199835787
+	}
+},
+{
+	"type": "Feature",
+	"geometry": {
+		"type": "Point",
+		"coordinates": [
+			13.802663,
+			53.242451
+		]
+	},
+	"properties": {
+		"PLAC": "Sternhagen,,Uckermark,BRANDENBURG,DEUTSCHLAND,",
+		"sum": 67.045114,
+		"diff": 39.439788,
+		"counter": 24,
+		"rand": 1.2214939650579002
+	}
+},
+{
+	"type": "Feature",
+	"geometry": {
+		"type": "Point",
+		"coordinates": [
+			12.26667,
+			53.65
+		]
+	},
+	"properties": {
+		"PLAC": "Krakow am See,,,MECKLENBURG-VORPOMMERN,DEUTSCHLAND,",
+		"sum": 65.91667,
+		"diff": 41.38333,
+		"counter": 25,
+		"rand": -1.5682349212075772
+	}
+},
+{
+	"type": "Feature",
+	"geometry": {
+		"type": "Point",
+		"coordinates": [
+			13.36008,
+			52.346346
+		]
+	},
+	"properties": {
+		"PLAC": "Diedersdorf,,Teltow-Fl\u00e4ming,BRANDENBURG,DEUTSCHLAND,",
+		"sum": 65.706426,
+		"diff": 38.986266,
+		"counter": 26,
+		"rand": 0.20766330478653805
+	}
+},
+{
+	"type": "Feature",
+	"geometry": {
+		"type": "Point",
+		"coordinates": [
+			13.585737,
+			52.295029
+		]
+	},
+	"properties": {
+		"PLAC": "Deutsch Wusterhausen,15711,Dahme-Spreewald,BRANDENBURG,DEUTSCHLAND,",
+		"sum": 65.880766,
+		"diff": 38.709292,
+		"counter": 27,
+		"rand": -0.31350073703403303
+	}
+},
+{
+	"type": "Feature",
+	"geometry": {
+		"type": "Point",
+		"coordinates": [
+			15.916454,
+			52.793849
+		]
+	},
+	"properties": {
+		"PLAC": "Karwin - Hammer,66-530,Powiat Strzelecko-Drezdenecki,WOIWODSCHAFT LEBUS,POLEN,",
+		"sum": 68.710303,
+		"diff": 36.877395,
+		"counter": 28,
+		"rand": 2.0852360985084615
+	}
+},
+{
+	"type": "Feature",
+	"geometry": {
+		"type": "Point",
+		"coordinates": [
+			13.51667,
+			52.38333
+		]
+	},
+	"properties": {
+		"PLAC": "Sch\u00f6nefeld,12061433,,BRANDENBURG,DEUTSCHLAND,",
+		"sum": 65.9,
+		"diff": 38.86666,
+		"counter": 29,
+		"rand": -1.9193414697510374
+	}
+},
+{
+	"type": "Feature",
+	"geometry": {
+		"type": "Point",
+		"coordinates": [
+			13.347123,
+			52.3827
+		]
+	},
+	"properties": {
+		"PLAC": "Friederikenhof,14979,Teltow-Fl\u00e4ming,BRANDENBURG,DEUTSCHLAND,",
+		"sum": 65.729823,
+		"diff": 39.035577,
+		"counter": 30,
+		"rand": -0.7954525055110531
+	}
+},
+{
+	"type": "Feature",
+	"geometry": {
+		"type": "Point",
+		"coordinates": [
+			13.81119,
+			52.88726
+		]
+	},
+	"properties": {
+		"PLAC": "Britz,,,,,",
+		"sum": 66.69845,
+		"diff": 39.07607,
+		"counter": 31,
+		"rand": -0.17844723147866287
+	}
+},
+{
+	"type": "Feature",
+	"geometry": {
+		"type": "Point",
+		"coordinates": [
+			13.633,
+			52.30141
+		]
+	},
+	"properties": {
+		"PLAC": "K\u00f6nigs Wusterhausen,,,BRANDENBURG,DEUTSCHLAND,",
+		"sum": 65.93441,
+		"diff": 38.668409999999994,
+		"counter": 32,
+		"rand": 0.6440576095819294
+	}
+},
+{
+	"type": "Feature",
+	"geometry": {
+		"type": "Point",
+		"coordinates": [
+			14.56667,
+			51.03333
+		]
+	},
+	"properties": {
+		"PLAC": "Friedersdorf,,,SACHSEN,DEUTSCHLAND,",
+		"sum": 65.6,
+		"diff": 36.46666,
+		"counter": 33,
+		"rand": -0.9861071815444609
+	}
+},
+{
+	"type": "Feature",
+	"geometry": {
+		"type": "Point",
+		"coordinates": [
+			13.45,
+			52.21667
+		]
+	},
+	"properties": {
+		"PLAC": "Zossen,,,BRANDENBURG,DEUTSCHLAND,",
+		"sum": 65.66667,
+		"diff": 38.766670000000005,
+		"counter": 34,
+		"rand": 0.5022232367126735
+	}
+},
+{
+	"type": "Feature",
+	"geometry": {
+		"type": "Point",
+		"coordinates": [
+			13.7,
+			52.11667
+		]
+	},
+	"properties": {
+		"PLAC": "Halbe,12061216,,BRANDENBURG,DEUTSCHLAND,",
+		"sum": 65.81667,
+		"diff": 38.416669999999996,
+		"counter": 35,
+		"rand": -0.582870639978273
+	}
+},
+{
+	"type": "Feature",
+	"geometry": {
+		"type": "Point",
+		"coordinates": [
+			13.447672,
+			52.392874
+		]
+	},
+	"properties": {
+		"PLAC": "Gro\u00dfziethen,,Dahme-Spreewald,BRANDENBURG,DEUTSCHLAND,",
+		"sum": 65.840546,
+		"diff": 38.945201999999995,
+		"counter": 36,
+		"rand": -0.6841595143041868
+	}
+},
+{
+	"type": "Feature",
+	"geometry": {
+		"type": "Point",
+		"coordinates": [
+			13.34839,
+			52.47457
+		]
+	},
+	"properties": {
+		"PLAC": "Berlin Sch\u00f6neberg,,,BERLIN,DEUTSCHLAND,",
+		"sum": 65.82296,
+		"diff": 39.12618,
+		"counter": 37,
+		"rand": 0.905920627621711
+	}
+},
+{
+	"type": "Feature",
+	"geometry": {
+		"type": "Point",
+		"coordinates": [
+			13.904807,
+			51.604625
+		]
+	},
+	"properties": {
+		"PLAC": "Wormlage,,Oberspreewald-Lausitz,BRANDENBURG,DEUTSCHLAND,",
+		"sum": 65.509432,
+		"diff": 37.699818,
+		"counter": 38,
+		"rand": 0.0356220765672638
+	}
+},
+{
+	"type": "Feature",
+	"geometry": {
+		"type": "Point",
+		"coordinates": [
+			13.854723,
+			52.252346
+		]
+	},
+	"properties": {
+		"PLAC": "Klein Schauen,,Oder-Spree,BRANDENBURG,DEUTSCHLAND,",
+		"sum": 66.107069,
+		"diff": 38.397623,
+		"counter": 39,
+		"rand": -0.026412907017383105
+	}
+},
+{
+	"type": "Feature",
+	"geometry": {
+		"type": "Point",
+		"coordinates": [
+			13.523585,
+			52.48434
+		]
+	},
+	"properties": {
+		"PLAC": "Karlshorst,10318,,BERLIN,DEUTSCHLAND,",
+		"sum": 66.007925,
+		"diff": 38.960755000000006,
+		"counter": 40,
+		"rand": 1.1288213485111953
+	}
+},
+{
+	"type": "Feature",
+	"geometry": {
+		"type": "Point",
+		"coordinates": [
+			11.379926,
+			52.319202
+		]
+	},
+	"properties": {
+		"PLAC": "Gut Detzel,39345,B\u00f6rde,SACHSEN-ANHALT,DEUTSCHLAND,",
+		"sum": 63.699127999999995,
+		"diff": 40.939276,
+		"counter": 41,
+		"rand": 0.20042700033871808
+	}
+},
+{
+	"type": "Feature",
+	"geometry": {
+		"type": "Point",
+		"coordinates": [
+			13.66667,
+			53.18333
+		]
+	},
+	"properties": {
+		"PLAC": "Mittenwalde,12073404,,BRANDENBURG,DEUTSCHLAND,",
+		"sum": 66.85,
+		"diff": 39.51666,
+		"counter": 42,
+		"rand": -1.2420213415176988
+	}
+},
+{
+	"type": "Feature",
+	"geometry": {
+		"type": "Point",
+		"coordinates": [
+			17.46101,
+			54.46571
+		]
+	},
+	"properties": {
+		"PLAC": "Dar\u017cyno,76-230,Powiat S\u0142upski,WOIWODSCHAFT POMMERN,POLEN,",
+		"sum": 71.92672,
+		"diff": 37.0047,
+		"counter": 43,
+		"rand": -0.09835919967378501
+	}
+},
+{
+	"type": "Feature",
+	"geometry": {
+		"type": "Point",
+		"coordinates": [
+			22.702701,
+			54.680118
+		]
+	},
+	"properties": {
+		"PLAC": "Plimballen,238015,\u041d\u0435\u0441\u0442\u0435\u0440\u043e\u0432\u0441\u043a\u0438\u0439 \u0413\u043e\u0440\u043e\u0434\u0441\u043a\u043e\u0439 \u041e\u043a\u0440\u0443\u0433,OBLAST KALININGRAD,RUSSLAND,",
+		"sum": 77.382819,
+		"diff": 31.977417,
+		"counter": 44,
+		"rand": -0.10145297881770408
+	}
+},
+{
+	"type": "Feature",
+	"geometry": {
+		"type": "Point",
+		"coordinates": [
+			13.290734,
+			52.214693
+		]
+	},
+	"properties": {
+		"PLAC": "Christinendorf,,Teltow-Fl\u00e4ming,BRANDENBURG,DEUTSCHLAND,",
+		"sum": 65.505427,
+		"diff": 38.923958999999996,
+		"counter": 45,
+		"rand": 0.6474533955804267
+	}
+},
+{
+	"type": "Feature",
+	"geometry": {
+		"type": "Point",
+		"coordinates": [
+			14.275416,
+			52.104162
+		]
+	},
+	"properties": {
+		"PLAC": "Friedland,,Oder-Spree,BRANDENBURG,DEUTSCHLAND,",
+		"sum": 66.37957800000001,
+		"diff": 37.828746,
+		"counter": 46,
+		"rand": -2.1046763149423247
+	}
+},
+{
+	"type": "Feature",
+	"geometry": {
+		"type": "Point",
+		"coordinates": [
+			13.435434,
+			52.344997
+		]
+	},
+	"properties": {
+		"PLAC": "Glasow,15827,Teltow-Fl\u00e4ming,BRANDENBURG,DEUTSCHLAND,",
+		"sum": 65.780431,
+		"diff": 38.909563,
+		"counter": 47,
+		"rand": 1.5992514889733451
+	}
+},
+{
+	"type": "Feature",
+	"geometry": {
+		"type": "Point",
+		"coordinates": [
+			13.58228,
+			52.44254
+		]
+	},
+	"properties": {
+		"PLAC": "Berlin K\u00f6penick,,,BERLIN,DEUTSCHLAND,",
+		"sum": 66.02482,
+		"diff": 38.86026,
+		"counter": 48,
+		"rand": -0.08025168323784188
+	}
+},
+{
+	"type": "Feature",
+	"geometry": {
+		"type": "Point",
+		"coordinates": [
+			13.352133,
+			52.27291
+		]
+	},
+	"properties": {
+		"PLAC": "Gro\u00df Schulzendorf,,Teltow-Fl\u00e4ming,BRANDENBURG,DEUTSCHLAND,",
+		"sum": 65.625043,
+		"diff": 38.920777,
+		"counter": 49,
+		"rand": -0.7358358483706685
+	}
+},
+{
+	"type": "Feature",
+	"geometry": {
+		"type": "Point",
+		"coordinates": [
+			13.658817,
+			52.164662
+		]
+	},
+	"properties": {
+		"PLAC": "Gro\u00df K\u00f6ris,2017-12-31,Dahme-Spreewald,BRANDENBURG,DEUTSCHLAND,",
+		"sum": 65.823479,
+		"diff": 38.505845,
+		"counter": 50,
+		"rand": -0.7288506542792295
+	}
+},
+{
+	"type": "Feature",
+	"geometry": {
+		"type": "Point",
+		"coordinates": [
+			15.702439,
+			52.151545
+		]
+	},
+	"properties": {
+		"PLAC": "Harthe,66-111,Powiat Zielonog\u00f3rski,WOIWODSCHAFT LEBUS,POLEN,",
+		"sum": 67.853984,
+		"diff": 36.449106,
+		"counter": 51,
+		"rand": 0.7443938026094536
+	}
+},
+{
+	"type": "Feature",
+	"geometry": {
+		"type": "Point",
+		"coordinates": [
+			12.87083,
+			51.39888
+		]
+	},
+	"properties": {
+		"PLAC": "Falkenhain,14729130,Direktionsbezirk Leipzig,SACHSEN,DEUTSCHLAND,",
+		"sum": 64.26971,
+		"diff": 38.52805,
+		"counter": 52,
+		"rand": 0.02726696035923861
+	}
+},
+{
+	"type": "Feature",
+	"geometry": {
+		"type": "Point",
+		"coordinates": [
+			13.79242,
+			52.298231
+		]
+	},
+	"properties": {
+		"PLAC": "Friedersdorf,,Dahme-Spreewald,BRANDENBURG,DEUTSCHLAND,",
+		"sum": 66.09065100000001,
+		"diff": 38.505811,
+		"counter": 53,
+		"rand": 0.9505892961173326
+	}
+},
+{
+	"type": "Feature",
+	"geometry": {
+		"type": "Point",
+		"coordinates": [
+			16.81945,
+			52.756
+		]
+	},
+	"properties": {
+		"PLAC": "Ludomy - Ludom,64-603,Powiat Obornicki,WOIWODSCHAFT GRO\u00dfPOLEN,POLEN,",
+		"sum": 69.57545,
+		"diff": 35.93655,
+		"counter": 54,
+		"rand": 0.8351709984935758
+	}
+},
+{
+	"type": "Feature",
+	"geometry": {
+		"type": "Point",
+		"coordinates": [
+			13.548141,
+			52.297815
+		]
+	},
+	"properties": {
+		"PLAC": "Ragow,15749,Dahme-Spreewald,BRANDENBURG,DEUTSCHLAND,",
+		"sum": 65.845956,
+		"diff": 38.749674,
+		"counter": 55,
+		"rand": 0.5619506204769165
+	}
+},
+{
+	"type": "Feature",
+	"geometry": {
+		"type": "Point",
+		"coordinates": [
+			13.757067,
+			52.280748
+		]
+	},
+	"properties": {
+		"PLAC": "Bindow,,Dahme-Spreewald,BRANDENBURG,DEUTSCHLAND,",
+		"sum": 66.037815,
+		"diff": 38.523681,
+		"counter": 56,
+		"rand": -0.31166107426223505
+	}
+},
+{
+	"type": "Feature",
+	"geometry": {
+		"type": "Point",
+		"coordinates": [
+			13.614284,
+			52.321485
+		]
+	},
+	"properties": {
+		"PLAC": "Hoherlehme,15745,Dahme-Spreewald,BRANDENBURG,DEUTSCHLAND,",
+		"sum": 65.93576900000001,
+		"diff": 38.707201000000005,
+		"counter": 57,
+		"rand": 1.1566651961412935
+	}
+},
+{
+	"type": "Feature",
+	"geometry": {
+		"type": "Point",
+		"coordinates": [
+			14.214722,
+			50.78242
+		]
+	},
+	"properties": {
+		"PLAC": "Tetschen,,Aussiger Region,NORDWESTEN,TSCHECHIEN,",
+		"sum": 64.997142,
+		"diff": 36.567698,
+		"counter": 58,
+		"rand": 1.0276130361759992
+	}
+},
+{
+	"type": "Feature",
+	"geometry": {
+		"type": "Point",
+		"coordinates": [
+			16.112662,
+			52.11725
+		]
+	},
+	"properties": {
+		"PLAC": "Wollstein,,Powiat Wolszty\u0144ski,WOIWODSCHAFT GRO\u00dfPOLEN,POLEN,",
+		"sum": 68.229912,
+		"diff": 36.004588,
+		"counter": 59,
+		"rand": -1.38164269482367
+	}
+},
+{
+	"type": "Feature",
+	"geometry": {
+		"type": "Point",
+		"coordinates": [
+			14.75927,
+			53.8591
+		]
+	},
+	"properties": {
+		"PLAC": "D\u00f6bberphul,72-511,Landkreis Cammin,WOIWODSCHAFT WESTPOMMERN,POLEN,",
+		"sum": 68.61837,
+		"diff": 39.09983,
+		"counter": 60,
+		"rand": -0.2726226166102509
+	}
+},
+{
+	"type": "Feature",
+	"geometry": {
+		"type": "Point",
+		"coordinates": [
+			13.390028,
+			52.44008
+		]
+	},
+	"properties": {
+		"PLAC": "Mariendorf,,,BERLIN,DEUTSCHLAND,",
+		"sum": 65.830108,
+		"diff": 39.050052,
+		"counter": 61,
+		"rand": -0.8592906968021723
+	}
+},
+{
+	"type": "Feature",
+	"geometry": {
+		"type": "Point",
+		"coordinates": [
+			13.733751,
+			52.223987
+		]
+	},
+	"properties": {
+		"PLAC": "Gr\u00e4bendorf,,Dahme-Spreewald,BRANDENBURG,DEUTSCHLAND,",
+		"sum": 65.957738,
+		"diff": 38.490236,
+		"counter": 62,
+		"rand": 0.15961078299061332
+	}
+},
+{
+	"type": "Feature",
+	"geometry": {
+		"type": "Point",
+		"coordinates": [
+			13.59317,
+			52.210223
+		]
+	},
+	"properties": {
+		"PLAC": "Motzen,,Dahme-Spreewald,BRANDENBURG,DEUTSCHLAND,",
+		"sum": 65.803393,
+		"diff": 38.617053,
+		"counter": 63,
+		"rand": -1.4141177493797659
+	}
+},
+{
+	"type": "Feature",
+	"geometry": {
+		"type": "Point",
+		"coordinates": [
+			13.499061,
+			52.333675
+		]
+	},
+	"properties": {
+		"PLAC": "Tollkrug,12529,Dahme-Spreewald,BRANDENBURG,DEUTSCHLAND,",
+		"sum": 65.832736,
+		"diff": 38.834614,
+		"counter": 64,
+		"rand": -0.06031439472413731
+	}
+},
+{
+	"type": "Feature",
+	"geometry": {
+		"type": "Point",
+		"coordinates": [
+			13.542097,
+			52.337188
+		]
+	},
+	"properties": {
+		"PLAC": "Karlshof,,Dahme-Spreewald,BRANDENBURG,DEUTSCHLAND,",
+		"sum": 65.879285,
+		"diff": 38.795091,
+		"counter": 65,
+		"rand": -0.9987134196098741
+	}
+},
+{
+	"type": "Feature",
+	"geometry": {
+		"type": "Point",
+		"coordinates": [
+			13.468917,
+			52.326092
+		]
+	},
+	"properties": {
+		"PLAC": "Gro\u00df Kienitz,,Teltow-Fl\u00e4ming,BRANDENBURG,DEUTSCHLAND,",
+		"sum": 65.79500900000001,
+		"diff": 38.857175000000005,
+		"counter": 66,
+		"rand": 0.137170169702072
+	}
+},
+{
+	"type": "Feature",
+	"geometry": {
+		"type": "Point",
+		"coordinates": [
+			13.511416,
+			52.306426
+		]
+	},
+	"properties": {
+		"PLAC": "Brusendorf,,Dahme-Spreewald,BRANDENBURG,DEUTSCHLAND,",
+		"sum": 65.817842,
+		"diff": 38.795010000000005,
+		"counter": 67,
+		"rand": 1.251814720325736
+	}
+},
+{
+	"type": "Feature",
+	"geometry": {
+		"type": "Point",
+		"coordinates": [
+			13.51081,
+			52.341874
+		]
+	},
+	"properties": {
+		"PLAC": "Rotberg - Rotzis,12529,Dahme-Spreewald,BRANDENBURG,DEUTSCHLAND,",
+		"sum": 65.852684,
+		"diff": 38.831064,
+		"counter": 68,
+		"rand": 0.5647566223205702
+	}
+},
+{
+	"type": "Feature",
+	"geometry": {
+		"type": "Point",
+		"coordinates": [
+			11.6177,
+			52.20193
+		]
+	},
+	"properties": {
+		"PLAC": "Barleben,15083040,,SACHSEN-ANHALT,DEUTSCHLAND,",
+		"sum": 63.81963,
+		"diff": 40.58423,
+		"counter": 69,
+		"rand": -0.05444772266298644
+	}
+},
+{
+	"type": "Feature",
+	"geometry": {
+		"type": "Point",
+		"coordinates": [
+			11.43265,
+			51.94384
+		]
+	},
+	"properties": {
+		"PLAC": "Egeln,15089075,,SACHSEN-ANHALT,DEUTSCHLAND,",
+		"sum": 63.376490000000004,
+		"diff": 40.51119,
+		"counter": 70,
+		"rand": -1.7220256832925294
+	}
+},
+{
+	"type": "Feature",
+	"geometry": {
+		"type": "Point",
+		"coordinates": [
+			12.25,
+			51.88333
+		]
+	},
+	"properties": {
+		"PLAC": "Ro\u00dflau,,,SACHSEN-ANHALT,DEUTSCHLAND,",
+		"sum": 64.13333,
+		"diff": 39.63333,
+		"counter": 71,
+		"rand": 0.269040871010621
+	}
+},
+{
+	"type": "Feature",
+	"geometry": {
+		"type": "Point",
+		"coordinates": [
+			10.25,
+			51.23333
+		]
+	},
+	"properties": {
+		"PLAC": "Effelder,16061027,,TH\u00dcRINGEN,DEUTSCHLAND,",
+		"sum": 61.48333,
+		"diff": 40.98333,
+		"counter": 72,
+		"rand": -0.12341505015315576
+	}
+},
+{
+	"type": "Feature",
+	"geometry": {
+		"type": "Point",
+		"coordinates": [
+			11.3245,
+			52.28759
+		]
+	},
+	"properties": {
+		"PLAC": "S\u00fcplingen,15083495,,SACHSEN-ANHALT,DEUTSCHLAND,",
+		"sum": 63.61209,
+		"diff": 40.96309,
+		"counter": 73,
+		"rand": -0.9631525597291233
+	}
+},
+{
+	"type": "Feature",
+	"geometry": {
+		"type": "Point",
+		"coordinates": [
+			12.00514,
+			52.67565
+		]
+	},
+	"properties": {
+		"PLAC": "Arneburg,,,SACHSEN-ANHALT,DEUTSCHLAND,",
+		"sum": 64.68079,
+		"diff": 40.67050999999999,
+		"counter": 74,
+		"rand": -0.7013328405150009
+	}
+},
+{
+	"type": "Feature",
+	"geometry": {
+		"type": "Point",
+		"coordinates": [
+			11.1,
+			52.36667
+		]
+	},
+	"properties": {
+		"PLAC": "Everingen,,,SACHSEN-ANHALT,DEUTSCHLAND,",
+		"sum": 63.46667,
+		"diff": 41.26667,
+		"counter": 75,
+		"rand": 0.12022292594891146
+	}
+},
+{
+	"type": "Feature",
+	"geometry": {
+		"type": "Point",
+		"coordinates": [
+			8.34028,
+			49.76806
+		]
+	},
+	"properties": {
+		"PLAC": "Alsheim,07331002,,RHEINLAND-PFALZ,DEUTSCHLAND,",
+		"sum": 58.10834,
+		"diff": 41.42778,
+		"counter": 76,
+		"rand": 0.33848085739507283
+	}
+},
+{
+	"type": "Feature",
+	"geometry": {
+		"type": "Point",
+		"coordinates": [
+			8.27111,
+			50.0
+		]
+	},
+	"properties": {
+		"PLAC": "Mainz,,,RHEINLAND-PFALZ,DEUTSCHLAND,",
+		"sum": 58.27111,
+		"diff": 41.72889,
+		"counter": 77,
+		"rand": -0.3643814613859252
+	}
+},
+{
+	"type": "Feature",
+	"geometry": {
+		"type": "Point",
+		"coordinates": [
+			11.43333,
+			52.11667
+		]
+	},
+	"properties": {
+		"PLAC": "Klein Rodensleben,,,SACHSEN-ANHALT,DEUTSCHLAND,",
+		"sum": 63.55,
+		"diff": 40.68334,
+		"counter": 78,
+		"rand": 0.6609553839366976
+	}
+},
+{
+	"type": "Feature",
+	"geometry": {
+		"type": "Point",
+		"coordinates": [
+			10.6,
+			50.65
+		]
+	},
+	"properties": {
+		"PLAC": "Benshausen,16066006,,TH\u00dcRINGEN,DEUTSCHLAND,",
+		"sum": 61.25,
+		"diff": 40.05,
+		"counter": 79,
+		"rand": 0.729621809527074
+	}
+},
+{
+	"type": "Feature",
+	"geometry": {
+		"type": "Point",
+		"coordinates": [
+			11.530628,
+			51.998297
+		]
+	},
+	"properties": {
+		"PLAC": "Altenweddingen,,B\u00f6rde,SACHSEN-ANHALT,DEUTSCHLAND,",
+		"sum": 63.528925,
+		"diff": 40.467669,
+		"counter": 80,
+		"rand": 0.021273055018339416
+	}
+},
+{
+	"type": "Feature",
+	"geometry": {
+		"type": "Point",
+		"coordinates": [
+			14.421254,
+			50.087465
+		]
+	},
+	"properties": {
+		"PLAC": "Prag,,Hauptstadt Prag,PRAG,TSCHECHIEN,",
+		"sum": 64.508719,
+		"diff": 35.666211000000004,
+		"counter": 81,
+		"rand": 1.374682810358715
+	}
+},
+{
+	"type": "Feature",
+	"geometry": {
+		"type": "Point",
+		"coordinates": [
+			11.08333,
+			52.06667
+		]
+	},
+	"properties": {
+		"PLAC": "Hamersleben,,,SACHSEN-ANHALT,DEUTSCHLAND,",
+		"sum": 63.150000000000006,
+		"diff": 40.98334,
+		"counter": 82,
+		"rand": 1.6880575447078694
+	}
+},
+{
+	"type": "Feature",
+	"geometry": {
+		"type": "Point",
+		"coordinates": [
+			11.49994,
+			52.17898
+		]
+	},
+	"properties": {
+		"PLAC": "Hohenwarsleben,,,SACHSEN-ANHALT,DEUTSCHLAND,",
+		"sum": 63.678920000000005,
+		"diff": 40.67904,
+		"counter": 83,
+		"rand": 0.03646781245915776
+	}
+},
+{
+	"type": "Feature",
+	"geometry": {
+		"type": "Point",
+		"coordinates": [
+			11.53736,
+			52.19519
+		]
+	},
+	"properties": {
+		"PLAC": "Dahlenwarsleben,,,SACHSEN-ANHALT,DEUTSCHLAND,",
+		"sum": 63.732549999999996,
+		"diff": 40.65783,
+		"counter": 84,
+		"rand": -0.7803572039955321
+	}
+},
+{
+	"type": "Feature",
+	"geometry": {
+		"type": "Point",
+		"coordinates": [
+			11.421318,
+			52.20311
+		]
+	},
+	"properties": {
+		"PLAC": "Klein Santersleben,,B\u00f6rde,SACHSEN-ANHALT,DEUTSCHLAND,",
+		"sum": 63.624428,
+		"diff": 40.781792,
+		"counter": 85,
+		"rand": 0.983398810763137
+	}
+},
+{
+	"type": "Feature",
+	"geometry": {
+		"type": "Point",
+		"coordinates": [
+			11.33738,
+			52.21076
+		]
+	},
+	"properties": {
+		"PLAC": "Nordgermersleben,,,SACHSEN-ANHALT,DEUTSCHLAND,",
+		"sum": 63.548140000000004,
+		"diff": 40.87338,
+		"counter": 86,
+		"rand": 0.7343635243876437
+	}
+},
+{
+	"type": "Feature",
+	"geometry": {
+		"type": "Point",
+		"coordinates": [
+			11.40896,
+			52.15782
+		]
+	},
+	"properties": {
+		"PLAC": "Ochtmersleben,,,SACHSEN-ANHALT,DEUTSCHLAND,",
+		"sum": 63.56678,
+		"diff": 40.74886,
+		"counter": 87,
+		"rand": 0.6376247928265234
+	}
+},
+{
+	"type": "Feature",
+	"geometry": {
+		"type": "Point",
+		"coordinates": [
+			11.498397,
+			52.140458
+		]
+	},
+	"properties": {
+		"PLAC": "Schnarsleben,39167,B\u00f6rde,SACHSEN-ANHALT,DEUTSCHLAND,",
+		"sum": 63.63885500000001,
+		"diff": 40.642061,
+		"counter": 88,
+		"rand": -0.36117681592553236
+	}
+},
+{
+	"type": "Feature",
+	"geometry": {
+		"type": "Point",
+		"coordinates": [
+			11.57478,
+			52.18551
+		]
+	},
+	"properties": {
+		"PLAC": "Ebendorf,,,SACHSEN-ANHALT,DEUTSCHLAND,",
+		"sum": 63.76029,
+		"diff": 40.610730000000004,
+		"counter": 89,
+		"rand": 1.692373862300453
+	}
+},
+{
+	"type": "Feature",
+	"geometry": {
+		"type": "Point",
+		"coordinates": [
+			11.95,
+			52.05
+		]
+	},
+	"properties": {
+		"PLAC": "Leitzkau,,,SACHSEN-ANHALT,DEUTSCHLAND,",
+		"sum": 64.0,
+		"diff": 40.099999999999994,
+		"counter": 90,
+		"rand": -0.32031375190744954
+	}
+},
+{
+	"type": "Feature",
+	"geometry": {
+		"type": "Point",
+		"coordinates": [
+			11.4,
+			52.16667
+		]
+	},
+	"properties": {
+		"PLAC": "Eichenbarleben,,,SACHSEN-ANHALT,DEUTSCHLAND,",
+		"sum": 63.56667,
+		"diff": 40.766670000000005,
+		"counter": 91,
+		"rand": 0.6829716934352498
+	}
+},
+{
+	"type": "Feature",
+	"geometry": {
+		"type": "Point",
+		"coordinates": [
+			11.294797,
+			52.18651
+		]
+	},
+	"properties": {
+		"PLAC": "Groppendorf,,B\u00f6rde,SACHSEN-ANHALT,DEUTSCHLAND,",
+		"sum": 63.481307,
+		"diff": 40.891712999999996,
+		"counter": 92,
+		"rand": 1.1545765178346186
+	}
+},
+{
+	"type": "Feature",
+	"geometry": {
+		"type": "Point",
+		"coordinates": [
+			11.0919,
+			52.31824
+		]
+	},
+	"properties": {
+		"PLAC": "Siestedt,,,SACHSEN-ANHALT,DEUTSCHLAND,",
+		"sum": 63.410140000000006,
+		"diff": 41.22634,
+		"counter": 93,
+		"rand": 0.8342909047494045
+	}
+},
+{
+	"type": "Feature",
+	"geometry": {
+		"type": "Point",
+		"coordinates": [
+			11.436031,
+			52.144681
+		]
+	},
+	"properties": {
+		"PLAC": "Wellen,39167,B\u00f6rde,SACHSEN-ANHALT,DEUTSCHLAND,",
+		"sum": 63.580712,
+		"diff": 40.70865,
+		"counter": 94,
+		"rand": -0.6997934806184697
+	}
+},
+{
+	"type": "Feature",
+	"geometry": {
+		"type": "Point",
+		"coordinates": [
+			11.399517,
+			52.212708
+		]
+	},
+	"properties": {
+		"PLAC": "Rottmersleben,,B\u00f6rde,SACHSEN-ANHALT,DEUTSCHLAND,",
+		"sum": 63.612224999999995,
+		"diff": 40.813191,
+		"counter": 95,
+		"rand": 0.5282970938495088
+	}
+},
+{
+	"type": "Feature",
+	"geometry": {
+		"type": "Point",
+		"coordinates": [
+			11.509951,
+			52.143711
+		]
+	},
+	"properties": {
+		"PLAC": "Niederndodeleben,,B\u00f6rde,SACHSEN-ANHALT,DEUTSCHLAND,",
+		"sum": 63.653662000000004,
+		"diff": 40.63376,
+		"counter": 96,
+		"rand": -1.8198205616876755
+	}
+},
+{
+	"type": "Feature",
+	"geometry": {
+		"type": "Point",
+		"coordinates": [
+			11.82575,
+			52.56049
+		]
+	},
+	"properties": {
+		"PLAC": "Dahlen,,,SACHSEN-ANHALT,DEUTSCHLAND,",
+		"sum": 64.38624,
+		"diff": 40.73474,
+		"counter": 97,
+		"rand": 0.9657218153640189
+	}
+},
+{
+	"type": "Feature",
+	"geometry": {
+		"type": "Point",
+		"coordinates": [
+			11.61667,
+			51.63333
+		]
+	},
+	"properties": {
+		"PLAC": "Gerbstedt,,,SACHSEN-ANHALT,DEUTSCHLAND,",
+		"sum": 63.25,
+		"diff": 40.01666,
+		"counter": 98,
+		"rand": 0.7761681619323806
+	}
+},
+{
+	"type": "Feature",
+	"geometry": {
+		"type": "Point",
+		"coordinates": [
+			11.67008,
+			52.077432
+		]
+	},
+	"properties": {
+		"PLAC": "Salbke,39122,Magdeburg,SACHSEN-ANHALT,DEUTSCHLAND,",
+		"sum": 63.747512,
+		"diff": 40.407352,
+		"counter": 99,
+		"rand": -0.7831652449750524
+	}
+}])
