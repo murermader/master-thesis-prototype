@@ -1,0 +1,2273 @@
+{
+    "type": "FeatureCollection",
+    "features": [
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    7.45192,
+                    46.96173
+                ]
+            },
+            "properties": {
+                "stationId": "11003",
+                "name": "Waffenweg",
+                "dateObserved": "2024-12-18T00:14:10Z",
+                "outdated": false,
+                "temperature": 1.2073702,
+                "relativeHumidity": 94.32998
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    7.47992,
+                    46.93919
+                ]
+            },
+            "properties": {
+                "stationId": "11032",
+                "name": "Murifeld",
+                "dateObserved": "2024-12-18T00:14:56Z",
+                "outdated": false,
+                "temperature": 0.17395285,
+                "relativeHumidity": 96.43
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    7.477217,
+                    46.974644
+                ]
+            },
+            "properties": {
+                "stationId": "11117",
+                "name": "Ittigen Papiermühle Kreisel",
+                "dateObserved": "2024-12-18T00:14:13Z",
+                "outdated": false,
+                "temperature": 2.8656442,
+                "relativeHumidity": 74.31777
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    7.386227,
+                    46.928032
+                ]
+            },
+            "properties": {
+                "stationId": "11076",
+                "name": "Niederwangen Papillon Laterne/Bushäuschen",
+                "dateObserved": "2024-12-18T00:18:42Z",
+                "outdated": false,
+                "temperature": -0.320058,
+                "relativeHumidity": 90.14137
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    7.49879,
+                    46.95566
+                ]
+            },
+            "properties": {
+                "stationId": "11108",
+                "name": "Ostermundigen Ahornstrasse",
+                "dateObserved": "2024-12-18T00:11:12Z",
+                "outdated": false,
+                "temperature": -0.023651484,
+                "relativeHumidity": 97.72129
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    7.43714,
+                    46.95171
+                ]
+            },
+            "properties": {
+                "stationId": "11059",
+                "name": "Vordere Länggasse",
+                "dateObserved": "2024-12-18T00:14:59Z",
+                "outdated": false,
+                "temperature": 0.33417258,
+                "relativeHumidity": 95.710915
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    7.525039,
+                    46.9585
+                ]
+            },
+            "properties": {
+                "stationId": "11129",
+                "name": "Stettlen Bernstrasse Laterne",
+                "dateObserved": "2024-12-18T00:19:26Z",
+                "outdated": false,
+                "temperature": 0.66262305,
+                "relativeHumidity": 87.385216
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    7.48222,
+                    46.95867
+                ]
+            },
+            "properties": {
+                "stationId": "11105",
+                "name": "Ostermundigen Poststrasse",
+                "dateObserved": "2024-12-18T00:12:34Z",
+                "outdated": false,
+                "temperature": 0.24605173,
+                "relativeHumidity": 95.144424
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    7.30584,
+                    47.073505
+                ]
+            },
+            "properties": {
+                "stationId": "12005",
+                "name": "Marktplatz Lyss",
+                "dateObserved": "2024-12-18T00:19:18Z",
+                "outdated": false,
+                "temperature": 0.73205155,
+                "relativeHumidity": 90.692604
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    7.4133654,
+                    46.938255
+                ]
+            },
+            "properties": {
+                "stationId": "11060",
+                "name": "Liebefeld Turnierstrasse Laterne",
+                "dateObserved": "2024-12-18T00:15:54Z",
+                "outdated": false,
+                "temperature": -0.22392614,
+                "relativeHumidity": 91.293434
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    7.45974,
+                    46.94823
+                ]
+            },
+            "properties": {
+                "stationId": "11135",
+                "name": "Vorplatz Bärenpark",
+                "dateObserved": "2024-12-18T00:11:53Z",
+                "outdated": false,
+                "temperature": 0.6973373,
+                "relativeHumidity": 95.379036
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    7.39587,
+                    46.94302
+                ]
+            },
+            "properties": {
+                "stationId": "11010",
+                "name": "Bümpliz Stöckacker",
+                "dateObserved": "2024-12-18T00:15:58Z",
+                "outdated": false,
+                "temperature": 0.49706262,
+                "relativeHumidity": 96.477684
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    7.45824,
+                    46.94059
+                ]
+            },
+            "properties": {
+                "stationId": "11009",
+                "name": "Thunplatz",
+                "dateObserved": "2024-12-18T00:09:54Z",
+                "outdated": false,
+                "temperature": -0.14114596,
+                "relativeHumidity": 95.932175
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    7.42128,
+                    46.95739
+                ]
+            },
+            "properties": {
+                "stationId": "11050",
+                "name": "Bremgartenwald",
+                "dateObserved": "2024-12-18T00:19:05Z",
+                "outdated": false,
+                "temperature": -1.1825742,
+                "relativeHumidity": 95.588844
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    7.43094,
+                    46.94195
+                ]
+            },
+            "properties": {
+                "stationId": "11042",
+                "name": "Pärkli bei Eigerplatz",
+                "dateObserved": "2024-12-18T00:17:58Z",
+                "outdated": false,
+                "temperature": 0.6679637,
+                "relativeHumidity": 92.67628
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    7.48719,
+                    46.95309
+                ]
+            },
+            "properties": {
+                "stationId": "11102",
+                "name": "Ostermundigen Lötschenstrasse",
+                "dateObserved": "2024-12-18T00:10:26Z",
+                "outdated": false,
+                "temperature": 0.17128251,
+                "relativeHumidity": 96.84581
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    7.45583,
+                    46.94701
+                ]
+            },
+            "properties": {
+                "stationId": "11026",
+                "name": "Matte Mühleplatz",
+                "dateObserved": "2024-12-18T00:18:11Z",
+                "outdated": false,
+                "temperature": 0.86823833,
+                "relativeHumidity": 95.81773
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    7.42252,
+                    46.95291
+                ]
+            },
+            "properties": {
+                "stationId": "11020",
+                "name": "VonRoll",
+                "dateObserved": "2024-12-18T00:11:27Z",
+                "outdated": false,
+                "temperature": -0.22392614,
+                "relativeHumidity": 95.01854
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    7.497151,
+                    46.975468
+                ]
+            },
+            "properties": {
+                "stationId": "11126",
+                "name": "Bolligen Sternenkreisel Laterne",
+                "dateObserved": "2024-12-18T00:13:22Z",
+                "outdated": false,
+                "temperature": -0.13313496,
+                "relativeHumidity": 88.60403
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    7.40642,
+                    46.94542
+                ]
+            },
+            "properties": {
+                "stationId": "11002",
+                "name": "Ausserholligen ewb",
+                "dateObserved": "2024-12-18T00:17:24Z",
+                "outdated": false,
+                "temperature": -0.7392996,
+                "relativeHumidity": 96.24689
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    7.46407,
+                    46.99079
+                ]
+            },
+            "properties": {
+                "stationId": "11119",
+                "name": "Zollikofen 3m",
+                "dateObserved": "2024-11-01T07:27:21Z",
+                "outdated": true,
+                "temperature": 6.8043795,
+                "relativeHumidity": 103.21263
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    7.41688,
+                    46.94211
+                ]
+            },
+            "properties": {
+                "stationId": "11014",
+                "name": "Schlossmatte Familiengärten",
+                "dateObserved": "2024-12-18T00:10:43Z",
+                "outdated": false,
+                "temperature": -0.5443656,
+                "relativeHumidity": 95.83681
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    7.50045,
+                    46.93537
+                ]
+            },
+            "properties": {
+                "stationId": "11115",
+                "name": "Gümligen (Worbstrasse) Laterne",
+                "dateObserved": "2024-12-18T00:18:49Z",
+                "outdated": false,
+                "temperature": 0.20866713,
+                "relativeHumidity": 88.619286
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    7.455911,
+                    46.92579
+                ]
+            },
+            "properties": {
+                "stationId": "11094",
+                "name": "Wabern Gartentower Laterne",
+                "dateObserved": "2024-12-18T00:14:22Z",
+                "outdated": false,
+                "temperature": 0.53444725,
+                "relativeHumidity": 88.35798
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    7.445022,
+                    46.95565
+                ]
+            },
+            "properties": {
+                "stationId": "11048",
+                "name": "Bern Lorrainepark",
+                "dateObserved": "2024-12-18T00:18:14Z",
+                "outdated": false,
+                "temperature": 0.873579,
+                "relativeHumidity": 86.303734
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    7.42015,
+                    46.9503
+                ]
+            },
+            "properties": {
+                "stationId": "11018",
+                "name": "Bremgartenfriedhof",
+                "dateObserved": "2024-12-18T00:12:32Z",
+                "outdated": false,
+                "temperature": -0.8381018,
+                "relativeHumidity": 96.56924
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    7.438822,
+                    46.977913
+                ]
+            },
+            "properties": {
+                "stationId": "11130",
+                "name": "Bremgarten Ecke Lindenstrasse / Ritterstrasse Laterne",
+                "dateObserved": "2024-12-18T00:11:55Z",
+                "outdated": false,
+                "temperature": -0.6084535,
+                "relativeHumidity": 90.57435
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    7.48201,
+                    46.96241
+                ]
+            },
+            "properties": {
+                "stationId": "11106",
+                "name": "Ostermundigen Milchstrasse",
+                "dateObserved": "2024-12-18T00:11:04Z",
+                "outdated": false,
+                "temperature": 0.1606012,
+                "relativeHumidity": 96.304115
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    7.360659,
+                    46.916786
+                ]
+            },
+            "properties": {
+                "stationId": "11087",
+                "name": "Oberwangen Laterne",
+                "dateObserved": "2024-12-18T00:18:59Z",
+                "outdated": false,
+                "temperature": -0.49362937,
+                "relativeHumidity": 90.00786
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    7.44082,
+                    46.95151
+                ]
+            },
+            "properties": {
+                "stationId": "11012",
+                "name": "Bollwerk",
+                "dateObserved": "2024-12-18T00:12:22Z",
+                "outdated": false,
+                "temperature": 0.7000076,
+                "relativeHumidity": 94.14114
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    7.44885,
+                    46.94381
+                ]
+            },
+            "properties": {
+                "stationId": "11068",
+                "name": "Helvetiaplatz",
+                "dateObserved": "2024-12-18T00:10:22Z",
+                "outdated": false,
+                "temperature": 0.3154803,
+                "relativeHumidity": 96.70275
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    7.43141,
+                    46.94067
+                ]
+            },
+            "properties": {
+                "stationId": "11037",
+                "name": "Eigerplatz",
+                "dateObserved": "2024-12-18T00:11:40Z",
+                "outdated": false,
+                "temperature": 0.5851835,
+                "relativeHumidity": 92.743034
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    7.377091,
+                    46.92567
+                ]
+            },
+            "properties": {
+                "stationId": "11089",
+                "name": "Niederwangen Zentrum Laterne",
+                "dateObserved": "2024-12-18T00:12:51Z",
+                "outdated": false,
+                "temperature": -0.05569543,
+                "relativeHumidity": 87.364235
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    7.46987,
+                    46.95063
+                ]
+            },
+            "properties": {
+                "stationId": "11040",
+                "name": "Galgenfeld Neubausiedlung",
+                "dateObserved": "2024-12-18T00:13:48Z",
+                "outdated": false,
+                "temperature": 0.7053483,
+                "relativeHumidity": 98.318306
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    7.305877,
+                    47.07661
+                ]
+            },
+            "properties": {
+                "stationId": "12006",
+                "name": "Monopoliplatz Lyss",
+                "dateObserved": "2024-12-06T12:22:59Z",
+                "outdated": true,
+                "temperature": 9.891279,
+                "relativeHumidity": 55.228733
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    7.41453,
+                    46.92282
+                ]
+            },
+            "properties": {
+                "stationId": "11096",
+                "name": "Köniz Bläuacker Park Aldi/Swisscom",
+                "dateObserved": "2024-12-18T00:06:42Z",
+                "outdated": false,
+                "temperature": -0.5336843,
+                "relativeHumidity": 89.908676
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    7.40134,
+                    46.949
+                ]
+            },
+            "properties": {
+                "stationId": "11051",
+                "name": "Weyermannshaus Industrie",
+                "dateObserved": "2024-12-18T00:11:48Z",
+                "outdated": false,
+                "temperature": -1.2546731,
+                "relativeHumidity": 96.498665
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    7.451387,
+                    46.99095
+                ]
+            },
+            "properties": {
+                "stationId": "11120",
+                "name": "Zollikofen Reichenbach Laterne",
+                "dateObserved": "2024-12-18T00:11:02Z",
+                "outdated": false,
+                "temperature": -0.51766235,
+                "relativeHumidity": 89.74273
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    7.44165,
+                    46.96523
+                ]
+            },
+            "properties": {
+                "stationId": "11013",
+                "name": "Viererfeld 4 (Strasse Nord)",
+                "dateObserved": "2024-11-06T02:50:08Z",
+                "outdated": true,
+                "temperature": 5.6748304,
+                "relativeHumidity": 98.99733
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    7.45935,
+                    46.92921
+                ]
+            },
+            "properties": {
+                "stationId": "11080",
+                "name": "Wabern Weyergut",
+                "dateObserved": "2024-12-18T00:14:31Z",
+                "outdated": false,
+                "temperature": -0.42687115,
+                "relativeHumidity": 90.232925
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    7.43688,
+                    46.96271
+                ]
+            },
+            "properties": {
+                "stationId": "11015",
+                "name": "Viererfeld 2 (Schacht)",
+                "dateObserved": "2024-12-18T00:11:22Z",
+                "outdated": false,
+                "temperature": -0.16784924,
+                "relativeHumidity": 96.777145
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    7.42946,
+                    46.94672
+                ]
+            },
+            "properties": {
+                "stationId": "11047",
+                "name": "Emch+Berger (Schlösslistrasse) Pfosten Eingang",
+                "dateObserved": "2024-12-18T00:11:20Z",
+                "outdated": false,
+                "temperature": 0.83352405,
+                "relativeHumidity": 79.08049
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    7.46407,
+                    46.99079
+                ]
+            },
+            "properties": {
+                "stationId": "11134",
+                "name": "Zollikofen 2m",
+                "dateObserved": "2024-12-18T00:14:32Z",
+                "outdated": false,
+                "temperature": -0.7392996,
+                "relativeHumidity": 100.36683
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    7.44571,
+                    46.94445
+                ]
+            },
+            "properties": {
+                "stationId": "11064",
+                "name": "Dalmazibrücke",
+                "dateObserved": "2024-12-18T00:12:53Z",
+                "outdated": false,
+                "temperature": 0.76409554,
+                "relativeHumidity": 94.46731
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    7.43786,
+                    46.94658
+                ]
+            },
+            "properties": {
+                "stationId": "11070",
+                "name": "Hirschengraben",
+                "dateObserved": "2024-12-18T00:10:56Z",
+                "outdated": false,
+                "temperature": 0.88693064,
+                "relativeHumidity": 91.33349
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    7.4695,
+                    46.93558
+                ]
+            },
+            "properties": {
+                "stationId": "11025",
+                "name": "Elfenau",
+                "dateObserved": "2024-12-18T00:12:07Z",
+                "outdated": false,
+                "temperature": -0.18120089,
+                "relativeHumidity": 98.30686
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    7.49792,
+                    46.9581
+                ]
+            },
+            "properties": {
+                "stationId": "11097",
+                "name": "Ostermundigen Oberfeld",
+                "dateObserved": "2024-12-18T00:16:04Z",
+                "outdated": false,
+                "temperature": 0.18196383,
+                "relativeHumidity": 95.90929
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    7.50944,
+                    46.9377
+                ]
+            },
+            "properties": {
+                "stationId": "11112",
+                "name": "Gümligen Dentenberg Laterne",
+                "dateObserved": "2024-12-18T00:16:07Z",
+                "outdated": false,
+                "temperature": 0.23537041,
+                "relativeHumidity": 90.353096
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    7.48807,
+                    46.95813
+                ]
+            },
+            "properties": {
+                "stationId": "11099",
+                "name": "Ostermundigen Moosweg",
+                "dateObserved": "2024-12-18T00:18:47Z",
+                "outdated": false,
+                "temperature": 0.069810025,
+                "relativeHumidity": 96.477684
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    7.47194,
+                    46.95553
+                ]
+            },
+            "properties": {
+                "stationId": "11030",
+                "name": "Galgenfeld Industrie",
+                "dateObserved": "2024-10-31T10:17:55Z",
+                "outdated": true,
+                "temperature": 9.031434,
+                "relativeHumidity": 92.64767
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    7.43462,
+                    46.94187
+                ]
+            },
+            "properties": {
+                "stationId": "11005",
+                "name": "Monbijou-Park",
+                "dateObserved": "2024-12-18T00:19:29Z",
+                "outdated": false,
+                "temperature": 0.101853974,
+                "relativeHumidity": 95.59266
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    7.476338,
+                    46.927624
+                ]
+            },
+            "properties": {
+                "stationId": "11110",
+                "name": "Muri Blümlisalpstrasse",
+                "dateObserved": "2024-12-18T00:15:47Z",
+                "outdated": false,
+                "temperature": -0.5416953,
+                "relativeHumidity": 90.65064
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    7.45326,
+                    46.93122
+                ]
+            },
+            "properties": {
+                "stationId": "11085",
+                "name": "Wabern Viktoriastrasse",
+                "dateObserved": "2024-12-18T00:19:18Z",
+                "outdated": false,
+                "temperature": -0.523003,
+                "relativeHumidity": 96.98505
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    7.42031,
+                    46.92781
+                ]
+            },
+            "properties": {
+                "stationId": "11084",
+                "name": "Liebefeld",
+                "dateObserved": "2024-12-18T00:14:48Z",
+                "outdated": false,
+                "temperature": 0.2513924,
+                "relativeHumidity": 95.293205
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    7.319325,
+                    47.098705
+                ]
+            },
+            "properties": {
+                "stationId": "12009",
+                "name": "Bahnhofplatz Busswil",
+                "dateObserved": "2024-12-18T00:03:25Z",
+                "outdated": false,
+                "temperature": 0.5798428,
+                "relativeHumidity": 87.86206
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    7.46442,
+                    46.94469
+                ]
+            },
+            "properties": {
+                "stationId": "11007",
+                "name": "Egelsee",
+                "dateObserved": "2024-12-18T00:13:15Z",
+                "outdated": false,
+                "temperature": 0.71869993,
+                "relativeHumidity": 93.959946
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    7.37708,
+                    46.94787
+                ]
+            },
+            "properties": {
+                "stationId": "11006",
+                "name": "Ansermetplatz",
+                "dateObserved": "2024-12-18T00:14:29Z",
+                "outdated": false,
+                "temperature": -0.9796292,
+                "relativeHumidity": 95.44961
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    7.42317,
+                    46.93716
+                ]
+            },
+            "properties": {
+                "stationId": "11027",
+                "name": "Eisenbahnquartier",
+                "dateObserved": "2024-12-18T00:17:11Z",
+                "outdated": false,
+                "temperature": 0.00038147555,
+                "relativeHumidity": 95.90547
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    7.45978,
+                    46.97857
+                ]
+            },
+            "properties": {
+                "stationId": "11116",
+                "name": "Ittigen Worblaufenstrasse Laterne",
+                "dateObserved": "2024-12-18T00:14:31Z",
+                "outdated": false,
+                "temperature": -0.4322118,
+                "relativeHumidity": 90.14137
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    7.464513,
+                    46.90957
+                ]
+            },
+            "properties": {
+                "stationId": "11123",
+                "name": "Kehrsatz Breitägertenstrasse Laterne",
+                "dateObserved": "2024-12-18T00:13:10Z",
+                "outdated": false,
+                "temperature": 2.579919,
+                "relativeHumidity": 82.55001
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    7.42771,
+                    46.92253
+                ]
+            },
+            "properties": {
+                "stationId": "11090",
+                "name": "Köniz Blinzernplateau Strom-/Telefonmast",
+                "dateObserved": "2024-11-11T10:14:06Z",
+                "outdated": true,
+                "temperature": 6.657511,
+                "relativeHumidity": 78.92218
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    7.50376,
+                    46.96681
+                ]
+            },
+            "properties": {
+                "stationId": "11100",
+                "name": "Umland Bolligen",
+                "dateObserved": "2024-12-18T00:11:44Z",
+                "outdated": false,
+                "temperature": -0.05836576,
+                "relativeHumidity": 97.774704
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    7.46146,
+                    46.96017
+                ]
+            },
+            "properties": {
+                "stationId": "11057",
+                "name": "Tellstrasse",
+                "dateObserved": "2024-12-18T00:11:10Z",
+                "outdated": false,
+                "temperature": 0.91363394,
+                "relativeHumidity": 96.64362
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    7.42571,
+                    46.94719
+                ]
+            },
+            "properties": {
+                "stationId": "11132",
+                "name": "Inselspital",
+                "dateObserved": "2024-12-18T00:11:43Z",
+                "outdated": false,
+                "temperature": 1.0151064,
+                "relativeHumidity": 92.7087
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    7.44513,
+                    46.95898
+                ]
+            },
+            "properties": {
+                "stationId": "11067",
+                "name": "Lorraine",
+                "dateObserved": "2024-12-18T00:16:20Z",
+                "outdated": false,
+                "temperature": 0.74540323,
+                "relativeHumidity": 94.84497
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    7.43823,
+                    46.96512
+                ]
+            },
+            "properties": {
+                "stationId": "11004",
+                "name": "Viererfeld 1 (Sportplatz)",
+                "dateObserved": "2024-12-18T00:17:39Z",
+                "outdated": false,
+                "temperature": -0.12512398,
+                "relativeHumidity": 95.74143
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    7.44007,
+                    46.93354
+                ]
+            },
+            "properties": {
+                "stationId": "11077",
+                "name": "Morillongut (Schönegg) Mast",
+                "dateObserved": "2024-12-18T00:16:44Z",
+                "outdated": false,
+                "temperature": -0.15182726,
+                "relativeHumidity": 90.820404
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    7.44366,
+                    46.94814
+                ]
+            },
+            "properties": {
+                "stationId": "11021",
+                "name": "Bärenplatz",
+                "dateObserved": "2024-12-18T00:09:59Z",
+                "outdated": false,
+                "temperature": 1.0551614,
+                "relativeHumidity": 92.99863
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    7.48411,
+                    46.94801
+                ]
+            },
+            "properties": {
+                "stationId": "11101",
+                "name": "Ostermundigen Tiefenmösli",
+                "dateObserved": "2024-12-18T00:10:15Z",
+                "outdated": false,
+                "temperature": 0.01373312,
+                "relativeHumidity": 96.821014
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    7.4602,
+                    46.95188
+                ]
+            },
+            "properties": {
+                "stationId": "11072",
+                "name": "Rosengarten",
+                "dateObserved": "2024-12-18T00:19:38Z",
+                "outdated": false,
+                "temperature": 0.4383154,
+                "relativeHumidity": 97.114746
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    7.43639,
+                    46.94734
+                ]
+            },
+            "properties": {
+                "stationId": "11036",
+                "name": "Laupenstrasse",
+                "dateObserved": "2024-12-18T00:13:37Z",
+                "outdated": false,
+                "temperature": 1.4156557,
+                "relativeHumidity": 87.49966
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    7.392484,
+                    46.951385
+                ]
+            },
+            "properties": {
+                "stationId": "11016",
+                "name": "Bern Bethlehem Laterne",
+                "dateObserved": "2024-12-18T00:11:44Z",
+                "outdated": false,
+                "temperature": -1.1505302,
+                "relativeHumidity": 90.19096
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    7.456929,
+                    46.99266
+                ]
+            },
+            "properties": {
+                "stationId": "11121",
+                "name": "Zollikofen Zentrum Laterne",
+                "dateObserved": "2024-12-18T00:15:33Z",
+                "outdated": false,
+                "temperature": -0.64049745,
+                "relativeHumidity": 90.67544
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    7.48628,
+                    46.93048
+                ]
+            },
+            "properties": {
+                "stationId": "11111",
+                "name": "Muri Zentrum (Tavelweg) Laterne",
+                "dateObserved": "2024-12-18T00:18:49Z",
+                "outdated": false,
+                "temperature": -0.028992143,
+                "relativeHumidity": 89.17052
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    7.43843,
+                    46.94728
+                ]
+            },
+            "properties": {
+                "stationId": "11073",
+                "name": "Bubenbergplatz",
+                "dateObserved": "2024-12-18T00:13:02Z",
+                "outdated": false,
+                "temperature": 0.94033724,
+                "relativeHumidity": 91.50706
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    7.37478,
+                    46.94555
+                ]
+            },
+            "properties": {
+                "stationId": "11063",
+                "name": "Westside Center",
+                "dateObserved": "2024-12-18T00:19:30Z",
+                "outdated": false,
+                "temperature": -0.8327611,
+                "relativeHumidity": 100.48318
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    7.43739,
+                    46.92607
+                ]
+            },
+            "properties": {
+                "stationId": "11082",
+                "name": "Spiegel",
+                "dateObserved": "2024-12-18T00:16:07Z",
+                "outdated": false,
+                "temperature": 0.5184253,
+                "relativeHumidity": 97.14717
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    7.46247,
+                    46.968
+                ]
+            },
+            "properties": {
+                "stationId": "11069",
+                "name": "Wankdorf ESP",
+                "dateObserved": "2024-12-18T00:13:10Z",
+                "outdated": false,
+                "temperature": -0.23994812,
+                "relativeHumidity": 95.95506
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    7.415169,
+                    46.90915
+                ]
+            },
+            "properties": {
+                "stationId": "11091",
+                "name": "Köniz Schliern Laterne",
+                "dateObserved": "2024-12-18T00:13:07Z",
+                "outdated": false,
+                "temperature": 1.0177767,
+                "relativeHumidity": 86.01381
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    7.44773,
+                    46.95518
+                ]
+            },
+            "properties": {
+                "stationId": "11017",
+                "name": "Wyttenbachstrasse",
+                "dateObserved": "2024-12-18T00:09:48Z",
+                "outdated": false,
+                "temperature": 1.1112382,
+                "relativeHumidity": 94.309
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    7.44353,
+                    46.94692
+                ]
+            },
+            "properties": {
+                "stationId": "11133",
+                "name": "Bundesplatz",
+                "dateObserved": "2024-10-03T01:30:26Z",
+                "outdated": true,
+                "temperature": 9.677653,
+                "relativeHumidity": 84.98001
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    7.49371,
+                    46.95806
+                ]
+            },
+            "properties": {
+                "stationId": "11103",
+                "name": "Ostermundigen Wegmühlengässli",
+                "dateObserved": "2024-12-18T00:11:03Z",
+                "outdated": false,
+                "temperature": 0.13122758,
+                "relativeHumidity": 97.36652
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    7.448146,
+                    46.93012
+                ]
+            },
+            "properties": {
+                "stationId": "11093",
+                "name": "Wabern Zentrum Laterne",
+                "dateObserved": "2024-12-18T00:14:30Z",
+                "outdated": false,
+                "temperature": 0.34218356,
+                "relativeHumidity": 87.30129
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    7.4474,
+                    46.94819
+                ]
+            },
+            "properties": {
+                "stationId": "11056",
+                "name": "Zytglogge",
+                "dateObserved": "2024-12-18T00:14:17Z",
+                "outdated": false,
+                "temperature": 1.2207217,
+                "relativeHumidity": 90.57053
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    7.45466,
+                    46.94886
+                ]
+            },
+            "properties": {
+                "stationId": "11138",
+                "name": "Postgasse Süd",
+                "dateObserved": "2024-12-17T18:14:36Z",
+                "outdated": true,
+                "temperature": 1.9817655,
+                "relativeHumidity": 84.80263
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    7.470893,
+                    46.90922
+                ]
+            },
+            "properties": {
+                "stationId": "11122",
+                "name": "Kehrsatz Zentrum Laterne",
+                "dateObserved": "2024-12-18T00:15:34Z",
+                "outdated": false,
+                "temperature": 0.011062791,
+                "relativeHumidity": 90.20241
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    7.44503,
+                    46.96546
+                ]
+            },
+            "properties": {
+                "stationId": "11104",
+                "name": "Engehalde Stauwehr",
+                "dateObserved": "2024-12-18T00:11:56Z",
+                "outdated": false,
+                "temperature": 0.1606012,
+                "relativeHumidity": 95.25124
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    7.41466,
+                    46.92327
+                ]
+            },
+            "properties": {
+                "stationId": "11095",
+                "name": "Köniz Bläuacker Kandelaber auf Platz",
+                "dateObserved": "2024-12-17T21:04:38Z",
+                "outdated": true,
+                "temperature": -0.13313496,
+                "relativeHumidity": 87.270775
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    7.44248,
+                    46.90961
+                ]
+            },
+            "properties": {
+                "stationId": "11086",
+                "name": "Köniztal",
+                "dateObserved": "2024-12-17T23:58:48Z",
+                "outdated": false,
+                "temperature": 0.30479896,
+                "relativeHumidity": 99.62104
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    7.43541,
+                    46.95789
+                ]
+            },
+            "properties": {
+                "stationId": "11054",
+                "name": "Hintere Länggasse",
+                "dateObserved": "2024-12-18T00:14:48Z",
+                "outdated": false,
+                "temperature": 0.45967802,
+                "relativeHumidity": 94.46349
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    7.45656,
+                    46.93798
+                ]
+            },
+            "properties": {
+                "stationId": "11055",
+                "name": "Dählhölzliwald",
+                "dateObserved": "2024-12-18T00:12:19Z",
+                "outdated": false,
+                "temperature": -0.4776074,
+                "relativeHumidity": 98.03029
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    7.471829,
+                    46.94506
+                ]
+            },
+            "properties": {
+                "stationId": "11049",
+                "name": "Bern-Ostring Freudenbergplatz Laterne",
+                "dateObserved": "2024-12-18T00:12:55Z",
+                "outdated": false,
+                "temperature": 0.65461206,
+                "relativeHumidity": 88.01465
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    7.45415,
+                    46.95838
+                ]
+            },
+            "properties": {
+                "stationId": "11019",
+                "name": "Breitenrainplatz",
+                "dateObserved": "2024-12-18T00:09:39Z",
+                "outdated": false,
+                "temperature": 1.0097657,
+                "relativeHumidity": 95.76051
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    7.40188,
+                    46.94755
+                ]
+            },
+            "properties": {
+                "stationId": "11022",
+                "name": "Ausserholligen Post",
+                "dateObserved": "2024-12-18T00:17:11Z",
+                "outdated": false,
+                "temperature": -1.0410467,
+                "relativeHumidity": 95.81201
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    7.40633,
+                    46.94333
+                ]
+            },
+            "properties": {
+                "stationId": "11031",
+                "name": "Europaplatz 2",
+                "dateObserved": "2024-12-18T00:14:04Z",
+                "outdated": false,
+                "temperature": 0.14457923,
+                "relativeHumidity": 93.4049
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    7.490017,
+                    46.980637
+                ]
+            },
+            "properties": {
+                "stationId": "11118",
+                "name": "Ittigen Gantrischweg 1 Laterne",
+                "dateObserved": "2024-12-18T00:15:03Z",
+                "outdated": false,
+                "temperature": 0.6225681,
+                "relativeHumidity": 89.55581
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    7.36084,
+                    46.93354
+                ]
+            },
+            "properties": {
+                "stationId": "11109",
+                "name": "Umland Bümpliz",
+                "dateObserved": "2024-12-18T00:15:17Z",
+                "outdated": false,
+                "temperature": 0.2513924,
+                "relativeHumidity": 94.59319
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    7.48052,
+                    46.95821
+                ]
+            },
+            "properties": {
+                "stationId": "11098",
+                "name": "Ostermundigen Schermenweg",
+                "dateObserved": "2024-12-18T00:15:48Z",
+                "outdated": false,
+                "temperature": 0.36888686,
+                "relativeHumidity": 95.47631
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    7.30673,
+                    47.089134
+                ]
+            },
+            "properties": {
+                "stationId": "12004",
+                "name": "Industriering Nord",
+                "dateObserved": "2024-12-18T00:09:48Z",
+                "outdated": false,
+                "temperature": 0.69199663,
+                "relativeHumidity": 89.52148
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    7.46407,
+                    46.94714
+                ]
+            },
+            "properties": {
+                "stationId": "11023",
+                "name": "Obstberg",
+                "dateObserved": "2024-12-18T00:19:19Z",
+                "outdated": false,
+                "temperature": 0.50774395,
+                "relativeHumidity": 97.14526
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    7.311275,
+                    47.078552
+                ]
+            },
+            "properties": {
+                "stationId": "12002",
+                "name": "Schulhaus Grentschel",
+                "dateObserved": "2024-12-16T17:34:11Z",
+                "outdated": true,
+                "temperature": 0.56115055,
+                "relativeHumidity": 80.6865
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    7.308954,
+                    47.0709
+                ]
+            },
+            "properties": {
+                "stationId": "12001",
+                "name": "Mühleplatz Lyss",
+                "dateObserved": "2024-12-16T21:28:26Z",
+                "outdated": true,
+                "temperature": -0.6458381,
+                "relativeHumidity": 85.71053
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    7.4542,
+                    46.94886
+                ]
+            },
+            "properties": {
+                "stationId": "11062",
+                "name": "Postgasse Nord",
+                "dateObserved": "2024-12-18T00:11:59Z",
+                "outdated": false,
+                "temperature": 1.5972381,
+                "relativeHumidity": 91.386894
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    7.481412,
+                    46.94348
+                ]
+            },
+            "properties": {
+                "stationId": "11046",
+                "name": "Bern Merzenacker",
+                "dateObserved": "2024-12-18T00:10:02Z",
+                "outdated": false,
+                "temperature": -0.24261844,
+                "relativeHumidity": 88.06233
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    7.45801,
+                    46.95697
+                ]
+            },
+            "properties": {
+                "stationId": "11044",
+                "name": "Kasernenareal",
+                "dateObserved": "2024-12-18T00:12:55Z",
+                "outdated": false,
+                "temperature": 0.8922713,
+                "relativeHumidity": 96.74471
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    7.46747,
+                    46.9645
+                ]
+            },
+            "properties": {
+                "stationId": "11066",
+                "name": "Bern Wankdorfplatz Laterne",
+                "dateObserved": "2024-12-18T00:15:51Z",
+                "outdated": false,
+                "temperature": 0.1686122,
+                "relativeHumidity": 88.61166
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    7.43481,
+                    46.96178
+                ]
+            },
+            "properties": {
+                "stationId": "11137",
+                "name": "Viererfeld 5 (Mittelfeld)",
+                "dateObserved": "2024-12-18T00:14:21Z",
+                "outdated": false,
+                "temperature": -0.320058,
+                "relativeHumidity": 97.660255
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    7.489671,
+                    46.971962
+                ]
+            },
+            "properties": {
+                "stationId": "11127",
+                "name": "Ittigen Worblentalstrasse",
+                "dateObserved": "2024-12-18T00:16:48Z",
+                "outdated": false,
+                "temperature": -0.29068437,
+                "relativeHumidity": 88.82147
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    7.51184,
+                    46.89942
+                ]
+            },
+            "properties": {
+                "stationId": "11125",
+                "name": "Umland Belp",
+                "dateObserved": "2024-12-18T00:18:17Z",
+                "outdated": false,
+                "temperature": -0.86213475,
+                "relativeHumidity": 99.16327
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    7.43971,
+                    46.91833
+                ]
+            },
+            "properties": {
+                "stationId": "11075",
+                "name": "Gurten Kulm",
+                "dateObserved": "2024-12-18T00:16:58Z",
+                "outdated": false,
+                "temperature": 4.075303,
+                "relativeHumidity": 79.214005
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    7.498633,
+                    46.892506
+                ]
+            },
+            "properties": {
+                "stationId": "11124",
+                "name": "Belp Zentrum Laterne",
+                "dateObserved": "2024-12-18T00:11:32Z",
+                "outdated": false,
+                "temperature": -0.01029984,
+                "relativeHumidity": 86.81491
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    7.44166,
+                    46.93964
+                ]
+            },
+            "properties": {
+                "stationId": "11083",
+                "name": "Gaswerk",
+                "dateObserved": "2024-12-18T00:10:37Z",
+                "outdated": false,
+                "temperature": -0.0049591823,
+                "relativeHumidity": 96.599754
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    7.45045,
+                    46.95597
+                ]
+            },
+            "properties": {
+                "stationId": "11034",
+                "name": "Optingenstrasse",
+                "dateObserved": "2024-12-18T00:11:21Z",
+                "outdated": false,
+                "temperature": 0.9830625,
+                "relativeHumidity": 95.285576
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    7.42805,
+                    46.93514
+                ]
+            },
+            "properties": {
+                "stationId": "11071",
+                "name": "Steinhölzliwald",
+                "dateObserved": "2024-12-18T00:18:24Z",
+                "outdated": false,
+                "temperature": 0.47570002,
+                "relativeHumidity": 95.37522
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    7.44938,
+                    46.95439
+                ]
+            },
+            "properties": {
+                "stationId": "11024",
+                "name": "Optingenstrasse Süd",
+                "dateObserved": "2024-12-18T00:11:03Z",
+                "outdated": false,
+                "temperature": 0.9937438,
+                "relativeHumidity": 94.15831
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    7.29574,
+                    47.075085
+                ]
+            },
+            "properties": {
+                "stationId": "12008",
+                "name": "Sportanlage Grien",
+                "dateObserved": "2024-12-18T00:15:40Z",
+                "outdated": false,
+                "temperature": 0.7907988,
+                "relativeHumidity": 89.687416
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    7.42713,
+                    46.94479
+                ]
+            },
+            "properties": {
+                "stationId": "11008",
+                "name": "Brunnhof",
+                "dateObserved": "2024-12-18T00:14:50Z",
+                "outdated": false,
+                "temperature": 1.0231174,
+                "relativeHumidity": 90.72884
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    7.40896,
+                    46.92981
+                ]
+            },
+            "properties": {
+                "stationId": "11088",
+                "name": "Köniz Gartenstadt Laterne",
+                "dateObserved": "2024-12-18T00:11:32Z",
+                "outdated": false,
+                "temperature": -0.37346455,
+                "relativeHumidity": 90.80705
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    7.301668,
+                    47.077145
+                ]
+            },
+            "properties": {
+                "stationId": "12010",
+                "name": "Reitplatz Grünau",
+                "dateObserved": "2024-12-18T00:18:52Z",
+                "outdated": false,
+                "temperature": 0.65728235,
+                "relativeHumidity": 90.38171
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    7.45341,
+                    46.94871
+                ]
+            },
+            "properties": {
+                "stationId": "11038",
+                "name": "Postgasse West",
+                "dateObserved": "2024-12-18T00:14:09Z",
+                "outdated": false,
+                "temperature": 0.9830625,
+                "relativeHumidity": 91.40406
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    7.44122,
+                    46.97417
+                ]
+            },
+            "properties": {
+                "stationId": "11061",
+                "name": "Felsenhaldenweg",
+                "dateObserved": "2024-12-17T21:09:48Z",
+                "outdated": true,
+                "temperature": 0.019073777,
+                "relativeHumidity": 97.351265
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    7.46257,
+                    46.96311
+                ]
+            },
+            "properties": {
+                "stationId": "11033",
+                "name": "Stadtlabor",
+                "dateObserved": "2024-12-18T00:13:21Z",
+                "outdated": false,
+                "temperature": 0.50774395,
+                "relativeHumidity": 96.34989
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    7.45351,
+                    46.9481
+                ]
+            },
+            "properties": {
+                "stationId": "11065",
+                "name": "Gerechtigkeitsgasse",
+                "dateObserved": "2024-12-18T00:18:02Z",
+                "outdated": false,
+                "temperature": 1.4797436,
+                "relativeHumidity": 91.67109
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    7.40995,
+                    46.92041
+                ]
+            },
+            "properties": {
+                "stationId": "11074",
+                "name": "Weiermatt",
+                "dateObserved": "2024-12-17T23:56:28Z",
+                "outdated": false,
+                "temperature": -0.8674754,
+                "relativeHumidity": 88.59449
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    7.310936,
+                    47.075108
+                ]
+            },
+            "properties": {
+                "stationId": "12003",
+                "name": "Heilbachweg | Oberfeldweg",
+                "dateObserved": "2024-12-18T00:18:31Z",
+                "outdated": false,
+                "temperature": 0.5504692,
+                "relativeHumidity": 90.41985
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    7.44009,
+                    46.96286
+                ]
+            },
+            "properties": {
+                "stationId": "11041",
+                "name": "Viererfeld 3 (Strasse Süd)",
+                "dateObserved": "2024-12-18T00:11:11Z",
+                "outdated": false,
+                "temperature": 0.15526055,
+                "relativeHumidity": 99.33875
+            }
+        }
+    ]
+}
