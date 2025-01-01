@@ -2,8 +2,6 @@ import json
 import re
 import uuid
 
-
-
 file_path = r"C:\Users\rb\switchdrive\OFBScientificDatabase\Database\places_2500_flipped.geojson"
 with open(file_path, "r") as file:
     data = json.load(file)
