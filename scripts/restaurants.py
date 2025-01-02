@@ -38,7 +38,7 @@ weights = {
 
 # Multiply each column by its weight and sum them up
 df["total_ratings"] = df[["excellent", "very_good", "average", "poor", "terrible"]].sum(axis=1)
-df["average_score"] = (
+df["rating"] = (
     df["excellent"] * weights["excellent"] +
     df["very_good"] * weights["very_good"] +
     df["average"] * weights["average"] +
@@ -52,14 +52,14 @@ print("Number of restaurants", len(df))
 
 
 # Summary statistics
-summary = df["average_score"].describe()
+summary = df["rating"].describe()
 print(summary)
 
 # Additional metrics
-print("Median:", df["average_score"].median())
-print("Mode:", df["average_score"].mode().tolist())
-print("Skewness:", df["average_score"].skew())
-print("Kurtosis:", df["average_score"].kurt())
+print("Median:", df["rating"].median())
+print("Mode:", df["rating"].mode().tolist())
+print("Skewness:", df["rating"].skew())
+print("Kurtosis:", df["rating"].kurt())
 
 
 features = []
@@ -106,7 +106,8 @@ for _, row in df.iterrows():
         int(row['poor']),
         int(row['terrible']),
         int(row['price_level']),
-        int(row['total_ratings'])
+        int(row['total_ratings']),
+        float(row['rating'])
     )
 
     line = f"({', '.join([str(v) for v in values])})"
@@ -136,12 +137,13 @@ create = """
                     poor INT NOT NULL,
                     terrible INT NOT NULL,
                     price_level INT NOT NULL,
+                    rating DECIMAL NOT NULL,
                     PRIMARY KEY (num));
 """
 
 sql = f"""INSERT INTO restaurants (
     restaurant_link, name, address, location, top_tags, price_range, cuisines,
-    special_diets, excellent, very_good, average, poor, terrible, price_level, total_ratings
+    special_diets, excellent, very_good, average, poor, terrible, price_level, total_ratings, rating
 ) VALUES
 {',\n'.join(lines)};
 """
