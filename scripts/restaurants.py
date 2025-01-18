@@ -11,21 +11,20 @@ print("Number of restaurants", len(df))
 columns_to_keep = [
     "restaurant_link", "restaurant_name", "address", "latitude", "longitude",
     "top_tags", "price_range", "cuisines", "special_diets",
-    "excellent", "very_good", "average", "poor", "terrible", "price_level"
+    "excellent", "very_good", "average", "poor", "terrible"
 ]
 df = df[columns_to_keep]
 
-def convert_price_range(price):
+def convert_to_avg(price):
     if pd.isna(price):
         return np.nan
-    if "-" in price:
-        low, high = price.split("-")
-        return (len(low) + len(high)) / 2
-    return len(price)
+    try:
+        prices = [int(p.replace('€', '')) for p in price.split('-')]
+        return sum(prices) / len(prices)
+    except:
+        return np.nan
 
-# Apply the function to the DataFrame
-df['price_level'] = df['price_level'].apply(convert_price_range)
-
+df['average_price'] = df['price_range'].apply(convert_to_avg)
 df = df.dropna()
 
 weights = {
@@ -97,7 +96,6 @@ for _, row in df.iterrows():
         wrap(row['address']),
         f"ST_GeomFromText('{wkt}')",
         wrap(row['top_tags']),
-        wrap(row['price_range']),
         wrap(row['cuisines']),
         wrap(row['special_diets']),
         int(row['excellent']),
@@ -105,7 +103,7 @@ for _, row in df.iterrows():
         int(row['average']),
         int(row['poor']),
         int(row['terrible']),
-        int(row['price_level']),
+        int(row['average_price']),
         int(row['total_ratings']),
         float(row['rating'])
     )
@@ -128,7 +126,6 @@ create = """
                     address VARCHAR(100) NOT NULL,
                     Location GEOMETRY NOT NULL,
                     top_tags VARCHAR(100) NOT NULL,
-                    price_range VARCHAR(100) NOT NULL,
                     cuisines VARCHAR(100) NOT NULL,
                     special_diets VARCHAR(100) NOT NULL,
                     excellent INT NOT NULL,
@@ -136,14 +133,15 @@ create = """
                     average INT NOT NULL,
                     poor INT NOT NULL,
                     terrible INT NOT NULL,
-                    price_level INT NOT NULL,
-                    rating DECIMAL NOT NULL,
+                    average_price DOUBLE NOT NULL,
+                    total_ratings INT NOT NULL,
+                    rating DOUBLE NOT NULL,
                     PRIMARY KEY (num));
 """
 
 sql = f"""INSERT INTO restaurants (
-    restaurant_link, name, address, location, top_tags, price_range, cuisines,
-    special_diets, excellent, very_good, average, poor, terrible, price_level, total_ratings, rating
+    restaurant_link, name, address, location, top_tags, cuisines,
+    special_diets, excellent, very_good, average, poor, terrible, average_price, total_ratings, rating
 ) VALUES
 {',\n'.join(lines)};
 """
