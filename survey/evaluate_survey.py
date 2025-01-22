@@ -49,6 +49,9 @@ prof_and_sus = [
 df_prof = df[prof_and_sus]
 df_prof.to_csv("data_prof_sus.csv", index=False)
 
+years = df['How many years of experience do you have with programming? '].mean()
+gis = df["How experienced are you in working with Geographic Information Systems (GIS)? "].mean()
+db = df['How experienced are you in working with databases? '].mean()
 
 average_sus_score = df["SUS Score"].mean()
 median_sus_score = df["SUS Score"].median()

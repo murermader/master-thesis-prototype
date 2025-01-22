@@ -1,11 +1,11 @@
 What is your current level of education? ,What is your role? ,Which department do you belong to?,How many years of experience do you have with programming? ,How experienced are you in working with databases? ,Which of the following query languages have you worked with? ,How experienced are you in working with Geographic Information Systems (GIS)? ,SUS Score
-1,0,1,8,3,3,2,82.5
-2,0,1,14,5,3,2,67.5
-1,0,1,5,2,1,1,95.0
-2,0,1,7,5,2,4,95.0
-1,0,0,0,1,0,1,80.0
-2,0,1,10,4,3,2,90.0
-3,0,1,11,5,3,1,85.0
-1,0,0,0,1,0,1,82.5
-2,0,1,8,3,3,1,75.0
-1,0,0,1,1,0,1,77.5
+Bachelor's or equivalent,Student,Mathematics and Computer Science,8,3,SQL;Mongo Query Language;Cypher,2,82.5
+Master's or equivalent,Student,Mathematics and Computer Science,14,5,SQL;Mongo Query Language;Cypher,2,67.5
+Bachelor's or equivalent,Student,Mathematics and Computer Science,5,2,SQL,1,95.0
+Master's or equivalent,Student,Mathematics and Computer Science,7,5,SQL;Mongo Query Language,4,95.0
+Bachelor's or equivalent,Student,"Arts, Media, Philosophy",0,1,,1,80.0
+Master's or equivalent,Student,Mathematics and Computer Science,10,4,SQL;Mongo Query Language;Cypher,2,90.0
+PhD or equivalent,Student,Mathematics and Computer Science,11,5,SQL;Mongo Query Language;Cypher,1,85.0
+Bachelor's or equivalent,Student,"Arts, Media, Philosophy",0,1,,1,82.5
+Master's or equivalent,DevOpsEngineer,"Not working at the university, but studied Computer Sience at UniBas",8,3,SQL;Mongo Query Language;Cypher,1,75.0
+Bachelor's or equivalent,Student,"Arts, Media, Philosophy",1,1,,1,77.5
