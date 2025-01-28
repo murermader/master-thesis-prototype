@@ -78,12 +78,4 @@ plt.xlabel("Participant")
 plt.ylabel("SUS Score")
 plt.xticks(range(1, len(df) + 1))  # Ensure x-axis has participant numbers
 plt.legend()
-# Show the plot
-# plt.tight_layout()
-# plt.show()
 plt.savefig("sus.pdf", format="pdf")
-
-#
-#
-# Task Confidence
-#
