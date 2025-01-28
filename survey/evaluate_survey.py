@@ -36,46 +36,47 @@ df_sus = df[sus_columns]
 df["SUS Score"] = df_sus.apply(calculate_sus_score, axis=1)
 df.to_csv("data_with_sus.csv", index=False)
 
-prof_and_sus = [
-    'What is your current level of education? ',
-    'What is your role? ',
-    'Which department do you belong to?',
-    'How many years of experience do you have with programming? ',
-    'How experienced are you in working with databases? ',
-    'Which of the following query languages have you worked with? ',
-    'How experienced are you in working with Geographic Information Systems (GIS)? ',
-    "SUS Score",
-]
-df_prof = df[prof_and_sus]
-df_prof.to_csv("data_prof_sus.csv", index=False)
-
-years = df['How many years of experience do you have with programming? '].mean()
-gis = df["How experienced are you in working with Geographic Information Systems (GIS)? "].mean()
-db = df['How experienced are you in working with databases? '].mean()
-
-average_sus_score = df["SUS Score"].mean()
-median_sus_score = df["SUS Score"].median()
-std_dev_sus_score = df["SUS Score"].std()
-min_sus_score = df["SUS Score"].min()
-print(f"Average SUS Score: {average_sus_score:.2f}")
-print(f"Median SUS Score: {median_sus_score:.2f}")
-print(f"Standard Deviation of SUS Scores: {std_dev_sus_score:.2f}")
-print(f"Min: {min_sus_score:.2f}")
-
 #
 #
 # PLOT SUS
 #
 # Create a bar plot with matplotlib
 plt.figure(figsize=(10, 6))
+plt.ylim(0, 100)
 # Bar plot for SUS scores
-plt.bar(range(1, len(df) + 1), df["SUS Score"], color="skyblue", edgecolor="black", label="Participant SUS Scores")
-# Add a horizontal line for the average SUS score
+bars = plt.bar(range(1, len(df) + 1), df["SUS Score"], color="skyblue", edgecolor="black", label="Participant SUS Scores")
+
 average_sus_score = df["SUS Score"].mean()
-plt.axhline(y=average_sus_score, color="red", linestyle="--", label=f"Average SUS Score ({average_sus_score:.2f})")
+plt.axhline(y=average_sus_score, color="coral", linestyle="--", label=f"Average SUS Score ({average_sus_score:.2f})")
+
+for bar in bars:
+    height = bar.get_height()
+    plt.text(
+        bar.get_x() + bar.get_width() / 2,
+        height + 0.25,
+        f'{height:.1f}',
+        ha='center',
+        va='bottom',
+        fontsize=9,
+        fontweight='bold'
+    )
+
+ax = plt.gca()
+ax.spines['top'].set_visible(False)
+ax.spines['right'].set_visible(False)
+ax.spines['left'].set_visible(False)
+ax.spines['bottom'].set_color('gray')
+ax.tick_params(bottom=False, left=False)
+ax.set_axisbelow(True)
+ax.yaxis.grid(True, color='#EEEEEE')
+ax.xaxis.grid(False)
+
+# Add a horizontal line for the average SUS score
+
 # Add labels and title
 plt.xlabel("Participant")
 plt.ylabel("SUS Score")
 plt.xticks(range(1, len(df) + 1))  # Ensure x-axis has participant numbers
 plt.legend()
 plt.savefig("sus.pdf", format="pdf")
+# plt.show()
