@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Matster's thesis by Rafael Biehler on Multi-Model Geospatial Queries with Interactive Visualization in a Polystore System">
+    <meta name="author" content="Rafael Biehler">
+
+    <title>Multi-Model Geospatial Queries with Interactive Visualization in a Polystore System</title>
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <!-- CSS Template -->
+    <link href="css/modern-business.css" rel="stylesheet">
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+    <!-- Font-awesome -->
+    <link href="css/font-awesome.min.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+<div class="container">
+    <header>
+        <img style="margin-top:30px;width:200px;" src="logo.png">
+
+        <div style="margin-top:10px;float:right; border-left: 1px dashed #e6e6e6; padding-left:35px;">
+            <h4>Master's Thesis, Rafael Biehler</h4>
+            <p> Department of Mathematics and Computer Science</p>
+            <a href="https://dbis.dmi.unibas.ch/">Databases and Information Systems (DBIS) Group</a>
+        </div>
+    </header>
+
+    <div style="padding:10px; border-bottom: 1px dashed #e0e0e0; width:100%;"></div>
+
+    <div class="row">
+        <div class="col-lg-12">
+            <h1>Multi-Model Geospatial Queries with Interactive Visualization in a Polystore System</h1>
+            <br>
+            <p><b>Examiner:</b>	Prof. Dr. Heiko Schuldt</p>
+            <p><b>Supervisor:</b> David Lengweiler, MSc; Yiming Wu, MSc</p>
+        </div>
+    </div>
+
+   <div style="padding:10px; border-bottom: 1px dashed #e0e0e0; width:100%;"></div>
+	
+    <div class="row">
+        <div class="col-lg-12">
+            <h2 class="page-header">Documents</h2>
+        </div>
+        <div class="col-md-3 col-sm-6">
+            <div class="panel panel-default text-center">
+                <div class="panel-heading">
+                    <a href="thesis.pdf" class="btn btn-primary">Thesis</a>
+                </div>
+                <div class="panel-body">
+                    <p>Thesis as PDF file</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3 col-sm-6">
+            <div class="panel panel-default text-center">
+                <div class="panel-heading">
+                    <a href="slides.pdf" class="btn btn-primary" download>Presentation</a>
+                </div>
+                <div class="panel-body">
+                    <p>Presentation slides as PDF file</p>
+                </div>
+            </div>
+        </div>
+		<div class="col-md-3 col-sm-6">
+            <div class="panel panel-default text-center">
+                <div class="panel-heading">
+                    <a href="demo.mp4" class="btn btn-primary">Video</a>
+                </div>
+                <div class="panel-body">
+                    <p>Video as MP4 file</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Features Section -->
+    <div class="row">
+        <div class="col-lg-12">
+            <h2 class="page-header">Abstract</h2>
+        </div>
+        <div class="col-md-12">
+			<p style="font-size:16px">
+                Managing and analyzing spatial data within large heterogeneous datasets remains a challenge in modern database systems.
+                PolyDBMS systems provide a solution to manage these datasets by unifying different databases and their data models behind a single query interface, but they currently have limited support for storing and querying spatial data. %across all data models.
+                This thesis examines how PolyDBMS can be extended with spatial capabilities by analyzing existing spatial database systems and proposing solutions to bridge this gap.
+                This is achieved by enabling the storage of spatial data across models and integrating spatial functions to operate across different data models.
+                These approaches are then implemented in the existing PolyDBMS system Polypheny.
+                To improve the usability of working with spatial data, a framework is introduced, which assists the user with visualization and query-building capabilities that enable the user to build complex spatial queries using data in various underlying data models.
+                An interactive map-based query mode is integrated into the user interface of a PolyDBMS system, allowing users to explore and validate spatial data by working with queries in a more interactive and visual way.
+                The implementation of spatial capabilities in a PolyDBMS system was validated through a reference comparison with the integrated data stores for the document and graph model.
+                The map-based query mode was evaluated through a user study, where participants completed tasks using a prototype.
+                The results indicate that the introduced user interface enhances usability and provides valuable functionality for working with spatial data in the multi-model context.
+                The reference comparison highlights that, despite performance challenges, the conceptual advancements in spatial support mark a significant step toward spatially-enabled PolyDBMS systems.
+            </p>
+        </div>
+    </div>
+
+    <div style="padding:5px; border-bottom: 1px dashed #e0e0e0; width:100%;"></div>
+    <!-- Footer -->
+    <footer>
+        <div style="margin-top:5px;float:left;">
+            <p> <a href="https://dbis.dmi.unibas.ch/">DBIS</a></p>
+        </div>
+        <div style="margin-top:5px;float:right; border-left: 1px dashed #d0d0d0;  padding-left:15px; padding-right:20px;">
+            <p>February 2025</p>
+        </div>
+        <div style="margin-top:5px;float:right; border-left: 1px dashed #d0d0d0; padding-left:15px; padding-right:20px;">
+            <p><a href="mailto:r.biehler@unibas.ch">r.biehler@unibas.ch</a></p>
+        </div>
+    </footer>
+
+</div>
+<!-- /.container -->
+
+
+
+
+</body></html>
